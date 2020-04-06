@@ -1,3 +1,59 @@
-<HTML>
-<h1>Hello World!</h1>
-</HTML>
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://d3js.org/d3.v5.js"></script>
+</head>
+<body>
+  <script>
+    var width = window.innerWidth;
+    var height = window.innerHeight;
+
+    var svg = d3.select("body")
+      .append("svg")
+      .attr("width",width)
+      .attr("height",height);
+
+
+    var colorScale = d3.scaleSequential(d3.interpolatePlasma)
+      .domain([0,1]);
+
+    /*
+    CREATE A RANDOM DATA SET
+
+    We can create an array of random data and then
+    use that array in a data join to draw
+    random shapes
+    */
+
+    var numCircles = 200;
+    var maxRadius = 30;
+    var data = [];
+
+    for(var i = 1; i <= numCircles; i++) {
+      var x = Math.random() * width;
+      var y = Math.random() * height;
+      var r = Math.random() * maxRadius;
+      var o = {xPosition: x, yPosition: y, radius: r};
+      data.push(o);
+    }
+
+
+    console.log(data);
+
+    var circle = svg.selectAll("circle")
+      .data(data)
+      .enter()
+      .append("circle")
+        .attr("cx", function(d) { return d.xPosition; })
+        .attr("cy", function(d) { return d.yPosition; })
+        .attr("r", function(d) { return d.radius; })
+        .attr("fill", function() {
+          return colorScale(Math.random());
+        })
+        .attr("opacity", 0.8);
+
+
+  </script>
+
+</body>
+</html>
