@@ -1,9 +1,9 @@
-var svg = d3.select("body").append("svg")
+var test = d3.select("body").append("svg")
 .attr("width", window.innerWidth - 50)
 .attr("height", 600);
 
 // Red Square
-svg.append("rect")
+test.append("rect")
 .attr("x", -600)
 .attr("y", 10)
 .attr("width", 500)
@@ -20,7 +20,7 @@ svg.append("rect")
 });
 
 // Orange Square
-svg.append("rect")
+test.append("rect")
 .attr("x", -800)
 .attr("y", 0)
 .attr("width", 300)
@@ -38,7 +38,7 @@ svg.append("rect")
 });
 
 // Light Green Square
-svg.append("rect")
+test.append("rect")
 .attr("x", -600)
 .attr("y", 500)
 .attr("width", 500)
@@ -55,7 +55,7 @@ svg.append("rect")
 });
 
 // Darker Green Square
-svg.append("rect")
+test.append("rect")
 .attr("x", window.innerWidth)
 .attr("y", 485)
 .attr("width", 500)
