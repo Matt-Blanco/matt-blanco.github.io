@@ -1,5 +1,8 @@
 html {
     scroll-behavior: smooth;
+    max-width: 100%;
+    overflow-x: hidden;
+    min-height: 50%;
 }
 
 .arcs {
@@ -29,7 +32,6 @@ html {
 
 .about {
     position: absolute;
-    opacity: 75%;
     padding: 25px;
 } 
 
@@ -45,11 +47,13 @@ h2 {
     margin: 0 0 50px; 
     padding: 0; 
     font-size: 40px; 
+    opacity: 75%;
 } 
 
 p { 
     font-family: garamond;
     text-align: left; 
+    opacity: 75%;
     font-size: 40px;
 }
 
@@ -59,10 +63,8 @@ p {
 }
 
 #blog {
-    opacity: 75%;
-    position: relative; 
-    top: 25vh;   
-    min-height: 100vh; 
+    position: relative;   
+    min-height: 70vh; 
 }
 
 #blog h2 {
@@ -96,6 +98,44 @@ div#postSquare {
 #blog p {
     text-align: center;
     padding-left: 0%;
+}
+
+#projects h2{
+    font-size: 50px;
+    padding-left: 10%;
+}
+
+ul {
+    padding-left: 20%;
+    list-style-type: circle;
+    font-family: garamond;
+    text-align: left; 
+    opacity: 75%;
+    font-size: 40px;
+}
+
+li {
+    padding-top: 35px;
+}
+
+li, a {
+    color: black;
+}
+
+a:hover {
+    opacity: 50%;
+}
+
+.projectSvg {
+    z-index: -1;
+    opacity: 75%;
+    position: relative;
+    margin-bottom: -700px;
+    top: -700px;
+} 
+
+p.list {
+    font-size: 20px;
 }
 
 .sidenav {
