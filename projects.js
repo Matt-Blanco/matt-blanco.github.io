@@ -108,7 +108,7 @@ projectSVG.append("rect")
   .on("end", repeat)
 });
 
-// Dark Green
+// Orange
 projectSVG.append("rect")
 .attr("x", 550)
 .attr("y", 700)
@@ -129,7 +129,7 @@ projectSVG.append("rect")
   .on("end", repeat)
 });
 
-// Dark Green
+// Orange
 projectSVG.append("rect")
 .attr("x", 700)
 .attr("y", 225)
@@ -145,6 +145,48 @@ projectSVG.append("rect")
   .attr("x", 400)
   .transition()
   .duration(5000)
+  .attr("width", 50)
+  .attr("x", 700)
+  .on("end", repeat)
+});
+
+// Dark Green
+projectSVG.append("rect")
+.attr("x", 800)
+.attr("y", 550)
+.attr("width", 50)
+.attr("height", 20)
+.attr("fill", "#b5ead7")
+.transition()
+.on("start", function repeat() {
+  d3.select(this)
+  .transition()
+  .duration(3000)
+  .attr("width", 700)
+  .attr("x", 500)
+  .transition()
+  .duration(5000)
+  .attr("width", 50)
+  .attr("x", 800)
+  .on("end", repeat)
+});
+
+// Dark Green
+projectSVG.append("rect")
+.attr("x", 500)
+.attr("y", 200)
+.attr("width", 50)
+.attr("height", 20)
+.attr("fill", "#b5ead7")
+.transition()
+.on("start", function repeat() {
+  d3.select(this)
+  .transition()
+  .duration(5000)
+  .attr("width", 600)
+  .attr("x", 50)
+  .transition()
+  .duration(6000)
   .attr("width", 50)
   .attr("x", 500)
   .on("end", repeat)

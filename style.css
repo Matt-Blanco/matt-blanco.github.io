@@ -2,7 +2,6 @@ html {
     scroll-behavior: smooth;
     max-width: 100%;
     overflow-x: hidden;
-    min-height: 50%;
 }
 
 .arcs {
@@ -110,11 +109,11 @@ ul {
     list-style-type: circle;
     font-family: garamond;
     text-align: left; 
-    opacity: 75%;
     font-size: 40px;
 }
 
 li {
+    opacity: 75%;
     padding-top: 35px;
 }
 
@@ -130,12 +129,52 @@ a:hover {
     z-index: -1;
     opacity: 75%;
     position: relative;
-    margin-bottom: -700px;
-    top: -700px;
+    margin-bottom: -1500px;
+    top: -1500px;
 } 
 
 p.list {
     font-size: 20px;
+}
+
+#contact {
+    padding-bottom: 30vh;
+}
+
+#contact h2{
+    font-size: 50px;
+    padding-left: 10%;
+}
+
+div.cont{
+    padding-top: 20vh;
+    padding-left: 18.5%;
+    font-family: garamond;
+    opacity: 75%;
+    font-size: 40px;
+}
+
+a.link {
+    text-decoration: underline;
+}
+
+a.git {
+    padding-left: 120px;
+}
+
+a.res {
+    padding-left: 125px;
+}
+
+a.insta {
+    padding-left: 105px;
+}
+
+div.conArc {
+    padding-left: 15%;
+    z-index: -1;
+    position: relative;
+    top: 460px;
 }
 
 .sidenav {

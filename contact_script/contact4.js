@@ -1,14 +1,14 @@
-var width = window.innerWidth - 50;
-var height = window.innerHeight - 50;
+var width = 250;
+var height = 250;
 
 var arc_colors = ["#ffb7b2", "#ffdac1", "#e2f0cb", "#b5ead7"]
-var inner_radius = 240
-var radius_width = 20
+var inner_radius = 60
+var radius_width = 10
 
-var svg = d3.select("body").append("svg")
+var con4Svg = d3.select("div.conArc").append("svg")
     .attr("width", width)
-    .attr("height", height)
-    .attr("class", "arcs")  
+    .attr("height", height) 
+    .attr("class", "contactArc")  
     .append("g").attr("transform", "translate(" + width / 2 + "," + height / 2 + ")")
 
 var arc = d3.arc()
@@ -28,21 +28,13 @@ for (var k = 0; k < 4; k++){
         })
 }
 
-svg.selectAll("path").data(data).enter()
+con4Svg.selectAll("path").data(data).enter()
       .append("path")
       .style("fill", function(d){ return d.fill })
       .attr("d", arc);
 
-svg.append("text")
-    .attr("x", -135)
-    .attr("y", 0)
-    .attr("class", "arcText")
-    .attr("fill", "black")
-    .attr("opacity", 0.7)
-    .text("Hey, I'm \n Matt");
-
 d3.interval(function() {
-  svg.selectAll("path").transition()
+  con4Svg.selectAll("path").transition()
       .duration(3000)
       .attrTween("d", function(d){ return arcTween(d, 0.7 * Math.random()) })
 }, 3000, -3000)
@@ -58,9 +50,3 @@ function arcTween(d, new_score) {
       return arc(d)
     }
 }
-
-$(document).ready(function(){ 
-   $(window).scroll(function(){ 
-       $('.arcs').css("opacity", 1 - $(window).scrollTop() / 300) 
-   }) 
-}) 
