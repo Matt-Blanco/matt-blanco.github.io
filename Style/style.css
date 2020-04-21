@@ -173,8 +173,8 @@ a.insta {
 div.conArc {
     padding-left: 15%;
     z-index: -1;
-    position: relative;
-    top: 460px;
+    position: absolute;
+    top: 436%;
 }
 
 .sidenav {

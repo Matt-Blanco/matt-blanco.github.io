@@ -1,5 +1,5 @@
-var width = window.innerWidth - 50;
-var height = window.innerHeight - 50;
+var width = window.innerWidth
+var height = window.innerHeight + 10;
 
 var arc_colors = ["#ffb7b2", "#ffdac1", "#e2f0cb", "#b5ead7"]
 var inner_radius = 240
