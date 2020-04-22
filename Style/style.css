@@ -139,7 +139,8 @@ p.list {
 }
 
 #contact {
-    padding-bottom: 30vh;
+    padding-bottom: 20vh;
+    padding-top: 15vh;
 }
 
 #contact h2{
@@ -147,27 +148,9 @@ p.list {
     padding-left: 10%;
 }
 
-a.link {
-    text-decoration: underline;
-}
-
-a.git {
-    padding-left: 120px;
-}
-
-a.res {
-    padding-left: 125px;
-}
-
-a.insta {
-    padding-left: 105px;
-}
-
 div.conArc {
     padding-left: 15%;
     z-index: 2;
-    position: absolute;
-    top: 436%;
 } 
 
 .conText {

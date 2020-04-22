@@ -9,7 +9,7 @@ var svg = d3.select("body").append("svg")
     .attr("width", width)
     .attr("height", height)
     .attr("class", "arcs")  
-    .append("g").attr("transform", "translate(" + width / 2 + "," + height / 2 + ")")
+    .append("g").attr("transform", "translate(" + width / 2 + "," + (height / 2 - 40)+ ")")
 
 var arc = d3.arc()
 
