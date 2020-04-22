@@ -9,7 +9,8 @@ var con2Svg = d3.select("div.conArc").append("svg")
     .attr("width", width)
     .attr("height", height)  
     .attr("class", "contactArc") 
-    .append("g").attr("transform", "translate(" + width / 2 + "," + height / 2 + ")")
+    .attr("class", "contactText")  
+    .append("g").attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
 
 var arc = d3.arc()
 
@@ -33,6 +34,14 @@ con2Svg.selectAll("path").data(data).enter()
       .style("fill", function(d){ return d.fill })
       .attr("d", arc);
 
+con2Svg.append("text")
+      .attr("x", -50)
+      .attr("y", 20)
+      .attr("class", "conText")
+      .attr("fill", "black")
+      .attr("opacity", 0.7)
+      .text("Github");
+
 d3.interval(function() {
   con2Svg.selectAll("path").transition()
       .duration(3000)
@@ -50,3 +59,15 @@ function arcTween(d, new_score) {
       return arc(d)
     }
 }
+
+con2Svg.on("click", function() { 
+  window.open("https://github.com/MBlanco03"); 
+});
+
+con2Svg.on("mouseover", function() {
+  con2Svg.attr("opacity", 0.5);
+});
+
+con2Svg.on("mouseout", function() {
+  con2Svg.attr("opacity", 1);
+});

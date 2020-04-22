@@ -8,8 +8,9 @@ var radius_width = 10
 var con4Svg = d3.select("div.conArc").append("svg")
     .attr("width", width)
     .attr("height", height) 
-    .attr("class", "contactArc")  
-    .append("g").attr("transform", "translate(" + width / 2 + "," + height / 2 + ")")
+    .attr("class", "contactArc") 
+    .attr("class", "contactText")  
+    .append("g").attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
 
 var arc = d3.arc()
 
@@ -33,6 +34,14 @@ con4Svg.selectAll("path").data(data).enter()
       .style("fill", function(d){ return d.fill })
       .attr("d", arc);
 
+con4Svg.append("text")
+      .attr("x", -75)
+      .attr("y", 20)
+      .attr("class", "conText")
+      .attr("fill", "black")
+      .attr("opacity", 0.7)
+      .text("Instagram");
+
 d3.interval(function() {
   con4Svg.selectAll("path").transition()
       .duration(3000)
@@ -49,4 +58,16 @@ function arcTween(d, new_score) {
       d.endAngle = interpolate_end(t)
       return arc(d)
     }
-}
+};
+
+con4Svg.on("click", function() { 
+  window.open("https://www.instagram.com/matthew_blanco"); 
+});
+
+con4Svg.on("mouseover", function() {
+  con4Svg.attr("opacity", 0.5);
+});
+
+con4Svg.on("mouseout", function() {
+  con4Svg.attr("opacity", 1);
+});

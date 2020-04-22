@@ -9,7 +9,8 @@ var con3Svg = d3.select("div.conArc").append("svg")
     .attr("width", width)
     .attr("height", height)  
     .attr("class", "contactArc") 
-    .append("g").attr("transform", "translate(" + width / 2 + "," + height / 2 + ")")
+    .attr("class", "contactText")  
+    .append("g").attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
 
 var arc = d3.arc()
 
@@ -33,6 +34,14 @@ con3Svg.selectAll("path").data(data).enter()
       .style("fill", function(d){ return d.fill })
       .attr("d", arc);
 
+con3Svg.append("text")
+    .attr("x", -60)
+    .attr("y", 20)
+    .attr("class", "conText")
+    .attr("fill", "black")
+    .attr("opacity", 0.7)
+    .text("Resume");
+
 d3.interval(function() {
   con3Svg.selectAll("path").transition()
       .duration(3000)
@@ -49,4 +58,16 @@ function arcTween(d, new_score) {
       d.endAngle = interpolate_end(t)
       return arc(d)
     }
-}
+};
+
+con3Svg.on("click", function() { 
+  window.open("link_resources/Resume.pdf"); 
+});
+
+con3Svg.on("mouseover", function() {
+  con3Svg.attr("opacity", 0.5);
+});
+
+con3Svg.on("mouseout", function() {
+  con3Svg.attr("opacity", 1);
+});

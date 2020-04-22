@@ -9,7 +9,7 @@ var conSvg = d3.select("div.conArc").append("svg")
     .attr("width", width)
     .attr("height", height) 
     .attr("class", "contactArc") 
-    .append("g").attr("transform", "translate(" + width / 2 + "," + height / 2 + ")")
+    .append("g").attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
 
 var arc = d3.arc()
 
@@ -32,6 +32,14 @@ conSvg.selectAll("path").data(data).enter()
       .append("path")
       .style("fill", function(d){ return d.fill })
       .attr("d", arc);
+      
+conSvg.append("text")
+    .attr("x", -70)
+    .attr("y", 20)
+    .attr("class", "conText")
+    .attr("fill", "black")
+    .attr("opacity", 0.7)
+    .text("LinkedIn");
 
 d3.interval(function() {
   conSvg.selectAll("path").transition()
@@ -50,3 +58,15 @@ function arcTween(d, new_score) {
       return arc(d)
     }
 }
+
+conSvg.on("click", function() { 
+  window.open("https://www.linkedin.com/in/mattblanco/"); 
+});
+
+conSvg.on("mouseover", function() {
+  conSvg.attr("opacity", 0.5);
+});
+
+conSvg.on("mouseout", function() {
+  conSvg.attr("opacity", 1);
+});

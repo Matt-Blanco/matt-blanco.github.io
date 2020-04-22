@@ -39,7 +39,7 @@ svg.append("text")
     .attr("class", "arcText")
     .attr("fill", "black")
     .attr("opacity", 0.7)
-    .text("Hey, I'm \n Matt");
+    .text("Hey, I'm Matt")
 
 d3.interval(function() {
   svg.selectAll("path").transition()
@@ -63,4 +63,4 @@ $(document).ready(function(){
    $(window).scroll(function(){ 
        $('.arcs').css("opacity", 1 - $(window).scrollTop() / 300) 
    }) 
-}) 
+});
