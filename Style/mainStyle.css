@@ -67,12 +67,25 @@ p {
     min-height: 70vh; 
 }
 
+#blogPost {
+    font-family: garamond;
+    text-align: center; 
+    margin-left: 35%;
+    opacity: 75%;
+    font-size: 35px;
+}
+
+#blogPost:hover {
+    opacity: 50%;
+}
+
 #blog h2 {
     font-size: 50px;
     padding-left: 10%;
+    padding-bottom: 80px;
 }
 
-div#blogSquare {
+#blogSquare {
     z-index: -1;
     position: relative;
     opacity: 75%;
@@ -83,14 +96,14 @@ div#blogSquare {
     background-color: #ffb7b2;
 }
 
-div#postSquare {
+#postSquare {
     z-index: -1;
     position: relative;
     opacity: 75%;
     left: 500px;
-    top: 145px;
+    top: -20px;
     width: 500px;
-    height: 40px;
+    height: 25px;
     background-color: #ffdac1;
 }
 

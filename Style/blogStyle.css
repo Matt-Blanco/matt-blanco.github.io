@@ -1,0 +1,146 @@
+body {
+    background-color: #fffcf2;
+}
+
+h1 {
+    top: 5%;
+    z-index: 1;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    opacity: 75%;
+    margin-left: 20%;
+}
+
+h3 {
+    z-index: 1;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    opacity: 45%;
+    margin-top: -20pt;
+    margin-left: 20%;
+}
+
+p {
+    font-family: garamond;
+    font-size: 18pt;
+    width: 45%;
+    margin-left: 20%;
+    margin-right: 15%;
+}
+
+#space {
+    height: 20pt;
+}
+
+#box1 {
+    position: relative;
+    z-index: -5;
+    margin-top: -40pt;
+    margin-bottom: 5%;
+    left: 213pt;
+    width: 45%;
+    height: 15px;
+    background-color: #ffb7b2;
+}
+
+#box2 {
+    position: relative;
+    z-index: -4;
+    margin-top: -40pt;
+    margin-bottom: 5%;
+    left: 7%;
+    width: 15px;
+    height: 600px;
+    background-color: #ffdac1;
+}
+
+#box3 {
+    position: relative;
+    z-index: -3;
+    margin-top: -15%;
+    margin-bottom: 5%;
+    left: 15%;
+    width: 15px;
+    height: 350pt;
+    background-color: #e2f0cb;
+}
+
+#box4 {
+    position: relative;
+    z-index: -2;
+    margin-top: -60%;
+    margin-bottom: 5%;
+    left: 75%;
+    width: 15px;
+    height: 500pt;
+    background-color: #b5ead7;
+}
+
+#box5 {
+    position: relative;
+    z-index: -2;
+    margin-top: -5%;
+    margin-bottom: 5%;
+    left: 11%;
+    width: 15px;
+    height: 500pt;
+    background-color: #ffb7b2;
+}
+
+#box6 {
+    position: relative;
+    z-index: -2;
+    margin-top: -55%;
+    margin-bottom: 5%;
+    left: 70%;
+    width: 15px;
+    height: 500pt;
+    background-color: #ffdac1;
+}
+
+#box7 {
+    position: relative;
+    z-index: -2;
+    margin-top: -40%;
+    margin-bottom: 5%;
+    left: 80%;
+    width: 15px;
+    height: 500pt;
+    background-color: #e2f0cb;
+}
+
+#text {
+    margin-top: -100%;
+}
+
+.sidenav {
+    width: 250;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 55px;
+  }
+  
+.sidenav a {
+    padding: 8px 20px 40px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+    opacity: 80%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: block;
+    transition: 0.3s;
+  }
+ 
+.sidenav a:hover {
+    text-decoration: underline;
+  }
+
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+::-webkit-scrollbar-thumb {
+    background: #575757;
+  }
