@@ -207,3 +207,622 @@ div.conArc {
 ::-webkit-scrollbar-thumb {
     background: #575757;
   }
+
+  #portfolioContainer {
+    position: absolute;
+    overflow: hidden;
+    overflow-y: hidden;
+    height: 100%;
+    width: 100%;
+  }
+
+  .portfolioTitles {
+      font-family: futura;
+      font-size: 75;
+      color: #303030;
+      opacity: 100%;
+      transform: rotate(-27deg);
+  }
+
+  #type {
+      position: relative;
+  }
+
+  #typeText {
+      position: absolute;
+      top: 10rem;
+      z-index: 10;
+  }
+
+  #typeText > a {
+    color: #303030;
+  }
+
+  #typeText > a:link {
+    opacity: 100%;
+    text-decoration: none;
+  }
+
+  #typeText > a:hover {
+    color: #fffcf2;
+    opacity: 100%;
+    animation: changeText 1s 1 alternate ease-in-out;
+    text-decoration: none;
+  }
+
+  #typeHover {
+    position: absolute;
+    z-index: 3;
+    top: 17rem;
+    left: -5rem;
+    transform: rotate(-27deg);
+    height: 125px;
+    width: 100px;
+
+}
+
+  #typeText:hover + #typeHover {
+    background-color: #303030;
+    top: 4rem;
+    left: -8rem;
+    width: 1000px;
+    animation: growTypeBox 1s 1 alternate ease-in-out;
+  }
+
+  @keyframes changeText {
+    from {
+        color: #303030;
+    } to {
+        color: #fffcf2;
+    }
+  }
+
+  @keyframes growTypeBox {
+    from {
+        width: 10px;
+        top: 17rem;
+        left: -5rem;
+    } to {
+        width: 1000px;
+        top: 4rem;
+        left: -8rem;
+    }
+  }
+
+  #fund {
+    position: absolute;
+    top: 5rem;
+    left: 45rem;  
+    z-index: 4;
+  }
+
+  #fund:hover {
+    cursor: pointer;
+    animation: changeText 1s 1 alternate ease-in-out;
+    color: #fffcf2;  
+  }
+
+  #fundHover {
+      position: absolute;
+      transform: rotate(-27deg);
+      height: 125px;
+      width: 100px;
+      top: 10rem;
+      z-index: 3;
+      left: 45rem;  
+  }
+
+  #fund:hover + #fundHover {
+    background-color: #303030;
+    top: -2rem;
+    left: 42rem;
+    width: 1000px;
+    animation: growFundBox 1s 1 alternate ease-in-out;
+  }
+
+  @keyframes growFundBox {
+    from {
+        width: 10px;
+        top: 10rem;
+        left: 45rem;
+    } to {
+        width: 1000px;
+        top: -2rem;
+        left: 42rem;
+    }
+  }
+
+  #gdText {
+      position: absolute;
+      z-index: 6;
+      top: 35rem;
+      left: 15rem;
+  }
+
+  #gdText > a:hover {
+    color: #fffcf2;
+    opacity: 100%;
+    animation: changeText 1s 1 alternate ease-in-out;
+    text-decoration: none;
+  }
+
+  #gdHover {
+    position: absolute;
+    transform: rotate(-27deg);
+    height: 125px;
+    width: 100px;
+    top: 53rem;
+    z-index: 0;
+    left: -4rem; 
+  }
+
+  #gdText:hover + #gdHover {
+    background-color: #303030;
+    top: 38rem;
+    left: -4rem;
+    width: 1050px;
+    animation: growGdBox 1s 1 alternate ease-in-out;
+  }
+
+  @keyframes growGdBox {
+      from {
+          width: 100px;
+          top: 53rem;
+          left: -4rem;
+      } to {
+          width: 1050px;
+          top: 38rem;
+          left: -4rem;
+      }
+  }
+
+  #gdText > a {
+    color: #303030;
+  }
+
+  #gdText > a:link {
+    opacity: 100%;
+    text-decoration: none;
+  }
+
+  #pLime {
+      position: absolute;
+      background-color: #E2F0CB;
+      transform: rotate(-27deg);
+      opacity: 80%;
+      z-index: -4;
+      top: 15rem;
+      left: -4rem;
+      width: 550px;
+      height: 50px;
+  }
+
+  #pOrange {
+    position: absolute;
+    background-color: #FFDAC1;
+    transform: rotate(-27deg);
+    opacity: 80%;
+    z-index: -3;
+    top: 6rem;
+    left: 40rem;
+    width: 900px;
+    height: 50px;
+}
+
+#pGreen {
+    position: absolute;
+    background-color: #B5EAD7;
+    transform: rotate(-27deg);
+    opacity: 80%;
+    z-index: -3;
+    top: 43rem;
+    left: -5rem;
+    width: 1000px;
+    height: 50px;
+}
+
+#pRed1 {
+    position: absolute;
+    background-color: #ffb7b2;
+    transform: rotate(-27deg);
+    opacity: 80%;
+    z-index: -3;
+    top: 0rem;
+    left: -20rem;
+    width: 200%;
+    height: 50px;
+}
+
+#pRed2 {
+    position: absolute;
+    background-color: #ffb7b2;
+    transform: rotate(-27deg);
+    opacity: 80%;
+    z-index: -3;
+    top: 12rem;
+    left: -10rem;
+    width: 200%;
+    height: 50px;
+}
+
+#tContainer {
+    position: absolute;
+    overflow: hidden;
+    overflow-y: hidden;
+    height: 100%;
+    width: 100%;
+}
+
+.typeTitle {
+    font-family: futura;
+    font-size: 215;
+    color: #303030;
+    opacity: 100%;
+}
+
+#t1 {
+    position: absolute;
+    top: -5rem;
+}
+
+#t2 {
+    position: absolute;
+    top: 5rem;
+    left: -0.45rem;
+}
+
+#t3 {
+    position: absolute;
+    top: 17rem;
+    left: -1rem;
+}
+
+#letterforms {
+    position: absolute;
+    width: 20rem;
+    left: 65rem;
+}
+
+#letterforms > p {
+    position: relative;
+    top: -5rem;
+    font-size: 15pt;
+}
+
+#letterforms > h3 {
+    color: #303030;
+    font-size: 20pt;
+    font-family: futura;
+}
+
+#lHoverBox{
+    position: relative;
+    height: 2rem;
+    top: -3.5rem;
+    z-index: -3;
+}
+
+#letterFormText:hover {
+    cursor: pointer;
+    animation: changeText 1s 1 alternate ease-in-out;
+    color: #fffcf2; 
+}
+
+#letterFormText:hover + #lHoverBox {
+    width: 12rem;
+    background-color: #303030;
+    animation: growHoverBox 1s 1 alternate ease-in-out;
+}
+
+@keyframes growHoverBox {
+    from {
+        width: 0rem;
+    } to {
+        width: 12rem;
+    }
+}
+
+#wordplay {
+    position: absolute;
+    width: 20rem;
+    left: 45rem;
+    top: 15rem;
+}
+
+#wHoverBox {
+    position: relative;
+    height: 2rem;
+    top: -3.5rem;
+    z-index: -3;
+}
+
+#wordplay > h3:hover {
+    cursor: pointer;
+    animation: changeText 1s 1 alternate ease-in-out;
+    color: #fffcf2; 
+}
+
+#wordplay > h3:hover + #wHoverBox {
+    width: 12rem;
+    background-color: #303030;
+    animation: growHoverBox 1s 1 alternate ease-in-out;
+}
+
+#wordplay > p {
+    position: relative;
+    top: -4.5rem;
+    font-size: 15pt;
+}
+
+#wordplay > h3 {
+    color: #303030;
+    font-size: 20pt;
+    font-family: futura;
+}
+
+#expressive {
+    position: absolute;
+    width: 20rem;
+    left: 65rem;
+    top: 30rem;
+}
+
+#eHoverBox {
+    position: relative;
+    height: 2rem;
+    top: -3.5rem;
+    z-index: -3;
+}
+
+#expressive > h3:hover {
+    cursor: pointer;
+    animation: changeText 1s 1 alternate ease-in-out;
+    color: #fffcf2; 
+}
+
+#expressive > h3:hover + #eHoverBox {
+    width: 12rem;
+    background-color: #303030;
+    animation: growHoverBox 1s 1 alternate ease-in-out;
+}
+
+
+#expressive > p {
+    position: relative;
+    top: -4.5rem;
+    font-size: 15pt;
+}
+
+#expressive > h3 {
+    color: #303030;
+    font-size: 20pt;
+    font-family: futura;
+}
+
+#rc1 {
+    position: absolute;
+    border-radius: 50%;
+    width: 25rem;
+    height: 25rem;
+    top: 40%;
+    left: -5%;
+    z-index: -4;
+    background-color: #ffb7b2;
+}
+
+#lc1 {
+    position: absolute;
+    border-radius: 50%;
+    width: 20rem;
+    height: 20rem;
+    top: -15%;
+    left: 35%;
+    z-index: -4;
+    background-color: #E2F0CB;
+}
+
+#oc1 {
+    position: absolute;
+    border-radius: 50%;
+    width: 15rem;
+    height: 15rem;
+    top: 60%;
+    left: 70%;
+    z-index: -4;
+    background-color: #FFDAC1;
+}
+
+#gdContainer {
+    position: absolute;
+}
+
+#gc1 {
+    position: absolute;
+    border-radius: 50%;
+    width: 10rem;
+    height: 10rem;
+    top: -5%;
+    left: 90%;
+    z-index: -4;
+    background-color: #B5EAD7;
+}
+
+.gdTitle {
+    z-index: -3;
+    letter-spacing: -5px;
+    font-family: futura;
+    color: #303030;
+    font-size: 20rem;
+}
+
+#greenGD1 {
+    position: absolute;
+    color: #B5EAD7;
+    top: -10rem;
+}
+
+#greenGD2 {
+    position: absolute;
+    color: #B5EAD7;
+    top: 5rem;
+    left: 10rem;
+}
+
+#orangeGD1 {
+    position: absolute;
+    color: #ffdac1;
+    top: -9rem;
+}
+
+#orangeGD2 {
+    position: absolute;
+    color: #ffdac1;
+    top: 6rem;
+    left: 10rem;
+}
+
+#limeGD1 {
+    position: absolute;
+    color: #E2F0CB;
+    top: -8rem;
+}
+
+#limeGD2 {
+    position: absolute;
+    color: #E2F0CB;
+    top: 7rem;
+    left: 10rem;
+}
+
+#redGD1 {
+    position: absolute;
+    color: #ffb7b2;
+    top: -7rem;
+}
+
+#redGD2 {
+    position: absolute;
+    color: #ffb7b2;
+    top: 8rem;
+    left: 10rem;
+}
+
+#book {
+    position: absolute;
+    width: 20rem;
+    left: 10rem;
+    top: 0rem;
+}
+
+#bcHoverBox {
+    position: relative;
+    height: 2rem;
+    top: -3.5rem;
+    z-index: -1;
+}
+
+#book > h3:hover {
+    cursor: pointer;
+    animation: changeText 1s 1 alternate ease-in-out;
+    color: #fffcf2; 
+}
+
+#book > h3:hover + #bcHoverBox {
+    width: 12rem;
+    background-color: #303030;
+    animation: growHoverBox 1s 1 alternate ease-in-out;
+}
+
+
+#book > p {
+    position: relative;
+    top: -4.5rem;
+    font-size: 15pt;
+}
+
+#book > h3 {
+    z-index: 10;
+    color: #303030;
+    font-size: 20pt;
+    font-family: futura;
+}
+
+#sp {
+    position: absolute;
+    width: 20rem;
+    left: 37rem;
+    top: 0rem;
+}
+
+#spHoverBox {
+    position: relative;
+    height: 2rem;
+    top: -3.5rem;
+    z-index: -1;
+}
+
+#sp > h3:hover {
+    cursor: pointer;
+    animation: changeText 1s 1 alternate ease-in-out;
+    color: #fffcf2; 
+}
+
+#sp > h3:hover + #spHoverBox {
+    width: 12rem;
+    background-color: #303030;
+    animation: growHoverBox 1s 1 alternate ease-in-out;
+}
+
+
+#sp > p {
+    position: relative;
+    top: -4.5rem;
+    font-size: 15pt;
+}
+
+#sp > h3 {
+    z-index: 10;
+    color: #303030;
+    font-size: 20pt;
+    font-family: futura;
+}
+
+#brand {
+    position: absolute;
+    width: 20rem;
+    left: 1rem;
+    top: 32rem;
+}
+
+#brandHoverBox {
+    position: relative;
+    height: 2rem;
+    top: -3.5rem;
+    z-index: -1;
+}
+
+#brand > h3:hover {
+    cursor: pointer;
+    animation: changeText 1s 1 alternate ease-in-out;
+    color: #fffcf2; 
+}
+
+#brand > h3:hover + #brandHoverBox {
+    width: 12rem;
+    background-color: #303030;
+    animation: growHoverBox 1s 1 alternate ease-in-out;
+}
+
+
+#brand > p {
+    position: relative;
+    top: -4.5rem;
+    font-size: 15pt;
+}
+
+#brand > h3 {
+    z-index: 10;
+    color: #303030;
+    font-size: 20pt;
+    font-family: futura;
+}
