@@ -289,17 +289,27 @@ div.conArc {
     }
   }
 
+  #fund > a {
+    color: #303030;
+  }
+
+  #fund > a:link {
+    opacity: 100%;
+    text-decoration: none;
+  }
+
+  #fund > a:hover {
+    color: #fffcf2;
+    opacity: 100%;
+    animation: changeText 1s 1 alternate ease-in-out;
+    text-decoration: none;
+  }
+
   #fund {
     position: absolute;
     top: 5rem;
     left: 45rem;  
     z-index: 4;
-  }
-
-  #fund:hover {
-    cursor: pointer;
-    animation: changeText 1s 1 alternate ease-in-out;
-    color: #fffcf2;  
   }
 
   #fundHover {
@@ -480,19 +490,23 @@ div.conArc {
 #letterforms {
     position: absolute;
     width: 20rem;
-    left: 65rem;
+    left: 56rem;
 }
 
 #letterforms > p {
     position: relative;
-    top: -5rem;
+    top: -4.5rem;
     font-size: 15pt;
 }
 
-#letterforms > h3 {
+#lfText > a {
     color: #303030;
     font-size: 20pt;
     font-family: futura;
+}
+
+#lfText > a:link {
+    text-decoration: none;
 }
 
 #lHoverBox{
@@ -502,13 +516,14 @@ div.conArc {
     z-index: -3;
 }
 
-#letterFormText:hover {
+#lfText > a:hover {
+    opacity: 100%;
     cursor: pointer;
     animation: changeText 1s 1 alternate ease-in-out;
     color: #fffcf2; 
 }
 
-#letterFormText:hover + #lHoverBox {
+#lfText:hover + #lHoverBox {
     width: 12rem;
     background-color: #303030;
     animation: growHoverBox 1s 1 alternate ease-in-out;
@@ -536,13 +551,18 @@ div.conArc {
     z-index: -3;
 }
 
-#wordplay > h3:hover {
+#wpText > a:hover {
+    opacity: 100%;
     cursor: pointer;
     animation: changeText 1s 1 alternate ease-in-out;
     color: #fffcf2; 
 }
 
-#wordplay > h3:hover + #wHoverBox {
+#wpText > a:link {
+    text-decoration: none;
+}
+
+#wpText:hover + #wHoverBox {
     width: 12rem;
     background-color: #303030;
     animation: growHoverBox 1s 1 alternate ease-in-out;
@@ -554,7 +574,7 @@ div.conArc {
     font-size: 15pt;
 }
 
-#wordplay > h3 {
+#wpText > a {
     color: #303030;
     font-size: 20pt;
     font-family: futura;
@@ -563,7 +583,7 @@ div.conArc {
 #expressive {
     position: absolute;
     width: 20rem;
-    left: 65rem;
+    left: 55rem;
     top: 30rem;
 }
 
@@ -574,13 +594,18 @@ div.conArc {
     z-index: -3;
 }
 
-#expressive > h3:hover {
+#tText > a:link {
+    text-decoration: none;
+}
+
+#tText > a:hover {
+    opacity: 100%;
     cursor: pointer;
     animation: changeText 1s 1 alternate ease-in-out;
     color: #fffcf2; 
 }
 
-#expressive > h3:hover + #eHoverBox {
+#tText:hover + #eHoverBox {
     width: 12rem;
     background-color: #303030;
     animation: growHoverBox 1s 1 alternate ease-in-out;
@@ -721,13 +746,18 @@ div.conArc {
     z-index: -1;
 }
 
-#book > h3:hover {
+#bcText > a {
+    text-decoration: none;
+}
+
+#bcText > a:hover {
+    opacity: 100%;
     cursor: pointer;
     animation: changeText 1s 1 alternate ease-in-out;
     color: #fffcf2; 
 }
 
-#book > h3:hover + #bcHoverBox {
+#bcText:hover + #bcHoverBox {
     width: 12rem;
     background-color: #303030;
     animation: growHoverBox 1s 1 alternate ease-in-out;
@@ -761,13 +791,18 @@ div.conArc {
     z-index: -1;
 }
 
-#sp > h3:hover {
+#spText > a:link {
+    text-decoration: none;
+}
+
+#spText > a:hover {
+    opacity: 100%;
     cursor: pointer;
     animation: changeText 1s 1 alternate ease-in-out;
     color: #fffcf2; 
 }
 
-#sp > h3:hover + #spHoverBox {
+#spText:hover + #spHoverBox {
     width: 12rem;
     background-color: #303030;
     animation: growHoverBox 1s 1 alternate ease-in-out;
@@ -801,7 +836,12 @@ div.conArc {
     z-index: -1;
 }
 
-#brand > h3:hover {
+#brandText > a:link {
+    text-decoration: none;
+}
+
+#brandText > a:hover {
+    opacity: 100%;
     cursor: pointer;
     animation: changeText 1s 1 alternate ease-in-out;
     color: #fffcf2; 
@@ -813,7 +853,6 @@ div.conArc {
     animation: growHoverBox 1s 1 alternate ease-in-out;
 }
 
-
 #brand > p {
     position: relative;
     top: -4.5rem;
@@ -821,6 +860,158 @@ div.conArc {
 }
 
 #brand > h3 {
+    z-index: 10;
+    color: #303030;
+    font-size: 20pt;
+    font-family: futura;
+}
+
+#fundamental {
+    overflow-y: hidden;
+    overflow-x: hidden;
+    background-color: #fffcf2;
+}
+
+#fContainer {
+    position: relative;
+    height: 100%;
+}
+
+#rBar {
+    position: absolute;
+    background-color: #ffb7b2;
+    left: 20rem;
+    top: -30rem;
+    width: 10rem;
+    height: 100rem;
+    transform: rotate(45deg);
+    z-index: -3;
+}
+
+#lBar {
+    position: absolute;
+    background-color: #E2F0CB;
+    left: 25rem;
+    top: -27rem;
+    width: 10rem;
+    height: 100rem;
+    transform: rotate(45deg);
+    z-index: -2;
+}
+
+#oBar {
+    position: absolute;
+    background-color: #FFDAC1;
+    left: 30rem;
+    top: -20rem;
+    width: 10rem;
+    height: 100rem;
+    transform: rotate(45deg);
+    z-index: -3;
+}
+
+#gBar {
+    position: absolute;
+    background-color: #B5EAD7;
+    left: 40rem;
+    top: -20rem;
+    width: 10rem;
+    height: 100rem;
+    transform: rotate(45deg);
+    z-index: -2;
+}
+
+#fname {
+    position: absolute;
+    font-family: futura;
+    font-size: 6rem;
+    left: 14rem;
+    top: 12rem;
+    color: #fffcf2;
+}
+
+#publication {
+    position: absolute;
+    width: 20rem;
+    left: 45rem;
+    top: 30rem;
+}
+
+#pubText > a:link {
+    text-decoration: none;
+}
+
+#pubText > a:hover {
+    opacity: 100%;
+    cursor: pointer;
+    animation: changeText 1s 1 alternate ease-in-out;
+    color: #fffcf2; 
+}
+
+#pub {
+    position: relative;
+    height: 2rem;
+    top: -3.5rem;
+    z-index: -1;
+}
+
+#publication > h3:hover + #pub {
+    width: 12rem;
+    background-color: #303030;
+    animation: growHoverBox 1s 1 alternate ease-in-out;
+}
+
+#publication > p {
+    position: relative;
+    top: -4.5rem;
+    font-size: 15pt;
+}
+
+#publication > h3 {
+    z-index: 10;
+    color: #303030;
+    font-size: 20pt;
+    font-family: futura;
+}
+
+#fc {
+    position: absolute;
+    width: 20rem;
+    left: -10rem;
+    top: 0rem;
+}
+
+#fcText > a:link {
+    text-decoration: none;
+}
+
+#fcText > a:hover {
+    opacity: 100%;
+    cursor: pointer;
+    animation: changeText 1s 1 alternate ease-in-out;
+    color: #fffcf2; 
+}
+
+#fcHoverBox {
+    position: relative;
+    height: 2rem;
+    top: -3.5rem;
+    z-index: -1;
+}
+
+#fc > h3:hover + #fcHoverBox {
+    width: 12rem;
+    background-color: #303030;
+    animation: growHoverBox 1s 1 alternate ease-in-out;
+}
+
+#fc > p {
+    position: relative;
+    top: -4.5rem;
+    font-size: 15pt;
+}
+
+#fc > h3 {
     z-index: 10;
     color: #303030;
     font-size: 20pt;
