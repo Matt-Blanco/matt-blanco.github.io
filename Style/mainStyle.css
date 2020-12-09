@@ -246,7 +246,7 @@ div.conArc {
   #typeText > a:hover {
     color: #fffcf2;
     opacity: 100%;
-    animation: changeText 1s 1 alternate ease-in-out;
+    animation: changeText 0.3s 1 alternate ease-in-out;
     text-decoration: none;
   }
 
@@ -266,7 +266,7 @@ div.conArc {
     top: 4rem;
     left: -8rem;
     width: 1000px;
-    animation: growTypeBox 1s 1 alternate ease-in-out;
+    animation: growTypeBox 0.3s 1 alternate ease-in-out;
   }
 
   @keyframes changeText {
@@ -301,7 +301,7 @@ div.conArc {
   #fund > a:hover {
     color: #fffcf2;
     opacity: 100%;
-    animation: changeText 1s 1 alternate ease-in-out;
+    animation: changeText 0.3s 1 alternate ease-in-out;
     text-decoration: none;
   }
 
@@ -327,7 +327,7 @@ div.conArc {
     top: -2rem;
     left: 42rem;
     width: 1000px;
-    animation: growFundBox 1s 1 alternate ease-in-out;
+    animation: growFundBox 0.3s 1 alternate ease-in-out;
   }
 
   @keyframes growFundBox {
@@ -342,6 +342,13 @@ div.conArc {
     }
   }
 
+  #gd {
+      position: absolute;
+      width: 900px;
+      left: 25rem;
+      top: -5rem; 
+  }
+
   #gdText {
       position: absolute;
       z-index: 6;
@@ -352,7 +359,7 @@ div.conArc {
   #gdText > a:hover {
     color: #fffcf2;
     opacity: 100%;
-    animation: changeText 1s 1 alternate ease-in-out;
+    animation: changeText 0.3s 1 alternate ease-in-out;
     text-decoration: none;
   }
 
@@ -371,7 +378,7 @@ div.conArc {
     top: 38rem;
     left: -4rem;
     width: 1050px;
-    animation: growGdBox 1s 1 alternate ease-in-out;
+    animation: growGdBox 0.3s 1 alternate ease-in-out;
   }
 
   @keyframes growGdBox {
@@ -425,8 +432,8 @@ div.conArc {
     transform: rotate(-27deg);
     opacity: 80%;
     z-index: -3;
-    top: 43rem;
-    left: -5rem;
+    top: 40rem;
+    left: 15rem;
     width: 1000px;
     height: 50px;
 }
@@ -519,14 +526,14 @@ div.conArc {
 #lfText > a:hover {
     opacity: 100%;
     cursor: pointer;
-    animation: changeText 1s 1 alternate ease-in-out;
+    animation: changeText 0.3s 1 alternate ease-in-out;
     color: #fffcf2; 
 }
 
 #lfText:hover + #lHoverBox {
     width: 12rem;
     background-color: #303030;
-    animation: growHoverBox 1s 1 alternate ease-in-out;
+    animation: growHoverBox 0.3s 1 alternate ease-in-out;
 }
 
 @keyframes growHoverBox {
@@ -554,7 +561,7 @@ div.conArc {
 #wpText > a:hover {
     opacity: 100%;
     cursor: pointer;
-    animation: changeText 1s 1 alternate ease-in-out;
+    animation: changeText 0.3s 1 alternate ease-in-out;
     color: #fffcf2; 
 }
 
@@ -565,7 +572,7 @@ div.conArc {
 #wpText:hover + #wHoverBox {
     width: 12rem;
     background-color: #303030;
-    animation: growHoverBox 1s 1 alternate ease-in-out;
+    animation: growHoverBox 0.3s 1 alternate ease-in-out;
 }
 
 #wordplay > p {
@@ -601,14 +608,14 @@ div.conArc {
 #tText > a:hover {
     opacity: 100%;
     cursor: pointer;
-    animation: changeText 1s 1 alternate ease-in-out;
+    animation: changeText 0.3s 1 alternate ease-in-out;
     color: #fffcf2; 
 }
 
 #tText:hover + #eHoverBox {
     width: 12rem;
     background-color: #303030;
-    animation: growHoverBox 1s 1 alternate ease-in-out;
+    animation: growHoverBox 0.3s 1 alternate ease-in-out;
 }
 
 
@@ -753,14 +760,14 @@ div.conArc {
 #bcText > a:hover {
     opacity: 100%;
     cursor: pointer;
-    animation: changeText 1s 1 alternate ease-in-out;
+    animation: changeText 0.3s 1 alternate ease-in-out;
     color: #fffcf2; 
 }
 
 #bcText:hover + #bcHoverBox {
     width: 12rem;
     background-color: #303030;
-    animation: growHoverBox 1s 1 alternate ease-in-out;
+    animation: growHoverBox 0.3s 1 alternate ease-in-out;
 }
 
 
@@ -798,14 +805,14 @@ div.conArc {
 #spText > a:hover {
     opacity: 100%;
     cursor: pointer;
-    animation: changeText 1s 1 alternate ease-in-out;
+    animation: changeText 0.3s 1 alternate ease-in-out;
     color: #fffcf2; 
 }
 
 #spText:hover + #spHoverBox {
     width: 12rem;
     background-color: #303030;
-    animation: growHoverBox 1s 1 alternate ease-in-out;
+    animation: growHoverBox 0.3s 1 alternate ease-in-out;
 }
 
 
@@ -824,7 +831,7 @@ div.conArc {
 
 #brand {
     position: absolute;
-    width: 20rem;
+    width: 25rem;
     left: 1rem;
     top: 32rem;
 }
@@ -843,14 +850,14 @@ div.conArc {
 #brandText > a:hover {
     opacity: 100%;
     cursor: pointer;
-    animation: changeText 1s 1 alternate ease-in-out;
+    animation: changeText 0.3s 1 alternate ease-in-out;
     color: #fffcf2; 
 }
 
 #brand > h3:hover + #brandHoverBox {
     width: 12rem;
     background-color: #303030;
-    animation: growHoverBox 1s 1 alternate ease-in-out;
+    animation: growHoverBox 0.3s 1 alternate ease-in-out;
 }
 
 #brand > p {
@@ -944,7 +951,7 @@ div.conArc {
 #pubText > a:hover {
     opacity: 100%;
     cursor: pointer;
-    animation: changeText 1s 1 alternate ease-in-out;
+    animation: changeText 0.3s 1 alternate ease-in-out;
     color: #fffcf2; 
 }
 
@@ -958,7 +965,7 @@ div.conArc {
 #publication > h3:hover + #pub {
     width: 12rem;
     background-color: #303030;
-    animation: growHoverBox 1s 1 alternate ease-in-out;
+    animation: growHoverBox 0.3s 1 alternate ease-in-out;
 }
 
 #publication > p {
@@ -988,7 +995,7 @@ div.conArc {
 #fcText > a:hover {
     opacity: 100%;
     cursor: pointer;
-    animation: changeText 1s 1 alternate ease-in-out;
+    animation: changeText 0.3s 1 alternate ease-in-out;
     color: #fffcf2; 
 }
 
@@ -1002,7 +1009,7 @@ div.conArc {
 #fc > h3:hover + #fcHoverBox {
     width: 12rem;
     background-color: #303030;
-    animation: growHoverBox 1s 1 alternate ease-in-out;
+    animation: growHoverBox 0.3s 1 alternate ease-in-out;
 }
 
 #fc > p {
