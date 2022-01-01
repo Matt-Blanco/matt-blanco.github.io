@@ -61,7 +61,7 @@ function arcTween(d, new_score) {
 };
 
 con4Svg.on("click", function() { 
-  window.open("https://www.instagram.com/matthew_blanco"); 
+  window.open("https://www.instagram.com/mattblancofilm"); 
 });
 
 con4Svg.on("mouseover", function() {

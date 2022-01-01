@@ -1,6 +1,7 @@
-var aboutSvg = d3.select("body").append("svg")
-.attr("width", window.innerWidth)
-.attr("height", 1000);
+var aboutSvg = d3.select(".container").append("svg")
+.attr("width", "100%")
+.attr("height", 1000)
+.attr("id", "aboutSvg");
 
 // Red Square
 aboutSvg.append("rect")
