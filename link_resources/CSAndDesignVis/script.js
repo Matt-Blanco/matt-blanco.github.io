@@ -119,8 +119,6 @@ function parseData(str) {
 
 let uistData = parseData(uistCsv);
 let drsData = parseData(drsCsv);
-console.log(drsData)
-
 
 let width = 1500;
 let height = 1000;
@@ -142,15 +140,15 @@ let csScale = d3.scaleLinear()
 
 let yScale = d3.scaleLinear()
     .domain([0, 2550])
-    .range([1, 0]);
+    .range([0.96, 0]);
 
 let xAxis = svg.append('line')
     .style("stroke", "black")
     .style("stroke-width", 2)
     .attr("x1", 0)
-    .attr("y1", "96%")
+    .attr("y1", "3%")
     .attr("x2", "100%")
-    .attr("y2", "96%");
+    .attr("y2", "3%");
 
 let dataText = svg.append("text")
     .attr("fill", "black")
@@ -164,61 +162,64 @@ let titleText = svg.append("text")
     .attr("class", "titleText")
     .text("UIST 2021 x DRS 2020")
     .attr("x", "0%")
+    .attr("y", "2%")
+    .attr("id", "title");
+
+let csLegend = svg.append("circle")
+    .attr("fill", "red")
+    .attr("r", 6)
+    .attr("cx", "30%")
+    .attr("cy", "1.2%")
+
+let csLegendTitle = svg.append("text")
+    .attr("fill", "black")
+    .text("CS Data")
+    .attr("x", "31%")
     .attr("y", "2%");
+
+let designLegend = svg.append("circle")
+    .attr("fill", "blue")
+    .attr("r", 6)
+    .attr("cx", "40%")
+    .attr("cy", "1.2%")
+
+let designLegendTitle = svg.append("text")
+    .attr("fill", "black")
+    .text("Design data")
+    .attr("x", "41%")
+    .attr("y", "2%");
+
+let yAxisTitle = svg.append("text")
+    .attr("fill", "black")
+    .text("Word Frequency")
+    .attr("y", "2%")
+    .attr("x", "-30%")
+    .attr("transform", "rotate(-90)");
+
+let xAxisTitle = svg.append("text")
+    .attr("fill", "black")
+    .text("Design Co-Occurrences")
+    .attr("y", "95%")
+    .attr("x", "45%");
 
 function addDataNodes(data, color, scale) {
     svg.selectAll(".svg-content")
-    .data(data)
-    .enter()
-    .append("circle")
-    .attr("cx", (d) => {
-        let sum = parseInt(d.nOne) + parseInt(d.nThree) + parseInt(d.nFive) + parseInt(d.nTen) + parseInt(d.nFifteen) + parseInt(d.nTwenty);
-        console.log(d.Word + " " + (drsScale(sum) * 100) + "%")
-        return (scale(sum) * 100) + "%"
-    })
-    .attr("cy", (d) => {
-        return (yScale(d.wordOccurrence) * 100) + "%";
-    })
-    .attr("r", 6)
-    .attr("fill", color)
-    .on("click", (d) => {
-        console.log(d.Word)
-    });
+        .data(data)
+        .enter()
+        .append("circle")
+        .attr("cx", (d) => {
+            let sum = parseInt(d.nOne) + parseInt(d.nThree) + parseInt(d.nFive) + parseInt(d.nTen) + parseInt(d.nFifteen) + parseInt(d.nTwenty);
+            return (scale(sum) * 100) + "%"
+        })
+        .attr("cy", (d) => {
+            return (yScale(d.wordOccurrence) * 100) + "%";
+        })
+        .attr("r", 6)
+        .attr("fill", color)
+        .on("click", (d) => {
+            console.log(d.Word)
+        });
 }
 
 addDataNodes(drsData, "blue", drsScale);
 addDataNodes(uistData, "red", csScale)
-
-// let Drscircles = svg.selectAll(".svg-content")
-//     .data(drsData)
-//     .enter()
-//     .append("circle")
-//     .attr("cx", (d) => {
-//         let sum = parseInt(d.nOne) + parseInt(d.nThree) + parseInt(d.nFive) + parseInt(d.nTen) + parseInt(d.nFifteen) + parseInt(d.nTwenty);
-//         console.log(d.Word + " " + (drsScale(sum) * 100) + "%")
-//         return (drsScale(sum) * 100) + "%"
-//     })
-//     .attr("cy", (d) => {
-//         return (yScale(d.wordOccurrence) * 100) + "%";
-//     })
-//     .attr("r", 5)
-//     .attr("fill", "blue")
-//     .on("click", (d) => {
-//         console.log(d.Word)
-//     });
-
-// let Cscircles = svg.selectAll(".svg-content")
-//     .data(uistData)
-//     .enter()
-//     .append("circle")
-//     .attr("cx", (d) => {
-//         let sum = parseInt(d.nOne) + parseInt(d.nThree) + parseInt(d.nFive) + parseInt(d.nTen) + parseInt(d.nFifteen) + parseInt(d.nTwenty);
-//         console.log(d.Word + " " + sum)
-//         return (csScale(sum) * 100) + "%"
-//     })
-//     .attr("cy", (d) => {
-//         return (yScale(d.wordOccurrence) * 100) + "%"
-//     })
-//     .attr("r", 5)
-//     .attr("fill", "red");//"#8232df");
-
