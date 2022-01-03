@@ -199,8 +199,20 @@ let yAxisTitle = svg.append("text")
 let xAxisTitle = svg.append("text")
     .attr("fill", "black")
     .text("Design Co-Occurrences")
-    .attr("y", "95%")
+    .attr("y", "99%")
     .attr("x", "45%");
+
+svg.append("text")
+    .attr("fill", "black")
+    .text("0")
+    .attr("y", "99%")
+    .attr("x", "99%");
+
+svg.append("text")
+    .attr("fill", "black")
+    .text("0")
+    .attr("y", "99%")
+    .attr("x", "0%");
 
 function addDataNodes(data, color, scale) {
     svg.selectAll(".svg-content")
