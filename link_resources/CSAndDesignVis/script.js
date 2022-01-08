@@ -117,34 +117,34 @@ function parseData(str) {
     return jsonObj
 }
 
-let uistData = parseData(uistCsv);
-let drsData = parseData(drsCsv);
+let dataSet1 = parseData(uistCsv);
+let dataSet2 = parseData(drsCsv);
 
-let width = 1500;
-let height = 1000;
+let WIDTH = 1400;
+let HEIGHT = 750;
 
 let svg = d3.select("body")
     .append("svg")
     .attr("preserveAspectRatio", "xMinYMin meet")
-    .attr("width", "90%")
-    .attr("height", "98%")
+    .attr("width", WIDTH)//"90%")
+    .attr("height", HEIGHT)//"98%")
     .classed("svg-content", true);
 
-let drsScale = d3.scaleLinear()
-    .domain([0, 500])
-    .range([1, 0.5]);
+let rightScale = d3.scaleLinear()
+    .domain([0, 800])
+    .range([WIDTH, WIDTH / 2]);
 
-let csScale = d3.scaleLinear()
-    .domain([0, 200])
-    .range([0, 0.5]);
+let leftScale = d3.scaleLinear()
+    .domain([0, 110])
+    .range([0, WIDTH / 2]);
 
 let yScale = d3.scaleLinear()
     .domain([0, 2550])
-    .range([0.96, 0]);
+    .range([HEIGHT, 0]);
 
 let xAxis = svg.append('line')
     .style("stroke", "black")
-    .style("stroke-width", 2)
+    .style("stroke-WIDTH", 2)
     .attr("x1", 0)
     .attr("y1", "3%")
     .attr("x2", "100%")
@@ -200,7 +200,7 @@ let xAxisTitle = svg.append("text")
     .attr("fill", "black")
     .text("Design Co-Occurrences")
     .attr("y", "99%")
-    .attr("x", "45%");
+    .attr("x", "42%");
 
 svg.append("text")
     .attr("fill", "black")
@@ -214,24 +214,88 @@ svg.append("text")
     .attr("y", "99%")
     .attr("x", "0%");
 
+let defs = svg.append("defs");
+let gradient = defs.append("linearGradient")
+    .attr("id", "svgGradient")
+    .attr("x1", "0%")
+    .attr("x2", "100%")
+    .attr("y1", "25%")
+    .attr("y2", "100%");
+gradient.append("stop")
+    .attr('class', 'start')
+    .attr("offset", "0%")
+    .attr("stop-color", "red")
+    .attr("stop-opacity", 1);
+gradient.append("stop")
+    .attr('class', 'end')
+    .attr("offset", "100%")
+    .attr("stop-color", "blue")
+    .attr("stop-opacity", 1);
+
+function sumCoOccurrence(d, scale) {
+    let sum = parseInt(d.nOne) + parseInt(d.nThree) + parseInt(d.nFive) + parseInt(d.nTen) + parseInt(d.nFifteen) + parseInt(d.nTwenty);
+    return (scale(sum))// * 100) + "%"
+}
+
 function addDataNodes(data, color, scale) {
     svg.selectAll(".svg-content")
         .data(data)
         .enter()
         .append("circle")
         .attr("cx", (d) => {
-            let sum = parseInt(d.nOne) + parseInt(d.nThree) + parseInt(d.nFive) + parseInt(d.nTen) + parseInt(d.nFifteen) + parseInt(d.nTwenty);
-            return (scale(sum) * 100) + "%"
+            return sumCoOccurrence(d, scale);
         })
         .attr("cy", (d) => {
-            return (yScale(d.wordOccurrence) * 100) + "%";
+            return (yScale(d.wordOccurrence))// * 100) + "%";
         })
         .attr("r", 6)
         .attr("fill", color)
         .on("click", (d) => {
+            let y2 = yScale(d.wordOccurrence) + 50 > HEIGHT ? yScale(d.wordOccurrence) - 50 : yScale(d.wordOccurrence) - 50;
+            console.log(yScale(d.wordOccurrence))
+            console.log(y2)
             console.log(d.Word)
         });
 }
 
-addDataNodes(drsData, "blue", drsScale);
-addDataNodes(uistData, "red", csScale)
+function drawLines() {
+    let commonWords = dataSet1.filter((el) => { return dataSet2.some(data => { return (data.Word === el.Word) }) }).map(el => { return el.Word })
+
+    function getPoints(word) {
+        let startData = dataSet1.find(el => { return el.Word === word });
+        let endData = dataSet2.find(el => { return el.Word === word });
+        let startX = sumCoOccurrence(startData, leftScale);
+        let startY = yScale(startData.wordOccurrence);
+        let endX = sumCoOccurrence(endData, rightScale);
+        let endY = yScale(endData.wordOccurrence);
+        let y2 = yScale(startData.wordOccurrence) + 50 > HEIGHT ? yScale(startData.wordOccurrence) - 50 : yScale(startData.wordOccurrence) + 50;
+        let y3 = yScale(endData.wordOccurrence) + 50 > HEIGHT ? yScale(endData.wordOccurrence) + (HEIGHT - yScale(endData.wordOccurrence)) : yScale(endData.wordOccurrence) - 50;
+
+        return [[startX, startY], [startX + 200, y2], [endX - 200, y3], [endX, endY]]
+    }
+
+    let bezierLine = d3.line()
+        .x(function (d) {
+            return d[0];
+        })
+        .y(function (d) {
+            return d[1];
+        })
+        .curve(d3.curveBasis);
+
+    svg.selectAll(".svg-content")
+        .data(commonWords)
+        .enter()
+        .append('path')
+        .attr("d", (d) => {
+            return bezierLine(getPoints(d))
+        })
+        .attr("stroke", "url(#svgGradient)")
+        .attr("stroke-WIDTH", 2)
+        .attr("fill", "none")
+        .attr("opacity", "50%");
+}
+
+drawLines();
+addDataNodes(dataSet2, "blue", rightScale);
+addDataNodes(dataSet1, "red", leftScale);
