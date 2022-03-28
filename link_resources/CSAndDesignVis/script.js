@@ -274,48 +274,52 @@ gradient.append("stop")
 
 function addDataNodes(data, color, scale) {
     svg.selectAll(".svg-content")
-    .data(data)
-    .enter()
-    .append("circle")
-    .attr("cx", (d) => {
-        return sumCoOccurrence(d, scale);
-    })
-    .attr("cy", (d) => {
-        return (yScale(d.wordOccurrence))
-    })
-    .attr("r", 6)
-    .attr("fill", color)
-    .attr("class", (d) => { return `${d.Word}Node dataNode` })
-    .on("mouseover", (d) => {
-        svg.selectAll(`.${d.Word}Text`).attr("opacity", 1)
-        svg.selectAll(`.dataNode`).attr("opacity", 0.25)
-        svg.selectAll(`.dataNode`).attr("opacity", 0.25)
-        svg.selectAll(`.${d.Word}Node`).attr("opacity", 1)
-        svg.selectAll(`.bezierLine`).attr("opacity", 0.25)
-        svg.select(`.${d.Word}Line`).attr("opacity", 1)
-    })
-    .on("mouseout", (d) => {
-        svg.selectAll(`.${d.Word}Text`).attr("opacity", 0)
-        svg.selectAll(`.dataNode`).attr("opacity", 1)
-        svg.selectAll(`.bezierLine`).attr("opacity", 0.5)
-    });
+        .data(data)
+        .enter()
+        .append("circle")
+        .attr("cx", (d) => {
+            return sumCoOccurrence(d, scale);
+        })
+        .attr("cy", (d) => {
+            return (yScale(d.wordOccurrence))
+        })
+        .attr("r", 6)
+        .attr("fill", color)
+        .attr("class", (d) => { return `${d.Word}Node dataNode ${color}Node` })
+        .on("mouseover", (d) => {
+            svg.selectAll(`.${d.Word}Text`).attr("opacity", 1)
+            svg.selectAll(`.dataNode`).attr("opacity", 0.25)
+            svg.selectAll(`.dataNode`).attr("opacity", 0.25)
+            svg.selectAll(`.${d.Word}Node`).attr("opacity", 1)
+            svg.selectAll(`.bezierLine`).attr("opacity", 0.25)
+            svg.select(`.${d.Word}Line`).attr("opacity", 1)
+        })
+        .on("mouseout", (d) => {
+            svg.selectAll(`.${d.Word}Text`).attr("opacity", 0)
+            svg.selectAll(`.dataNode`).attr("opacity", 1)
+            svg.selectAll(`.bezierLine`).attr("opacity", 0.5)
+        });
 
-    svg.selectAll(".svg-content")
-    .data(data)
-    .enter()
-    .append("text")
-    .text((d) => { 
-        let sum = parseInt(d.nOne) + parseInt(d.nThree) + parseInt(d.nFive) + parseInt(d.nTen) + parseInt(d.nFifteen) + parseInt(d.nTwenty)
-        return `${d.Word} (${sum})`
-     })
-    .attr("x", (d) => {
-        return sumCoOccurrence(d, scale) - 40;
-    })
-    .attr("y", (d) => {
-        return (yScale(d.wordOccurrence) - 10)
-    })
-    .attr("opacity", 0)
-    .attr("class", (d) => { return `${d.Word}Text` })
+
+    for (let i = 0; i < 3; i++) {
+        svg.selectAll(".svg-content")
+        .data(data)
+        .enter()
+        .append("text")
+        .text((d) => {
+            let coOccurrenceSum = parseInt(d.nOne) + parseInt(d.nThree) + parseInt(d.nFive) + parseInt(d.nTen) + parseInt(d.nFifteen) + parseInt(d.nTwenty)
+            let textLines = [`Co-Occurrences - ${coOccurrenceSum}`, `Frequency - ${d.wordOccurrence}`, `${d.Word}:`]
+            return textLines[i]
+        })
+        .attr("x", (d) => {
+            return (sumCoOccurrence(d, scale) - 40);
+        })
+        .attr("y", (d) => {
+            return (yScale(d.wordOccurrence) - (10 + (i * 14)))
+        })
+        .attr("opacity", 0)
+        .attr("class", (d) => { return `${d.Word}Text`})
+    }
 }
 
 function drawLines() {
@@ -350,7 +354,7 @@ function drawLines() {
         .attr("d", (d) => {
             return bezierLine(getPoints(d))
         })
-        .attr("class", (d) => {return `${d}Line bezierLine`})
+        .attr("class", (d) => { return `${d}Line bezierLine` })
         .attr("stroke", "url(#svgGradient)")
         .attr("stroke-WIDTH", 2)
         .attr("fill", "none")
