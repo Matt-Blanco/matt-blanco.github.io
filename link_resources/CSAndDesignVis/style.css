@@ -24,3 +24,13 @@
     font-family: 'Franklin Gothic Medium';
     font-size: 100%;
 }
+
+.wordNode {
+    z-index: -3;
+    position: absolute;
+}
+
+.wordText {
+    z-index: 1;
+    position: absolute;
+}
