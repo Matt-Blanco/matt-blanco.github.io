@@ -1,9 +1,10 @@
-import './App.css';
+import { Link } from 'react-router-dom';
 import './style.css'
 
 function App() {
+
   return (
-    <body>
+    <div id="Body">
       <div id="MainHeader">
         <div id="title">
           <h1 id="hey">Hey I'm Matt</h1>
@@ -14,13 +15,29 @@ function App() {
             If any of this seems cool to you feel free to drop a line I'm always up for a chat!
           </p>
           <div id="QuickLinks">
-            <a class="link" id="email" href="mattmblanco@gmail.com"> email </a>
-            <a class="link" id="github" href="https://github.com/Matt-Blanco"> github </a>
-            <a class="link" id="linkedIn" href="https://www.linkedin.com/in/mattblanco/"> linkedIn </a>
+            <a className="link" id="email" href="mattmblanco@gmail.com"> email </a>
+            <a className="link" id="github" href="https://github.com/Matt-Blanco"> github </a>
+            <a className="link" id="linkedIn" href="https://www.linkedin.com/in/mattblanco/"> linkedIn </a>
           </div>
         </div>
       </div>
-    </body>
+      <div id="Navigation">
+        <ul>
+          <li className="NavLink">
+            <Link to="/Test">About</Link>
+          </li>
+          <li className="NavLink">
+            <Link to="/Test">Projects</Link>
+          </li>
+          <li className="NavLink">
+            <Link to="/Test">Photography</Link>
+          </li>
+          <li className="NavLink">
+            <Link to="/Test">CV</Link>
+          </li>
+        </ul>
+      </div>
+    </div>
   );
 }
 
