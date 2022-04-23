@@ -1,0 +1,212 @@
+/*
+============================================================================================
+=========================  Styling for Main Sections =======================================
+============================================================================================ 
+*/
+
+body {
+  overflow-x: hidden;
+  /* overflow-y: hidden; */
+}
+
+#MainHeader {
+  padding-left: 5%;
+  margin-top: 5%;
+}
+
+#hey {
+  font-family: 'Didot';
+  font-style: italic;
+  font-weight: 700;
+  color: #FFBE07;
+  font-size: 100pt;
+  position: relative;
+  line-height: 85%;
+}
+
+#myShape {
+  position: relative;
+  overflow: auto;
+  margin-top: -32%;
+  margin-left: -25%;
+  transform: scale(0.75);
+}
+
+.myPic {
+  position: absolute;
+  fill: url(#pattern);
+}
+
+#me { 
+  position: absolute;
+  width: 30%;
+  clip-path: url("#meClipPath");
+}
+
+#about {
+  margin-top: -3%;
+  position: relative;
+}
+
+#aboutText{
+  width: 30vw;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 100;
+  font-size: 15pt;
+}
+
+#QuickLinks {
+  width: 30vw;
+}
+
+.link {
+  position: relative;
+  font-family: 'Didot';
+  font-style: italic;
+  color: black;
+  font-weight: 700;
+  font-size: 16pt;
+  margin-right: 1vw;
+}
+
+.link:hover {
+  color: #FFBE07;
+}
+
+#sections {
+  position: relative;
+  padding-top: 20%;
+}
+
+.sectionTitle {
+  font-family: 'Didot';
+  color: #FFBE07;
+  z-index: 0;
+  font-size: 35pt;
+  z-index: 5;
+  font-style: italic;
+}
+
+#designSection {
+  overflow: auto;
+  margin-left: 42%;
+  transform: scale(0.9);
+  padding-top: 5%
+}
+
+#bus {
+  position: absolute;
+  clip-path: url("#busClipPath");
+  z-index: 3;
+}
+
+#designTitle {
+  text-decoration: none;
+  position: absolute;
+  margin-left: 22%;
+  margin-top: 5%;
+}
+
+#designTitle:hover + #bus {
+  margin-top: -5%;
+}
+
+#csSection {
+  overflow: auto;
+  margin-top: -45%;
+  padding-top: 5%;
+  margin-left: 55%;
+  transform: scale(0.9);
+  overflow-y: hidden;
+}
+
+#csTitle {
+  text-decoration: none;
+  position: absolute;
+  margin-top: 8%;
+}
+
+#csTitle:hover + #field {
+  margin-top: -5%;
+}
+
+#field { 
+  position: absolute;
+  width: 65%;
+  clip-path: url("#fieldClipPath");
+  z-index: 3;
+}
+
+#csTitle {
+  position: absolute;
+  margin-left: 22%;
+  text-align: center;
+}
+
+#photoSection {
+  overflow: auto;
+  height: 20rem;
+  margin-top: -5%;
+  padding-top: 5%;
+  margin-left: 70%;
+  transform: scale(0.9);
+  overflow-y: hidden;
+}
+
+#photoTitle {
+  text-decoration: none;
+}
+
+#photoTitle:hover + #snell {
+  margin-top: -5%;
+}
+
+#snell { 
+  position: absolute;
+  width: 100%;
+  clip-path: url("#snellClipPath");
+  z-index: 3;
+}
+
+#photoTitle {
+  position: absolute;
+  margin-left: 20%;
+  margin-top: 20%;
+  text-align: center;
+  /* color: white; */
+}
+
+
+/* @media screen and (max-width: 500px) {
+  #bckgLine {
+    opacity: 0.75;
+    position: absolute;
+    margin-top: 50%;
+    transform: scale(3.0);
+  }
+
+  #title {
+    position: absolute;
+    padding-left: 5%;
+    margin-top: 5%;
+  }
+  
+  #hey {
+    font-family: 'Didot';
+    font-style: italic;
+    font-weight: 700;
+    color: #FFBE07;
+    font-size: 150pt;
+    position: relative;
+    line-height: 85%;
+  }
+  
+  #myShape {
+    position: relative;
+    overflow: auto;
+    margin-top: -70%;
+    margin-left: -25%;
+    transform: scale(0.75);
+  }
+
+} */
