@@ -6,7 +6,14 @@
 
 html {
   min-height: 100%;
+  overflow-x: hidden;
+  /* overflow-y: hidden;  */
+}
+
+main {
+  display: hidden;
   overflow-y: hidden;
+  overflow-x: hidden;
 }
 
 #Body {
@@ -15,7 +22,7 @@ html {
 }
 
 #root {
-  height: 100vh;
+  height: 90vh;
   width: 100vw;
 }
 
@@ -72,6 +79,7 @@ html {
   float: right;
   z-index: 3;
   margin-right: 1%;
+  position: sticky;
 }
 
 .NavLink {
@@ -110,6 +118,10 @@ html {
 
 #AboutMe {
   margin-top: 5%;
+  position: absolute;
+  width: 99.5%;
+  overflow-y: hidden;
+  overflow-x: hidden;
 }
 
 #Info {
@@ -155,4 +167,86 @@ html {
   position: relative;
   margin-top: -100vh;
   margin-left: -60vw;
+}
+
+/*
+============================================================================================
+=========================  Styling for Projects  =======================================
+============================================================================================ 
+*/
+
+#Projects {
+  margin-top: 5%;
+  position: absolute;
+  width: 99.5%;
+}
+
+#ProjectsTitle {
+  font-family: 'Didot';
+  font-style: italic;
+  font-weight: 700;
+  color: #FFBE07;
+  font-size: 8em;
+  text-align: center;
+  margin-top: -2%;
+  margin-bottom: -0.5%;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+.cards-container {
+  border-radius: 6px;
+  color: #333;
+  padding: 1rem;
+  overflow-x: auto;
+  position: relative;
+  text-align: center;
+}
+
+.card {
+  width: 30%;
+  display: inline-block;
+  height: 60vh;
+  /* box-shadow: 0 1px 1rem -4px #000; */
+  background: rgba(255, 255, 255, .9);
+  border-width: 3px;
+  border-style: solid;
+  border-color: #FFBE07;
+  margin: 1rem;
+  overflow: hidden;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 250ms ease-in-out;
+}
+
+.card>img {
+  /* width: 250px; */
+  height: 250px;
+  margin-top: 5%;
+  object-fit: center;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+}
+
+.card-content {
+  padding: 1rem;
+}
+
+@media screen and (max-width: 625px) {
+  .container {
+    width: 100%
+  }
+
+  .cards-container {
+    padding: .5rem;
+  }
+
+  .card {
+    margin: .5rem;
+  }
 }

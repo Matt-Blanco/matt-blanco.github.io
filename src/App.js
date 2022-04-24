@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import Background from './Background';
 import Navigation from './Navigation';
 import './style.css'

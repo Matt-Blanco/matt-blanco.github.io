@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import App from './App';
 import {
   BrowserRouter,
@@ -8,8 +7,9 @@ import {
   Route,
 } from "react-router-dom";
 import reportWebVitals from './reportWebVitals';
-import Test from './Test';
+import CV from './CV';
 import About from './About';
+import Projects from './Projects';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -17,8 +17,9 @@ root.render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />} />
-        <Route path="/Test" element={<Test />} />
+        <Route path="/CV" element={<CV />} />
         <Route path="/About" element={<About />} />
+        <Route path="/Projects" element={<Projects />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
