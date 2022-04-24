@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import Background from './Background';
+import Navigation from './Navigation';
 import './style.css'
 
 function App() {
@@ -22,22 +23,7 @@ function App() {
           </div>
         </div>
       </div>
-      <div id="Navigation">
-        <ul>
-        <li className="NavLink">
-            <Link to="/">Home</Link>
-          </li>
-          <li className="NavLink">
-            <Link to="/Test">About</Link>
-          </li>
-          <li className="NavLink">
-            <Link to="/Test">Projects</Link>
-          </li>
-          <li className="NavLink">
-            <Link to="/Test">CV</Link>
-          </li>
-        </ul>
-      </div>
+      <Navigation />
       <Background />
     </div>
   );
