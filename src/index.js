@@ -7,7 +7,6 @@ import {
   Route,
 } from "react-router-dom";
 import reportWebVitals from './reportWebVitals';
-import CV from './CV';
 import About from './About';
 import Projects from './Projects';
 
@@ -17,7 +16,6 @@ root.render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />} />
-        <Route path="/CV" element={<CV />} />
         <Route path="/About" element={<About />} />
         <Route path="/Projects" element={<Projects />} />
       </Routes>

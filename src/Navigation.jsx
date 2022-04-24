@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import resume from "./data/Resume.pdf"
 
 export default function Navigation() {
     return (
@@ -14,7 +15,7 @@ export default function Navigation() {
                     <Link to="/Projects">Projects</Link>
                 </li>
                 <li className="NavLink">
-                    <Link to="/CV">CV</Link>
+                    <a target="_blank" href={resume}>CV</a>
                 </li>
             </ul>
         </div>
