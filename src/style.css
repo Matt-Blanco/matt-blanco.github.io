@@ -1,0 +1,252 @@
+/*
+============================================================================================
+=========================  Styling for Homepage  =======================================
+============================================================================================ 
+*/
+
+html {
+  min-height: 100%;
+  overflow-x: hidden;
+  /* overflow-y: hidden;  */
+}
+
+main {
+  display: hidden;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+#Body {
+  position: absolute;
+  margin-top: 5%;
+}
+
+#root {
+  height: 90vh;
+  width: 100vw;
+}
+
+#MainHeader {
+  margin-left: 5%;
+  margin-top: -5%;
+  width: 80%;
+  z-index: 1;
+}
+
+#hey {
+  font-family: 'Didot';
+  font-style: italic;
+  font-weight: 700;
+  color: #FFBE07;
+  font-size: 8em;
+  position: relative;
+  line-height: 85%;
+}
+
+#about {
+  width: 30%;
+  margin-top: -3%;
+  position: relative;
+}
+
+#aboutText {
+  font-weight: 300;
+  font-size: 1.25em;
+  font-family: 'Segoe UI';
+}
+
+#QuickLinks {
+  width: 40vw;
+}
+
+.link {
+  position: relative;
+  font-family: 'Didot';
+  font-style: italic;
+  color: black;
+  font-weight: 500;
+  font-size: 1.5em;
+  margin-right: 1vw;
+}
+
+.link:hover {
+  color: #FFBE07;
+}
+
+#Navigation {
+  width: 5vw;
+  height: 25vh;
+  float: right;
+  z-index: 3;
+  margin-right: 1%;
+  position: sticky;
+}
+
+.NavLink {
+  float: right;
+  list-style-type: none;
+  margin-bottom: 15%;
+}
+
+.NavLink>a {
+  color: #FFBE07;
+  font-family: 'Didot';
+  font-style: italic;
+  font-weight: 700;
+  font-size: 1.5em;
+}
+
+.NavLink>a:hover {
+  color: black;
+}
+
+.react-p5 {
+  height: 100vh;
+  width: 100vw;
+  display: block;
+  position: fixed;
+  z-index: -3;
+  top: 0vh;
+  opacity: 75%;
+}
+
+/*
+============================================================================================
+=========================  Styling for About  =======================================
+============================================================================================ 
+*/
+
+#AboutMe {
+  margin-top: 5%;
+  position: absolute;
+  width: 99.5%;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+#Info {
+  margin-left: 5%;
+  width: 80vw;
+  height: 45vh;
+}
+
+.AboutLink {
+  position: relative;
+  font-family: 'Didot';
+  font-style: italic;
+  color: black;
+  font-weight: 400;
+}
+
+.AboutLink:hover {
+  color: #FFBE07;
+}
+
+#BioText {
+  display: inline-block;
+  /* margin-left: -5%; */
+  margin-top: 5%;
+  width: 30vw;
+  font-family: 'Segoe UI';
+  font-weight: 55;
+  font-size: 1.5em;
+}
+
+
+#me {
+  width: 50vh;
+  clip-path: url("#meClipPath");
+}
+
+#clip {
+  width: 50vh;
+  float: left;
+}
+
+#myPic {
+  position: relative;
+  margin-top: -100vh;
+  margin-left: -60vw;
+}
+
+/*
+============================================================================================
+=========================  Styling for Projects  =======================================
+============================================================================================ 
+*/
+
+#Projects {
+  margin-top: 5%;
+  position: absolute;
+  width: 99.5%;
+}
+
+#ProjectsTitle {
+  font-family: 'Didot';
+  font-style: italic;
+  font-weight: 700;
+  color: #FFBE07;
+  font-size: 8em;
+  text-align: center;
+  margin-top: -2%;
+  margin-bottom: -0.5%;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+.cards-container {
+  border-radius: 6px;
+  color: #333;
+  padding: 1rem;
+  overflow-x: auto;
+  position: relative;
+  text-align: center;
+}
+
+.card {
+  width: 30%;
+  display: inline-block;
+  height: 60vh;
+  /* box-shadow: 0 1px 1rem -4px #000; */
+  background: rgba(255, 255, 255, .9);
+  border-width: 3px;
+  border-style: solid;
+  border-color: #FFBE07;
+  margin: 1rem;
+  overflow: hidden;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 250ms ease-in-out;
+}
+
+.card>img {
+  /* width: 250px; */
+  height: 250px;
+  margin-top: 5%;
+  object-fit: center;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+}
+
+.card-content {
+  padding: 1rem;
+}
+
+@media screen and (max-width: 625px) {
+  .container {
+    width: 100%
+  }
+
+  .cards-container {
+    padding: .5rem;
+  }
+
+  .card {
+    margin: .5rem;
+  }
+}
