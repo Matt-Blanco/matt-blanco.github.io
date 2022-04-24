@@ -1,62 +1,76 @@
 import React from "react";
 import Sketch from "react-p5";
 
+let circles = [{
+    x:  window.innerWidth / 2,
+    y: window.innerHeight / 2,
+    stepX: 0,
+    stepY: 0,
+    color: "#723D73",
+    strokeWeight: 9,
+    width: 300,
+    height: 300
+},
+{
+    x:  window.innerWidth / 2,
+    y: window.innerHeight / 2,
+    stepX: 0,
+    stepY: 0,
+    color: "#038C8C",
+    strokeWeight: 5,
+    width: 400,
+    height: 400
+},
+{
+    x:  window.innerWidth / 2,
+    y: window.innerHeight / 2,
+    stepX: 0,
+    stepY: 0,
+    color: "#E99379",
+    strokeWeight: 22,
+    width: 150,
+    height: 150
+}];
 let refreshCount = 0;
-let x = window.innerWidth / 2
-let y = window.innerHeight / 2;
-let stepX = 0;
-let stepY = 0;
-let bg2, bg3;
 let c4;
+const bg2 = "White";
 
 export default function Background(props) {
     const setup = (p5, canvasParentRef) => {
-        // use parent to render the canvas in this ref
-        // (without that p5 will render the canvas outside of your component)
         p5.createCanvas(window.innerWidth, window.innerHeight).parent(canvasParentRef);
-        // createCanvas(windowWidth, windowHeight);
         p5.noFill()
-        bg2 = "White"
-        bg3 = "#f0e3db"
 
         c4 = "#723D73" //darkpurple
-        p5.frameRate(30)
+        p5.frameRate(45)
     };
 
     const draw = (p5) => {
-        // p5.background("#f0e3db");
-            p5.background("White");
+            p5.background(bg2);
             if (refreshCount === 0 || refreshCount % 60 === 0) {
                 refreshCount = 0
-                // while (!(stepX + x >= width || stepX + x < 0) && 
-                //        !(stepY + y >= height || stepY + y < 0)) {
-                stepX = p5.random(25, 75) / 60 * p5.random([-1, 1]);
-                stepY = p5.random(25, 75) / 60 * p5.random([-1, 1]);
-                console.log(`${x} + ${y}`)
-                console.log(`${stepX} + ${stepY}`)
-                // }
+                circles.forEach(circle => {
+                    circle.stepX = p5.random(25, 75) / 60 * p5.random([-1, 1]);
+                    circle.stepY = p5.random(25, 75) / 60 * p5.random([-1, 1]);
+                })
             }
 
-            if (stepX + x < 0 || stepX + x > window.innerWidth) {
-                stepX *= -1
-            }
-            if (stepY + y < 0 || stepY + y > window.innerHeight) {
-                stepY *= -1
-            }
-
-            //ellipse7
-            p5.strokeWeight(9)
-            p5.stroke(c4)
-            x += stepX
-            y += stepY
-            p5.ellipse(x, y, 300, 300)
+            circles.forEach(circle => {
+                if (circle.stepX + circle.x < 0 || circle.stepX + circle.x > window.innerWidth) {
+                    circle.stepX *= -1
+                }
+                if (circle.stepY + circle.y < 0 || circle.stepY + circle.y > window.innerHeight) {
+                    circle.stepY *= -1
+                }  
+                p5.strokeWeight(circle.strokeWeight)
+                p5.stroke(circle.color)
+                circle.x += circle.stepX
+                circle.y += circle.stepY
+                p5.ellipse(circle.x, circle.y, circle.width, circle.height)
+            })
 
             p5.colorMode(p5.RGB)
 
-
             refreshCount += 1
-
     };
-
-    return <Sketch setup={setup} draw={draw} />;
+    return <Sketch aria="hidden" setup={setup} draw={draw} />;
 };

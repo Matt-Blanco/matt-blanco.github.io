@@ -88,8 +88,8 @@ body {
   float: right;
   position: sticky;
   position: absolute;
-  left: 85%;
-  margin-top: -40vh;
+  left: 88%;
+  margin-top: -25vh;
 }
 
 .NavLink {
@@ -113,6 +113,6 @@ body {
 .react-p5 {
   display: block;
   position: fixed;
-  margin-top: -30%;
+  margin-top: -25%;
   z-index: -3;
 }
