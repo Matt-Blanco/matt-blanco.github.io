@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import Background from './Background';
 import './style.css'
 
 function App() {
@@ -37,6 +38,7 @@ function App() {
           </li>
         </ul>
       </div>
+      <Background />
     </div>
   );
 }

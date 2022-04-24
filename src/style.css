@@ -87,8 +87,9 @@ body {
   height: 25vh;
   float: right;
   position: sticky;
-  margin-top: -15%;
-  margin-right: 2%;
+  position: absolute;
+  left: 85%;
+  margin-top: -40vh;
 }
 
 .NavLink {
@@ -107,4 +108,11 @@ body {
 
 .NavLink > a:hover {
   color: black;
+}
+
+.react-p5 {
+  display: block;
+  position: fixed;
+  margin-top: -30%;
+  z-index: -3;
 }
