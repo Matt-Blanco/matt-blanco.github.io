@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import Background from './Background';
 import Navigation from './Navigation';
 import './style.css'
@@ -7,6 +6,7 @@ function App() {
 
   return (
     <div id="Body">
+      <Navigation />
       <div id="MainHeader">
         <div id="title">
           <h1 id="hey">Hey, I'm Matt.</h1>
@@ -23,7 +23,6 @@ function App() {
           </div>
         </div>
       </div>
-      <Navigation />
       <Background />
     </div>
   );

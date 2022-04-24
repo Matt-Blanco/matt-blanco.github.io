@@ -9,6 +9,7 @@ import {
 } from "react-router-dom";
 import reportWebVitals from './reportWebVitals';
 import Test from './Test';
+import About from './About';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -16,7 +17,8 @@ root.render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />} />
-        <Route path="Test" element={<Test />} />
+        <Route path="/Test" element={<Test />} />
+        <Route path="/About" element={<About />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

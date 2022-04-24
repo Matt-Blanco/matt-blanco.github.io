@@ -6,21 +6,24 @@
 
 html {
   min-height: 100%;
+  overflow-y: hidden;
 }
 
-body {
-  height: 100vh;
+#Body {
+  position: absolute;
+  margin-top: 5%;
 }
 
 #root {
-  overflow-x: hidden;
-  height: 100%;
-    /* overflow-y: hidden; */
+  height: 100vh;
+  width: 100vw;
 }
 
 #MainHeader {
-  padding-left: 5%;
-  margin-top: 5%;
+  margin-left: 5%;
+  margin-top: -5%;
+  width: 80%;
+  z-index: 1;
 }
 
 #hey {
@@ -28,44 +31,25 @@ body {
   font-style: italic;
   font-weight: 700;
   color: #FFBE07;
-  font-size: 100pt;
+  font-size: 8em;
   position: relative;
   line-height: 85%;
 }
 
-#myShape {
-  position: relative;
-  overflow: auto;
-  margin-top: -32%;
-  margin-left: -25%;
-  transform: scale(0.75);
-}
-
-.myPic {
-  position: absolute;
-  fill: url(#pattern);
-}
-
-#me { 
-  position: absolute;
-  width: 30%;
-  clip-path: url("#meClipPath");
-}
-
 #about {
+  width: 30%;
   margin-top: -3%;
   position: relative;
 }
 
-#aboutText{
-  width: 30vw;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-weight: 100;
-  font-size: 15pt;
+#aboutText {
+  font-weight: 300;
+  font-size: 1.25em;
+  font-family: 'Segoe UI';
 }
 
 #QuickLinks {
-  width: 30vw;
+  width: 40vw;
 }
 
 .link {
@@ -73,8 +57,8 @@ body {
   font-family: 'Didot';
   font-style: italic;
   color: black;
-  font-weight: 700;
-  font-size: 16pt;
+  font-weight: 500;
+  font-size: 1.5em;
   margin-right: 1vw;
 }
 
@@ -83,13 +67,11 @@ body {
 }
 
 #Navigation {
-  width: 10vw;
+  width: 5vw;
   height: 25vh;
   float: right;
-  position: sticky;
-  position: absolute;
-  left: 88%;
-  margin-top: -25vh;
+  z-index: 3;
+  margin-right: 1%;
 }
 
 .NavLink {
@@ -98,21 +80,79 @@ body {
   margin-bottom: 15%;
 }
 
-.NavLink > a {
+.NavLink>a {
   color: #FFBE07;
   font-family: 'Didot';
   font-style: italic;
   font-weight: 700;
-  font-size: 20pt;
+  font-size: 1.5em;
 }
 
-.NavLink > a:hover {
+.NavLink>a:hover {
   color: black;
 }
 
 .react-p5 {
+  height: 100vh;
+  width: 100vw;
   display: block;
   position: fixed;
-  margin-top: -25%;
   z-index: -3;
+  top: 0vh;
+  opacity: 75%;
+}
+
+/*
+============================================================================================
+=========================  Styling for About  =======================================
+============================================================================================ 
+*/
+
+#AboutMe {
+  margin-top: 5%;
+}
+
+#Info {
+  margin-left: 5%;
+  width: 80vw;
+  height: 45vh;
+}
+
+.AboutLink {
+  position: relative;
+  font-family: 'Didot';
+  font-style: italic;
+  color: black;
+  font-weight: 400;
+}
+
+.AboutLink:hover {
+  color: #FFBE07;
+}
+
+#BioText {
+  display: inline-block;
+  /* margin-left: -5%; */
+  margin-top: 5%;
+  width: 30vw;
+  font-family: 'Segoe UI';
+  font-weight: 55;
+  font-size: 1.5em;
+}
+
+
+#me {
+  width: 50vh;
+  clip-path: url("#meClipPath");
+}
+
+#clip {
+  width: 50vh;
+  float: left;
+}
+
+#myPic {
+  position: relative;
+  margin-top: -100vh;
+  margin-left: -60vw;
 }

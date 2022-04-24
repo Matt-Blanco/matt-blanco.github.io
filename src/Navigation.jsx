@@ -8,7 +8,7 @@ export default function Navigation() {
                     <Link to="/">Home</Link>
                 </li>
                 <li className="NavLink">
-                    <Link to="/Test">About</Link>
+                    <Link to="/About">About</Link>
                 </li>
                 <li className="NavLink">
                     <Link to="/Test">Projects</Link>
