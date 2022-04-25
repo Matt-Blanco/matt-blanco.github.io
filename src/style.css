@@ -228,6 +228,7 @@ html {
 
   #Navigation {
     display: inline;
+    position: relative;
   }
 
   .NavLink {
