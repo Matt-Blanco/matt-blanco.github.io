@@ -1,8 +1,9 @@
 import React from "react";
 import Sketch from "react-p5";
 
-let width = window.screen.width;
-let height = window.screen.height;
+let width = window.screen.availWidth;
+let height = window.screen.availHeight;
+console.log(`${width} ${height}`)
 let circles = [{
     x: width / 2,
     y: height / 2,
@@ -64,13 +65,21 @@ export default function Background(props) {
     refreshCount = 0;
 
     const setup = (p5, canvasParentRef) => {
-        p5.createCanvas(width, height).parent(canvasParentRef);
+        p5.createCanvas(p5.windowWidth , p5.windowHeight).parent(canvasParentRef);
         p5.noFill()
 
         p5.frameRate(45)
     };
 
     const draw = (p5) => {
+
+
+        if (width !== p5.windowWidth || height !== p5.windowHeight) {
+            width = p5.windowWidth;
+            height = p5.windowHeight;
+            p5.resizeCanvas(width, height);
+        }
+
 
         p5.background(bg2);
         circles.forEach(circle => {
@@ -99,5 +108,5 @@ export default function Background(props) {
 
         refreshCount += 1
     };
-    return <Sketch aria="hidden" setup={setup} draw={draw} />;
+    return <Sketch setup={setup} draw={draw} />;
 };

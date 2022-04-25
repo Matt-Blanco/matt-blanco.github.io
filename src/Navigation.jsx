@@ -3,8 +3,7 @@ import resume from "./data/Resume.pdf"
 
 export default function Navigation() {
     return (
-        <div id="Navigation">
-            <ul>
+            <ul id="Navigation">
                 <li className="NavLink">
                     <Link to="/">Home</Link>
                 </li>
@@ -18,6 +17,5 @@ export default function Navigation() {
                     <a target="_blank" href={resume}>CV</a>
                 </li>
             </ul>
-        </div>
     )
 }
