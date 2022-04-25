@@ -30,7 +30,7 @@ export default function Projects() {
     },
     {
         title: "Excelsior 2022",
-        content: "Designed the cover and layout of Excelsior. The 2022 installation of Northeastern University Outing Club's premiere magazine recapping stories throughout the past two semesters.",
+        content: "Designed the cover and layout of Excelsior. The 2022 installation of Northeastern University Outing Club's magazine.",
         imgUrl: excelsiorImg,
         clickUrl: excelsiorImg
     },
