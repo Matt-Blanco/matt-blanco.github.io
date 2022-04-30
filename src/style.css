@@ -180,6 +180,7 @@ html {
 }
 
 .cards-container {
+  margin-top: 2rem;
   border-radius: 6px;
   color: #333;
   padding: 1rem;
@@ -260,6 +261,7 @@ html {
   }
 
   .cards-container {
+    margin-top: 2rem;
     padding: .5rem;
     display: grid;
   }
