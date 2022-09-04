@@ -1,5 +1,5 @@
 import Navigation from "./Navigation"
-import accessImg from "./data/ProjectImages/accessVis.png"
+import olliImg from "./data/ProjectImages/olli.png"
 import atlastImg from "./data/ProjectImages/atlas-logo.png"
 import designVisImg from "./data/ProjectImages/designAcrossTime.JPG"
 import excelsiorImg from "./data/ProjectImages/Excelsior2022Cover.png"
@@ -11,10 +11,10 @@ import Background from "./Background"
 export default function Projects() {
 
     const cards = [{
-        title: "Accessible Visualization Design",
-        content: "In collaboration with people with visual disabilities, we explore textual and screen reader modalities for representing data.",
-        imgUrl: accessImg,
-        clickUrl: "http://vis.csail.mit.edu/"
+        title: "Olli",
+        content: "A JavaScript library improving screen reader accessibility for data visualizations across the web. Using an adapter design pattern, any visualization framework can be extended for more accessible charts.",
+        imgUrl: olliImg,
+        clickUrl: "https://mitvis.github.io/olli/"
     },
     {
         title: "Design Across Disciplines",
