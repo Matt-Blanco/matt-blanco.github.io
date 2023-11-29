@@ -18,7 +18,7 @@ function App() {
           </div>
         <div id="about">
           <p id="aboutText">
-            I'm a designer and software engineer trying to make complex information easier for people to understand!
+            I'm a designer, developer, and adventurer trying to make complex information easier for people to understand!
             If this, or any of my past projects seems cool to you feel free to drop a line I'm always up for a chat!
           </p>
         </div>
