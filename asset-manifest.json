@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.4127cd23.css",
-    "main.js": "/static/js/main.dd7e1404.js",
+    "main.js": "/static/js/main.c445264a.js",
     "static/js/787.71e672d5.chunk.js": "/static/js/787.71e672d5.chunk.js",
     "static/media/Excelsior2022Cover.png": "/static/media/Excelsior2022Cover.46dff66cba5355daaa81.png",
     "static/media/hammock.png": "/static/media/hammock.b8e180b6f1315c481a56.png",
@@ -12,11 +12,11 @@
     "static/media/olli.png": "/static/media/olli.2e72305dcb2ac67cc4f1.png",
     "index.html": "/index.html",
     "main.4127cd23.css.map": "/static/css/main.4127cd23.css.map",
-    "main.dd7e1404.js.map": "/static/js/main.dd7e1404.js.map",
+    "main.c445264a.js.map": "/static/js/main.c445264a.js.map",
     "787.71e672d5.chunk.js.map": "/static/js/787.71e672d5.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4127cd23.css",
-    "static/js/main.dd7e1404.js"
+    "static/js/main.c445264a.js"
   ]
 }
