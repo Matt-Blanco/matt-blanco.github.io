@@ -13,8 +13,8 @@ function App() {
         </div>
         <div id="QuickLinks">
             <a className="link" target="_blank" id="email" href="mattmblanco@gmail.com"> email </a>
-            <a className="link" target="_blank" id="github" href="https://github.com/Matt-Blanco"> github </a>
-            <a className="link" target="_blank" id="linkedIn" href="https://www.linkedin.com/in/mattblanco/"> linkedIn </a>
+            <a className="link" target="_blank" id="github" href="https://github.com/Matt-Blanco" rel="noreferrer"> github </a>
+            <a className="link" target="_blank" id="linkedIn" href="https://www.linkedin.com/in/mattblanco/" rel="noreferrer"> linkedIn </a>
           </div>
         <div id="about">
           <p id="aboutText">
