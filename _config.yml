@@ -1,0 +1,26 @@
+# Build settings
+title: "Matt Blanco"
+baseurl: ""
+
+collections:
+  posts:
+    permalink: /blog/:year/:month/:day/:slug
+  projects:
+    permalink: /projects/:title
+    output: true
+
+markdown: kramdown
+theme: minima
+gems:
+  - jekyll-feed
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - content
+
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      layout: "default"
