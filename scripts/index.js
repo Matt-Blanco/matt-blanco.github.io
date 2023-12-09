@@ -2,13 +2,13 @@ import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
 
 const data = {
   nodes: [
-    {id: 'Design', group: 1, color: 'black'},
-    {id: 'Research', group: 2, color: 'black'},
-    {id: 'Computer Science', group: 3, color: 'black'},
-    {id: 'Photography', group: 4, color: 'black'},
-    {id: 'Adventure', group: 4, color: 'black'},
-    {id: 'About', group: 4, color: 'black'},
-    {id: '', group: 0, color: 'black'}
+    {id: 'Design', group: 1, color: 'black', page: 'about.html'},
+    {id: 'Research', group: 2, color: 'black', page: 'about.html'},
+    {id: 'Computer Science', group: 3, color: 'black', page: 'about.html'},
+    {id: 'Photography', group: 4, color: 'black', page: 'about.html'},
+    {id: 'Adventure', group: 4, color: 'black', page: 'about.html'},
+    {id: 'About', group: 4, color: 'black', page: 'about.html'},
+    {id: '', group: 0, color: 'black', page: 'about.html'}
   ],
   links: [
     {source: '', target: 'Design'},
@@ -109,13 +109,16 @@ function ForceGraph({
         .attr('class', 'node')
     
     const labels = svg.selectAll(".node")
-    .append('text')
+    .append('a')
       .attr('class', 'nodeText')
+      .attr('href', (d) => `${String(d.id).toLowerCase()}.html`)
+    .append('text')
       .attr("width", 40)
       .attr("height", 20)
       .attr("font-size", "1.3em")
       .attr("color", "black")
       .text((d) => d.id)
+      // .attr('href', d => d.page)
       .call(drag(simulation))
 
 
