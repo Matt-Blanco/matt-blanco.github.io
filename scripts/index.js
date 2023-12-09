@@ -2,18 +2,16 @@ import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
 
 const data = {
   nodes: [
-    {id: 'Design', group: 1, color: 'black', page: 'about.html'},
-    {id: 'Research', group: 2, color: 'black', page: 'about.html'},
-    {id: 'Computer Science', group: 3, color: 'black', page: 'about.html'},
-    {id: 'Photography', group: 4, color: 'black', page: 'about.html'},
+    {id: 'Research', group: 1, color: 'black', page: 'about.html'},
+    {id: 'Projects', group: 2, color: 'black', page: 'about.html'},
+    {id: 'Photography', group: 3, color: 'black', page: 'about.html'},
     {id: 'Adventure', group: 4, color: 'black', page: 'about.html'},
-    {id: 'About', group: 4, color: 'black', page: 'about.html'},
+    {id: 'About', group: 5, color: 'black', page: 'about.html'},
     {id: '', group: 0, color: 'black', page: 'about.html'}
   ],
   links: [
-    {source: '', target: 'Design'},
+    {source: '', target: 'Projects'},
     {source: '', target: 'Research'},
-    {source: '', target: 'Computer Science'},
     {source: '', target: 'Photography'},
     {source: '', target: 'About'},
     {source: '', target: 'Adventure'},

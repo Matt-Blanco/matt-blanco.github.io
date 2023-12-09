@@ -10,7 +10,6 @@ collections:
     output: true
 
 markdown: kramdown
-theme: minima
 gems:
   - jekyll-feed
 exclude:
