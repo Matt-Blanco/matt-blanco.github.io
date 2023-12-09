@@ -1,0 +1,11 @@
+<nav id="navbar" class="meta-text pb-1 w-100">
+  <ul class="nav navbar-expand-lg navbar-light ms-auto w-fit">
+    <li><a {% if page.active_section == 'home' %}class="nav-current nav-item"{% endif %} {% unless page.active_section == 'home' %} class="nav-item" href="{{ "/"  | prepend: site.baseurl }}"{% endunless %} title="Home">Home</a></li>
+    <li><a {% if page.active_section == 'research' %}class="nav-current nav-item"{% endif %} {% unless page.active_section == 'research' %} class="nav-item" href="{{ "/research"  | prepend: site.baseurl }}"{% endunless %} title="Research">Research</a></li>
+    <li><a {% if page.active_section == 'about' %}class="nav-current nav-item"{% endif %} {% unless page.active_section == 'bio' %} class="nav-item" href="{{ "/bio"  | prepend: site.baseurl }}"{% endunless %} title="Bio">Bio</a></li>
+    <li><a {% if page.active_section == 'cv' %}class="nav-current nav-item"{% endif %} {% unless page.active_section == 'cv' %} class="nav-item" href="{{ "/cv"  | prepend: site.baseurl }}"{% endunless %} title="CV">CV</a></li>
+    <li><a {% if page.active_section == 'projects' %}class="nav-current nav-item"{% endif %} {% unless page.active_section == 'projects' %} class="nav-item" href="{{ "/projects"  | prepend: site.baseurl }}"{% endunless %} {% if page.active_section == 'projects' %}{% unless page.url == '/projects.html' %}href="{{ "/projects"  | prepend: site.baseurl }}"{% endunless %}{% endif %} title="Projects">Projects</a></li>
+    <li><a {% if page.active_section == 'adventures' %}class="nav-current nav-item"{% endif %} {% unless page.active_section == 'adventures' %} class="nav-item" href="{{ "/adventures"  | prepend: site.baseurl }}"{% endunless %} title="Adventures">Adventures</a></li>
+    <li><a {% if page.active_section == 'photography' %}class="nav-current nav-item"{% endif %} {% unless page.active_section == 'photography' %} class="nav-item" href="{{ "/photography"  | prepend: site.baseurl }}"{% endunless %} title="Photography">Photography</a></li>
+  </ul>
+</nav>
