@@ -18,6 +18,12 @@ body {
   font-weight: 100;
   width: fit-content;
   font-style: normal;
+  
+}
+
+#title:hover {
+  color: black;
+  text-decoration: none;
 }
 
 #title:hover {
@@ -38,6 +44,10 @@ body {
 .nodeText:hover {
   text-decoration: underline;
   transition: 2s ease-in-out;
+}
+
+#homeTitle {
+  width: fit-content;
 }
 
 a {
