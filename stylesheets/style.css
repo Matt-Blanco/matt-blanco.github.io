@@ -23,10 +23,8 @@ body {
 
 #graph {
   position: absolute;
-  top: 20%;
+  top: 40vh;
   z-index: 3;
-  width: 95vw;
-  height: 75vh;
 }
 
 .nodeText {

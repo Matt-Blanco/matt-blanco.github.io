@@ -119,7 +119,6 @@ function ForceGraph({
       .text((d) => d.id)
       .call(drag(simulation))
 
-
   if (invalidation != null) invalidation.then(() => simulation.stop());
 
   function intern(value) {
@@ -173,8 +172,8 @@ const chart = ForceGraph(data, {
   nodeId: d => d.id,
   nodeGroup: d => d.group,
   nodeTitle: d => d.id,
-  width: document.getElementById('graph').clientWidth,
-  height: document.getElementById('graph').clientHeight,
+  // width: document.getElementsByTagName('body')[0].clientWidth,
+  // height: document.getElementsByTagName('body')[0].clientHeight,
 })
 
 document.getElementById('graph').append(chart)
