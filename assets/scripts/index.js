@@ -71,7 +71,7 @@ function ForceGraph({
   // Construct the forces.
   const forceNode = d3.forceManyBody();
   const forceLink = d3.forceLink(links).id(({index: i}) => N[i])
-    .distance(200);
+    .distance(150);
 
   const simulation = d3.forceSimulation(nodes)
       .force("link", forceLink)
@@ -173,8 +173,8 @@ const chart = ForceGraph(data, {
   nodeId: d => d.id,
   nodeGroup: d => d.group,
   nodeTitle: d => d.id,
-  width: document.getElementsByTagName('html')[0].clientWidth,
-  height: document.getElementsByTagName('html')[0].clientHeight,
+  width: document.getElementById('graph').clientWidth,
+  height: document.getElementById('graph').clientHeight,
 })
 
 document.getElementById('graph').append(chart)

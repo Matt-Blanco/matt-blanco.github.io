@@ -3,23 +3,19 @@ active_section: home
 layout: default
 ---
 
-<body>
-  <script type="module" src="{{ "/assets/scripts/index.js" | prepend: site.baseurl }}"></script>
-  <div id="info" class="row">
-    <div class="col-sm-8">
-      <h1 id="homeTitle">
-        <a id="title" class="link" href="about.html">
-          hey I'm matt.
-        </a> 
-      </h1>
-      <p id="about">
-        I'm is a designer, developer, & researcher who uses design as a lens to look at how people interact with information.
-        Currently I am wrapping up my undergraduate studies at Northeastern University where I'm a candidate for a BS. in Computer Science and Design
-        Currently I'm a researcher at the <a href="https://camd.northeastern.edu/center-for-design/">Center for Design</a>, and was affiliated with the <a target="_blank" className="AboutLink" href="http://vis.csail.mit.edu/">Visualization Group</a> at MIT CSAIL.
-      </p>
-    </div>
-  </div>
-  <div class="row">
-    <div id="graph"></div>
-  </div>
-</body>
+<script type="module" src="{{ "/assets/scripts/index.js" | prepend: site.baseurl }}"></script>
+<div id="info" class="row col-sm-8">
+  <a id="title" class="link" href="about.html">
+    <h1>
+      hey I'm matt.
+    </h1>
+  </a> 
+  <p id="about">
+    I'm is a designer, developer, & researcher who uses design as a lens to look at how people interact with information.
+    Currently I am wrapping up my undergraduate studies at Northeastern University where I'm a candidate for a BS. in Computer Science and Design
+    Currently I'm a researcher at the <a href="https://camd.northeastern.edu/center-for-design/">Center for Design</a>, and was affiliated with the <a target="_blank" className="AboutLink" href="http://vis.csail.mit.edu/">Visualization Group</a> at MIT CSAIL.
+  </p>
+</div>
+<div class="row">
+  <div id="graph"></div>
+</div>
