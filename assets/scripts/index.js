@@ -2,9 +2,9 @@ import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
 
 const data = {
   nodes: [
-    {id: 'Research', group: 1, color: 'black', page: 'about.html'},
+    {id: 'Research', group: 1, color: 'black', page: 'research.html'},
     {id: 'Projects', group: 2, color: 'black', page: 'about.html'},
-    {id: 'Photography', group: 3, color: 'black', page: 'about.html'},
+    {id: 'Photography', group: 3, color: 'black', page: 'https://blanco.darkroom.com/'},
     {id: 'Adventure', group: 4, color: 'black', page: 'about.html'},
     {id: 'About', group: 5, color: 'black', page: 'about.html'},
     {id: '', group: 0, color: 'black', page: 'about.html'}
@@ -50,6 +50,7 @@ function ForceGraph({
 } = {}) {
   // Compute values.
   const N = d3.map(nodes, nodeId).map(intern);
+  const pg = nodes.map(n => n.page)
   const LS = d3.map(links, linkSource).map(intern);
   const LT = d3.map(links, linkTarget).map(intern);
   if (nodeTitle === undefined) nodeTitle = (_, i) => N[i];
@@ -59,7 +60,7 @@ function ForceGraph({
   const L = typeof linkStroke !== "function" ? null : d3.map(links, linkStroke);
 
   // Replace the input nodes and links with mutable objects for the simulation.
-  nodes = d3.map(nodes, (_, i) => ({id: N[i]}));
+  nodes = d3.map(nodes, (_, i) => ({id: N[i], page: pg[i]}));
   links = d3.map(links, (_, i) => ({source: LS[i], target: LT[i]}));
 
   // Compute default domains.
@@ -109,14 +110,13 @@ function ForceGraph({
     const labels = svg.selectAll(".node")
     .append('a')
       .attr('class', 'nodeText')
-      .attr('href', (d) => `${String(d.id).toLowerCase()}.html`)
+      .attr('href', (d) => d.page)
     .append('text')
       .attr("width", 40)
       .attr("height", 20)
       .attr("font-size", "1.3em")
       .attr("color", "black")
       .text((d) => d.id)
-      // .attr('href', d => d.page)
       .call(drag(simulation))
 
 

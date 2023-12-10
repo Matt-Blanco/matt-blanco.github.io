@@ -43,13 +43,19 @@ body {
   width: fit-content;
 }
 
+p {
+  margin-bottom: 1rem;
+}
+
 a {
+  width: fit-content;
   text-decoration: none;
   font-style: italic;
-  color: black
+  color: black;
 }
 
 a:hover {
+  color: black;
   text-decoration: underline;
 }
 

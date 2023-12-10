@@ -1,0 +1,49 @@
+---
+active_section: research
+title: Research
+---
+
+<br/>
+<div class="research-container">
+  {% for research in site.data.research %}
+    {% assign loopindex = forloop.index | modulo: 2 %}
+    {% if loopindex == 1 %}
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="research">
+            <div class="research-info">
+              <a href="{{ research.paperLink }}">
+                <h4 class="research-title">
+                  {{ research.title }}
+                </h4>
+              </a>
+              <a href="{{ research.affLink }}">
+                <p>{{ research.affiliation }}</p>
+              </a>
+              <p>{{ research.abstract }}</p>
+            </div>
+          </div>
+        </div>
+    {% else %}
+        <div class="col-sm-6">
+          <div class="research">
+            <div class="research-info">
+              <a href="{{ research.paperLink }}">
+                <h4 class="research-title">
+                  {{ research.title }}
+                </h4>
+              </a>
+              <a href="{{ research.affLink }}">
+                <p>{{ research.affiliation }}</p>
+              </a>
+              <p>{{ research.abstract }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    {% endif %}
+  {% endfor %}
+</div>
+</div>
+
+<script src="/assets/scripts/research.js"></script>

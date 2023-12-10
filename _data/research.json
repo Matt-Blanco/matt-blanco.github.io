@@ -1,0 +1,23 @@
+[
+  {
+    "title": "Harnessing Information Visualization as a Vehicle for Translational Design",
+    "abstract": "Designers are often positioned as mediators or interpreters working between disciplines and stakeholders to frame and address problems. This quality is particularly desired when a product transitions from one implementation to another. Translational designers assist this process through critical activities such as navigating differing domain knowledge and balancing conflicting values or cultures between stakeholders. We argue that the primary outcome of translational design is not necessarily an artifact but the translation of knowledge across disciplines for decision-making. Our research explains and shows how information visualization can translate meaning within a group of experts seemingly familiar with the same topic and between a group of experts with differing expertise. In collaboration with <Industry Partner>, we present <Project Name>, an interactive information visualization that assists users with better understanding the distribution of activities and their associated risks across an organization to contribute to the developing literature on 'translational design practices.'",
+    "affiliation": "Center for Design",
+    "affLink": "https://camd.northeastern.edu/center-for-design/",
+    "paperLink": ""
+  },
+  {
+    "title": "Olli: An Extensible Visualization Library for Screen Reader Accessibility",
+    "abstract": "Though recent research has explored the design of rich screen reader visualization experiences, accessible visualizations for blind and low vision users remain rare on the web. While some visualization toolkits offer accessible solutions, toolkit-specific implementations can present idiosyncratic user experiences that limit learnability. We present Olli, an open source library that converts visualizations into a keyboard-navigable structure accessible to screen readers. Using an extensible adapter design pattern, Olli is agnostic to the specific toolkit used to author the visualization. Olli renders a chart as an accessible tree view following the HTML Accessible Rich Internet Applications (ARIA) standard. Olli helps visualization developers easily create accessible visualizations across visualization toolkits.",
+    "affiliation": "MIT Visualization Group",
+    "affLink": "https://vis.csail.mit.edu/",
+    "paperLink": "https://vis.csail.mit.edu/pubs/olli/"
+  },
+  {
+    "title": "Augur: Dynamic Taint Analysis for Asynchronous JavaScript",
+    "abstract": "Dynamic taint analysis (DTA) is a popular approach to help protect JavaScript applications against injection vulnerabilities. In 2016, the ECMAScript 7 JavaScript language standard introduced many language features that most existing DTA tools for JavaScript do not support, e.g., the async/await keywords for asynchronous programming. We present Augur, a high-performance dynamic taint analysis for ES7 JavaScript that leverages VM-supported instrumentation. Integrating directly with a public, stable instrumentation API gives Augur the ability to run with high performance inside the VM and remain resilient to language revisions. We extend the abstract-machine approach to DTA to handle asynchronous function calls. In addition to providing the classic DTA use case of injection vulnerability detection, Augur is highly configurable to support any type of taint analysis, making it useful outside of the security domain. We evaluated Augur on a set of 20 benchmarks, and observed a median runtime overhead of only 1.77 ×, a median performance improvement of 298% compared to the previous state-of-the-art.",
+    "affiliation": "Northeastern Programming Language Lab",
+    "affLink": "https://prl.khoury.northeastern.edu/",
+    "paperLink": "https://dl.acm.org/doi/10.1145/3551349.3559522"
+  }
+]
