@@ -1,0 +1,42 @@
+[
+  {
+    "title": "Exploring Hidden Worlds",
+    "description": "We are becoming more dependent on technology, and yet fewer people know how it works. Software should not be created behind closed doors especially when it can have larger ramifications on our day-to-day lives. Exploring Hidden Worlds aims to lift the veil on what it takes to build modern software through an explorable 3D visualization. Through learning what it takes to build modern software, and having the ability to understand it people can have more agency when deciding whether to adopt new, potentially harmful, technologies.",
+    "tags":["computer science, ", "design"],
+    "img": "/assets/images/exploring_hidden_worlds.png",
+    "year": 2023,
+    "url": "https://matt-blanco.github.io/Exploring-Hidden-Worlds/"
+  },
+  {
+    "title": "Our Changing Lands",
+    "description": "A semester long project focused on rethinking our relationship to the outdoors. Organized as three parts: a poster, dimensional, and screen based series all focused on the same social cause and to practice different aspects of design.",
+    "tags":["design"],
+    "img": "/assets/images/our_changing_lands.png",
+    "year": 2023,
+    "url": ""
+  },
+  {
+    "title": "Banca Intesa Processes",
+    "description": "As a student developer & researcher at the Center for Design I worked with a team alongside Banca IntesaSanpaolo, Italy's largest bank, to create a visualization interface to explore auditing risk and management data throughout different levels of the company",
+    "tags":["computer science, ", "design"],
+    "img": "/assets/images/banca_intesa.jpg",
+    "year": 2023,
+    "url": ""
+  },
+  {
+    "title": "NUHOC on Film",
+    "description": "What makes a community? Is it the shared common interests amongst a group of people or the people themselves? Shot using Super8 film \"NUHOC on Film\" captures the hidden history of why some of its members stuck around and showcasing what matters most: people.",
+    "tags":["design"],
+    "img": "/assets/images/nuhoc_on_film.jpg",
+    "year": 2023,
+    "url": "https://www.youtube.com/watch?v=MZDFxir7_3s"
+  },
+  {
+    "title": "Excelsior",
+    "description": "The Northeastern University Huskiers and Outing Club semi-yearly magazine. Had the opportunity to design the cover and spreads of the 2022 edition combining member written stories with engaging photography taken throughout the semester.",
+    "tags":["design"],
+    "img": "/assets/images/excelsior.png",
+    "year": 2022,
+    "url": ""
+  }
+]
