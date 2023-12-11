@@ -1,11 +1,11 @@
 $(document).ready(function() {
-  $('.research').on({
+  $('.project').on({
     mouseenter: function(){
       $(this).removeClass('faded');
-      $('.research').not(this).addClass('faded');
+      $('.project').not(this).addClass('faded');
     },
     mouseleave: function(){
-      $('.research').removeClass('faded');
+      $('.project').removeClass('faded');
     }
   });
 })
