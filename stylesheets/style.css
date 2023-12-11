@@ -99,3 +99,10 @@ a:hover {
 #title:hover {
   cursor: pointer;
 }
+
+
+@media screen and (max-width: 480px) {
+  #graph {
+    top: 45vh;
+  }
+}
