@@ -1,0 +1,40 @@
+[
+  {
+    "trip": "John Muir Trail",
+    "location": "Sierra Nevada Mountains",
+    "year": "2023",
+    "img": "/assets/images/jmt.jpg",
+    "url": "",
+    "elevation": "32,000ft",
+    "distance": 220,
+    "days": 15
+  },
+  {
+    "trip": "Sawback Trail",
+    "location": "Canadian Rockies",
+    "year": "2023",
+    "img": "/assets/images/banff.jpg",
+    "url": "",
+    "elevation": "13,000ft",
+    "distance": 55,
+    "days": 5
+  },
+  {
+    "trip": "Walker's Haught",
+    "year": "2023",
+    "img": "/assets/images/alps.jpg",
+    "url": "",
+    "elevation": "32,000ft",
+    "distance": 120,
+    "days": 12
+  },
+  {
+    "trip": "Philmont",
+    "year": "2016",
+    "img": "/assets/images/philmont.jpg",
+    "url": "",
+    "elevation": "20,000ft",
+    "distance": 80,
+    "days": 12
+  }
+]
