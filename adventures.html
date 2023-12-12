@@ -1,0 +1,56 @@
+---
+active_section: adventures
+permalink: /adventures/
+title: Adventures
+---
+
+<br/>
+<div class="adventures-container">
+  {% for adventure in site.data.adventures %}
+    {% assign loopindex = forloop.index | modulo: 2 %}
+    {% if loopindex == 1 %}
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="adventure">
+            <a target="_blank" href="{{ adventure.url }}">
+              <div class="project-img">
+                <img src="{{ adventure.img }}" width="100" height="100" />
+              </div>
+            </a>
+              <div class="adventure-info">
+                <a target="_blank" href="{{ adventure.url }}">
+                  <h4 class="adventure-title">{{ adventure.trip }} ({{ adventure.year }})</h4>
+                </a>
+                <p>{{ adventure.location }}</p>
+                <p>{{ adventure.days }} days</p>
+                <p>{{ adventure.distance }} mi, {{ adventure.elevation}}</p>
+              </div>
+            </a>
+          </div>
+        </div>
+    {% else %}
+        <div class="col-sm-6">
+          <div class="adventure">
+            <a target="_blank" href="{{ adventure.url }}">
+              <div class="card-img">
+                <img src="{{ adventure.img }}" width="100" height="100" />
+              </div>
+            </a>
+              <div class="adventure-info">
+                <a target="_blank" href="{{ adventure.url }}">
+                  <h4 class="card-title">{{ adventure.trip }} ({{ adventure.year }})</h4>
+                </a>
+                <p>{{ adventure.location }}</p>
+                <p>{{ adventure.days }} days</p>
+                <p>{{ adventure.distance }} mi, {{ adventure.elevation}}</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    {% endif %}
+  {% endfor %}
+</div>
+</div>
+
+<script src="/assets/scripts/projects.js"></script>
