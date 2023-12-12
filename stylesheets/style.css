@@ -21,7 +21,9 @@ body {
   
 }
 
-#graph {
+svg {
+  overflow-y: hidden;
+  overflow-x: hidden;
   position: absolute;
   top: 40vh;
   z-index: 3;
