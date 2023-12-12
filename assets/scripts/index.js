@@ -2,12 +2,12 @@ import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
 
 const data = {
   nodes: [
-    {id: 'Research', group: 1, color: 'black', page: 'research.html'},
-    {id: 'Projects', group: 2, color: 'black', page: 'projects.html'},
+    {id: 'Research', group: 1, color: 'black', page: 'research'},
+    {id: 'Projects', group: 2, color: 'black', page: 'projects'},
     {id: 'Photography', group: 3, color: 'black', page: 'https://blanco.darkroom.com/'},
-    {id: 'Adventure', group: 4, color: 'black', page: 'adventure.html'},
-    {id: 'About', group: 5, color: 'black', page: 'about.html'},
-    {id: '', group: 0, color: 'black', page: 'about.html'}
+    {id: 'Adventure', group: 4, color: 'black', page: 'adventure'},
+    {id: 'About', group: 5, color: 'black', page: 'about'},
+    {id: '', group: 0, color: 'black', page: 'about'}
   ],
   links: [
     {source: '', target: 'Projects'},
