@@ -107,6 +107,8 @@ a:hover {
 
 .card {
   padding: 15px;
+  border: none;
+  margin-bottom: 15px;
 } 
 
 .card:hover {

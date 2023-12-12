@@ -1,11 +1,11 @@
 $(document).ready(function() {
-  $('.project').on({
+  $('.card').on({
     mouseenter: function(){
       $(this).removeClass('faded');
-      $('.project').not(this).addClass('faded');
+      $('.card').not(this).addClass('faded');
     },
     mouseleave: function(){
-      $('.project').removeClass('faded');
+      $('.card').removeClass('faded');
     }
   });
 })
