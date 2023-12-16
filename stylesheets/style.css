@@ -129,6 +129,6 @@ img {
 
 @media screen and (max-width: 480px) {
   #graph {
-    top: 45vh;
+    top: 50vh;
   }
 }
