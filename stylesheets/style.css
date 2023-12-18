@@ -14,6 +14,10 @@ body {
   z-index: 2;
 }
 
+#navbar {
+  margin-left: 6%;
+}
+
 #title {
   font-weight: 100;
   width: fit-content;
@@ -21,11 +25,10 @@ body {
   
 }
 
-svg {
+#graph {
   overflow-y: hidden;
   overflow-x: hidden;
-  position: absolute;
-  top: 40vh;
+  position: relative;
   z-index: 3;
 }
 
@@ -126,9 +129,14 @@ img {
   height: auto;
 }
 
+@media (min-width:801px)  {
+  #graph {
+    top: -10vh;
+  }
+}
 
 @media screen and (max-width: 480px) {
   #graph {
-    top: 50vh;
+    top: 0vh;
   }
 }
