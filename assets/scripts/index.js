@@ -4,7 +4,7 @@ const data = {
   nodes: [
     {id: 'Research', group: 1, color: 'black', page: 'research'},
     {id: 'Projects', group: 2, color: 'black', page: 'projects'},
-    {id: 'Photography', group: 3, color: 'black', page: 'https://blanco.darkroom.com/'},
+    {id: 'Photography', group: 3, color: 'black', page: 'https://www.instagram.com/mattblanco.photo/'},
     {id: 'Adventure', group: 4, color: 'black', page: 'adventure'},
     {id: 'About', group: 5, color: 'black', page: 'about'},
     {id: '', group: 0, color: 'black', page: 'about'}
