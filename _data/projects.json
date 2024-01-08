@@ -43,7 +43,7 @@
   },
   {
     "title": "Olli",
-    "description": "While working for the MIT Visualization Group I developed version 1 of Olli. Olli is an open-source library for converting data visualizations into accessible text structures for screen reader users. Starting with an existing visualization specification created with a supported toolkit, Olli produces a keyboard-navigable tree view with descriptions at varying levels of detail. Users can explore these structures both to get an initial overview, and to dive into the data in more detail.",
+    "description": "While working for the MIT Visualization Group I developed version 1.0 of Olli. An open-source library for converting data visualizations into accessible text structures for screen reader users. Starting with an existing visualization specification created with a supported toolkit, Olli produces a keyboard-navigable tree view with descriptions at varying levels of detail. Users can explore these structures both to get an initial overview, and to dive into the data in more detail.",
     "tags": [
       "computer science, ",
       "design"
