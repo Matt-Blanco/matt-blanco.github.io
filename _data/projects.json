@@ -18,7 +18,7 @@
     ],
     "img": "/assets/images/our_changing_lands.png",
     "year": 2023,
-    "url": "https://assets.adobe.com/id/urn:aaid:sc:US:89a72a47-50b4-4407-ad4a-03089bb695c5?view=published"
+    "url": "/projects/changingLands"
   },
   {
     "title": "Banca Intesa Processes",
@@ -61,15 +61,5 @@
     "img": "/assets/images/excelsior.png",
     "year": 2022,
     "url": ""
-  },
-  {
-    "title": "Poster a Day",
-    "description": "Practicing graphic design skills by creating a unique poster evey day and posting it on my social media.",
-    "tags": [
-      "design"
-    ],
-    "img": "/assets/images/hopper.png",
-    "year": 2021,
-    "url": "https://photos.app.goo.gl/62cRfi9oX3rG4dWA7"
   }
 ]

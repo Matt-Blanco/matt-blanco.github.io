@@ -1,4 +1,4 @@
-<nav id="navbar" class="meta-text mt-2 mb-2 w-100">
+<nav id="navbar" class="meta-text mt-2 mb-2">
   <ul class="nav navbar-expand-lg navbar-light ms-auto w-fit">
     <li><a {% if page.active_section == 'home' %}class="nav-current nav-item"{% endif %} {% unless page.active_section == 'home' %} class="nav-item" href="{{ "/"  | prepend: site.baseurl }}"{% endunless %} title="Home">Home</a></li>
     <li><a {% if page.active_section == 'about' %}class="nav-current nav-item"{% endif %} {% unless page.active_section == 'about' %} class="nav-item" href="{{ "/about"  | prepend: site.baseurl }}"{% endunless %} title="About">About</a></li>
