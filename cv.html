@@ -148,6 +148,47 @@ title: CV
       <section class="mt-1 mb-1">
         <h3>
           <strong>
+            Projects
+          </strong>
+        </h3>
+        {% for project in site.data.resume.projects %}
+        <div class="mb-4">
+          <div class="row">
+            <div class="col col-md-auto edu-info">
+              <h5>
+                <strong>
+                  {{ project.title }}
+                </strong>
+              </h5>
+            </div>
+            <div class="col d-flex justify-content-end">
+              <p>{{ project.year }}</p>
+            </div>
+          </div>
+          <div class="row">
+            <div>
+              <p>
+                <span>
+                  skills:
+                  {% for skill in project.skills %}
+                  {{ skill }}
+                  {% endfor %}
+                </span>
+              </p>
+            </div>
+            <div class="row">
+              {% for bullet in project.description %}
+              <p>- {{ bullet }}</p>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </section>
+
+      <section class="mt-1 mb-1">
+        <h3>
+          <strong>
             Publications
           </strong>
         </h3>
