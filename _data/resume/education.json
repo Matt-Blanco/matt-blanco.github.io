@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Northeastern University",
+    "location": "Boston, MA",
+    "startDate": "09.2019",
+    "endDate": "05.2024",
+    "gpa": 3.65,
+    "degreeType": "B.S.",
+    "degree": "Computer Science & Design",
+    "clubs": ["NUHOC (Huskiers and Outing Club)", "Oasis Software Accelerator"]
+  },
+  {
+    "title": "IE University",
+    "location": "Madrid, Spain",
+    "startDate": "09.2022",
+    "endDate": "12.2022",
+    "gpa": 3.72,
+    "degreeType": "B.A.",
+    "degree": "Design Exchange Student",
+    "clubs": ["IE Climbing Club"]
+  }
+]

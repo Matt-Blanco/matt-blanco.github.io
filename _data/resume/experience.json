@@ -1,0 +1,74 @@
+[
+  {
+    "position": "UI & Visualization Developer",
+    "company": "Center for Design",
+    "location": "Boston, MA",
+    "startDate": "05.2022",
+    "endDate": "05.2024",
+    "description": [
+      "Designed and Developed a modular UI to search, filter, and analyze company data from Banca Intesa Sanpaolo, Italy’s largest bank, to a rendered network and circular packing visualizations.",
+      "Collaborated with other team members to properly implement visualization prototypes iterating off of feedback from team members and stakeholders",
+      "Created an independent open-source ReactJS component library used throughout the visualization and in other Center for Design projects."
+    ]
+  },
+  {
+    "position": "Front-End Engineer",
+    "company": "RECUR",
+    "location": "Boston, MA",
+    "startDate": "01.2023",
+    "endDate": "05.2023",
+    "description": [
+      "Updated default brand styling when creating new brand marketplaces.",
+      "Abstracted UI to more easily switch between brands and different visual styles.",
+      "Added additional profile customization by allowing users to select and display items between brands."
+    ]
+  },
+  {
+    "position": "Visualization Researcher & Designer",
+    "company": "MIT Visualization Group",
+    "location": "Boston, MA",
+    "startDate": "01.2022",
+    "endDate": "08.2022",
+    "description": [
+      "Created Olli, an open-source JavaScript library improving accessibility of data visualization with screen readers for blind and low-vision users.",
+      "Implemented an adapter design pattern allowing the tool to be used alongside any visualization library such as Vega, Vega-Lite, and Observable Plot.",
+      "Intentionally developed the library to be as light-weight as possible reducing overall dependencies and overhead when added to websites.",
+      "Published the project to NPM and submitted the work as an academic poster that was accepted to IEEE VIS 2022."
+    ]
+  },
+  {
+    "position": "Programming Language Researcher",
+    "company": "NUPRL",
+    "location": "Boston, MA",
+    "startDate": "01.2023",
+    "endDate": "06.2023",
+    "description": [
+      "Contributed to the development of an open-source dynamic taint analysis tool for the JavaScript programming language.",
+      "Added support to track program taint through JavaScript Promises and Async and Await operations through adding multiple function call stacks throughout the analysis and intercepting Promise events.",
+      "Supported in part by National Science Foundation REU Project # 2109395."
+    ]
+  },
+  {
+    "position": "Teaching Assistant - Computer Science Fundamentals",
+    "company": "Northeastern University",
+    "location": "Boston, MA",
+    "startDate": "09.2020",
+    "endDate": "12.2020",
+    "description": [
+      "Graded assignments on a weekly basis providing thoughtful feedback on students code giving comments on both functionality and design of solutions",
+      "Communicated with fellow TAs and faculty on assignment expectations and abnormal homework submissions"
+    ]
+  },
+  {
+    "position": "Software Engineer Intern",
+    "company": "Alluxio",
+    "location": "San Mateo, CA",
+    "startDate": "06.2019",
+    "endDate": "09.2019",
+    "description": [
+      "Developed automatic documentation generation for CLI commands by scraping current documentation files in Markdown and modifying the format to better suite the command line.",
+      "Used Docker simulate an Alluxio cluster in order to test and improve metric collection and dashboard layouts to better visualize the health of an Alluxio cluster.",
+      "Authored a blog post about setting up new metric collection software with Alluxio"
+    ]
+  }
+]

@@ -1,0 +1,23 @@
+[
+  {
+    "title": "Exploring Hidden Worlds",
+    "skills": ["JavaScript", "HTML", "CSS", "ThreeJS", "D3"],
+    "year": 2023,
+    "description": [
+      "Designed a 3D visualization exploring a new visual representation of code.",
+      "Prototyped methods to visually represent complex networks.",
+      "Wrote custom program to statically analyze JavaScript specifically searching for directory hierarchy and scoping between functions, classes, conditionals, and loops.",
+      "Supported by URF Summit Award and Honors in the Discipline while at Northeastern University."
+    ]
+  },
+  {
+    "title": "Northeast Outing Club Association Brand Overhaul",
+    "skills": ["InDesign", "Figma", "Illustrator"],
+    "year": 2024,
+    "description": [
+      "Led a small team of designers creating a comprehensive brand guideline for NEOCA a 501(c)(3) non-profit.",
+      "Prototyped and Redesigned NEOCA's website to better convey the organization's message, mission and goals.",
+      "Wrote an extensive outreach & fundraising strategy incorporating visual guidelines with the organization's mission and values."
+    ]
+  }
+]

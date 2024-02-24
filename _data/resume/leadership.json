@@ -1,0 +1,25 @@
+[
+  {
+    "organization": "Huskiers and Outing Club (NUHOC)",
+    "positions": ["President, VP Organization, VP Trips, VP Communication"],
+    "start": "09.2021",
+    "end": "06.2024",
+    "description": [
+      "Organized dozens of day trips and weekend trips to the White Mountains keeping students safe while hiking on difficult terrain.",
+      "Managed NUComers, a 120 person weekend at NUHOC's lodge property outside Shelburne, NH for underclassmen who have never been to the property before. Introducing them to the club and to the White Mountains.",
+      "Facilitated an open and welcoming community for underclassmen to learn and get involved in the club.",
+      "Hosted talks and workshops on outdoor prepardness, safety, and trip planning."
+    ]
+  },
+  {
+    "organization": "Oasis Software Project Accelerator",
+    "positions": ["Program Coordinator"],
+    "start": "09.2021",
+    "end": "04.2022",
+    "description": [
+      "Managed a cohort of upperclassmen mentors to advise groups of underclassmen in project development",
+      "Led workshops on project development skills such as version control, front-end web frameworks, databases, and visual languages",
+      "Planned weekly meetings for project work sessions for groups to get together make progess on their respective projects "
+    ]
+  }
+]

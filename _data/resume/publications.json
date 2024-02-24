@@ -1,0 +1,35 @@
+[
+  {
+    "year": 2024,
+    "title": "Harnessing Information Visualization as a Vehicle for Translational Design",
+    "authors": [
+      "Joli Holmes",
+      "Matthew Blanco",
+      "Todd Linkner",
+      "Estafania Ciliotta",
+      "Paolo Ciccuarelli"
+    ],
+    "conference": "Design Research Society (DRS2024)"
+  },
+  {
+    "year": 2022,
+    "title": "Olli: An Extensible Visualization Library for Screen Reader Accessibility",
+    "authors": [
+      "Matthew Blanco",
+      "Jonathan Zong",
+      "Arvind Satyanarayan"
+    ],
+    "conference": "IEEE VIS2022 Posters"
+  },
+  {
+    "year": 2022,
+    "title": "Augur: Dynamic Taint Analysis for Asynchronous JavaScript",
+    "authors": [
+      "Mark W. Aldrich",
+      "Alexi Turcotte",
+      "Matthew Blanco",
+      "Frank Tip"
+    ],
+    "conference": "ASE2022 Conference on Automated Software Engineering"
+  }
+]
