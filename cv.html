@@ -1,0 +1,185 @@
+---
+active_section: cv
+title: CV
+---
+
+<style>
+  p {
+    margin-bottom: 0rem;
+  }
+</style>
+
+<br />
+<div class="cv-container">
+  <div class="row align-items-start">
+    <div class="col">
+      <h1><strong>Matthew Blanco</strong></h1>
+    </div>
+  </div>
+  <div class="row mb-4">
+    <div class="col float-right">
+      <p><a href="https://mattblanco.me">www.mattblanco.me</a> <a href="mattmblanco@gmail.com">mattmblanco@gmail.com</a>
+      </p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-2">
+    </div>
+    <div class="col">
+
+      <section class="mt-1 mb-1">
+        <h3>
+          <strong>
+            Education
+          </strong>
+        </h3>
+        {% for edu in site.data.resume.education %}
+        {% assign loopindex = forloop.index | modulo: 2 %}
+        <div class="mb-4">
+          <div class="row">
+            <div class="col col-md-auto edu-info">
+              <strong>{{ edu.title }}</strong>
+            </div>
+            <div class="col col-md-auto">
+              <p>
+                {{ edu.location }}
+              </p>
+            </div>
+            <div class="col d-flex justify-content-end">
+              <p>{{ edu.startDate }} - {{ edu.endDate }}</p>
+            </div>
+          </div>
+          <div class="row">
+            <p>{{ edu.degreeType}} {{ edu.degree }}</p>
+            <p>GPA: {{ edu.gpa }} / 4.0</p>
+            <div>
+              <p>
+                <span>
+                  Extracurriculars:
+                  {% for club in edu.clubs %}
+                  {{ club }}
+                  {% endfor %}
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </section>
+
+      <section>
+        <h3>
+          <strong>
+            Work Experience
+          </strong>
+        </h3>
+        {% for exp in site.data.resume.experience %}
+        <div class="mb-3">
+          <div class="row align-items-start">
+            <div class="col col-md-auto">
+              <h5>
+                <strong>
+                  {{ exp.position }},
+                </strong>
+                <em>{{ exp.company }}</em>
+              </h5>
+            </div>
+            <div class="col d-flex justify-content-end">
+              <span>{{ exp.startDate }} - {{ exp.endDate }}</span>
+            </div>
+          </div>
+          <div class="row mb-2">
+            <h7>{{ exp.location }}</h7>
+          </div>
+          <div class="row">
+            {% for bullet in exp.description %}
+            <p>- {{ bullet }}</p>
+            {% endfor %}
+          </div>
+        </div>
+        {% endfor %}
+      </section>
+
+      <section class="mt-1 mb-1">
+        <h3>
+          <strong>
+            Leadership
+          </strong>
+        </h3>
+        {% for ld in site.data.resume.leadership %}
+        <div class="mb-4">
+          <div class="row">
+            <div class="col col-md-auto edu-info">
+              <h5>
+                <strong>
+                  {{ ld.organization }}
+                </strong>
+              </h5>
+              </h5>
+            </div>
+            <div class="col d-flex justify-content-end">
+              <p>{{ ld.start }} - {{ ld.end }}</p>
+            </div>
+          </div>
+          <div class="row">
+            <div>
+              <p>
+                <span>
+                  Positions:
+                  {% for pos in ld.positions %}
+                  {{ pos }}
+                  {% endfor %}
+                </span>
+              </p>
+            </div>
+            <div class="row">
+              {% for bullet in ld.description %}
+              <p>- {{ bullet }}</p>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </section>
+
+      <section class="mt-1 mb-1">
+        <h3>
+          <strong>
+            Publications
+          </strong>
+        </h3>
+        {% for pub in site.data.resume.publications %}
+        <div class="mb-2">
+          <div class="row">
+            <p>
+              {{pub.year}}. <strong>{{ pub.title }}</strong>
+              {% for author in pub.authers %}
+              {{ author }}
+              {% endfor %}
+              <em>{{ pub.conference }}</em>
+            </p>
+          </div>
+        </div>
+        {% endfor %}
+      </section>
+
+      <section class="mt-1 mb-1">
+        <h3>
+          <strong>
+            Awards
+          </strong>
+        </h3>
+        {% for award in site.data.resume.awards %}
+        <div class="mb-2">
+          <div class="row">
+            <p>
+              {{award.year}}. <strong>{{ award.name }}</strong>
+            </p>
+          </div>
+        </div>
+        {% endfor %}
+      </section>
+
+    </div>
+  </div>
+</div>
