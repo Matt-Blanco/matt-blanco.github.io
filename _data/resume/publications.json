@@ -1,6 +1,15 @@
 [
   {
     "year": 2024,
+    "title": "Exploring Hidden Worlds: Investigating a New Future of Code",
+    "authors": [
+      "Matthew Blanco",
+      "Todd Linkner"
+    ],
+    "conference": "Northeastern University RISE 2024"
+  },
+  {
+    "year": 2024,
     "title": "Harnessing Information Visualization as a Vehicle for Translational Design",
     "authors": [
       "Joli Holmes",

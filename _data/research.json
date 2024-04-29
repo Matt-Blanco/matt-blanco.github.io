@@ -1,5 +1,12 @@
 [
   {
+    "title": "Exploring Hidden Worlds: Investigating a New Future of Code",
+    "abstract": "Over the last decade, as our digital needs have expanded, so too has the scope and complexity of the infrastructure, tools, and services built using code. Code has become increasingly complex for an individual to understand, projects now span tens of thousands of lines of code across dozens of directories.This increasing complexity and interdependency calls for new ways to make sense of it. Experts have used information visualization to aid in code comprehension and understanding, but few, if any, visualization tools exist to help understand the structure and scale of code code especially for non-experts. Exploring Hidden Worlds attempts to create an explorable 3D visualization to give form and materiality to the intangible and difficult to understand infrastructure behind software.",
+    "affiliation": "Northeastern University RISE 2024",
+    "affLink": "",
+    "paperLink": "/assets/images/RISE-poster.png"
+  },
+  {
     "title": "Harnessing Information Visualization as a Vehicle for Translational Design",
     "abstract": "Designers are often positioned as mediators or interpreters working between disciplines and stakeholders to frame and address problems. This quality is particularly desired when a product transitions from one implementation to another. Translational designers assist this process through critical activities such as navigating differing domain knowledge and balancing conflicting values or cultures between stakeholders. We argue that the primary outcome of translational design is not necessarily an artifact but the translation of knowledge across disciplines for decision-making. Our research explains and shows how information visualization can translate meaning within a group of experts seemingly familiar with the same topic and between a group of experts with differing expertise. In collaboration with <Industry Partner>, we present <Project Name>, an interactive information visualization that assists users with better understanding the distribution of activities and their associated risks across an organization to contribute to the developing literature on 'translational design practices.'",
     "affiliation": "DRS2024, Center for Design",
