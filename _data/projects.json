@@ -7,7 +7,7 @@
       "design"
     ],
     "img": "/assets/images/exploring_hidden_worlds.png",
-    "year": 2023,
+    "year": 2024,
     "url": "https://matt-blanco.github.io/Exploring-Hidden-Worlds/"
   },
   {
@@ -51,6 +51,17 @@
     "img": "/assets/images/olli.png",
     "year": 2022,
     "url": "https://mitvis.github.io/olli/"
+  },
+  {
+    "title": "Knowledge Map",
+    "description": "Collaborating as part of a small team in the Center for Design, we partnered with Banca Intesa Sanpaolo, Italy's largest bank, to design and develop an interactive visualization platform for managers to understand knowledge distribution throughout the bank, and see through interactive explorations which sections of the company were more knowledgeable about various aspects of company operations.",
+    "tags": [
+      "computer science, ",
+      "design"
+    ],
+    "img": "/assets/images/knowledge_map.png",
+    "year": 2022,
+    "url": "https://nu-center-for-design.github.io/DataViz_Elearning_phase-3/#/"
   },
   {
     "title": "Excelsior",
