@@ -6,9 +6,31 @@
       "computer science, ",
       "design"
     ],
-    "img": "/assets/images/exploring_hidden_worlds.png",
+    "img": "/assets/images/hidden_worlds.png",
     "year": 2024,
-    "url": "https://matt-blanco.github.io/Exploring-Hidden-Worlds/"
+    "url": "/projects/exploring-hidden-worlds"
+  },
+  {
+    "title": "The Archive of a Designer",
+    "description": "It is common practice for designers to have a lot of collected artifacts to look back on or inspire them throughout the design process. The visualization showcases the archive of design artifacts that can be found throughout my apartment.",
+    "tags": [
+      "computer science, ",
+      "design"
+    ],
+    "img": "/assets/images/designer_archive.png",
+    "year": 2024,
+    "url": "/projects/designers-archive"
+  },
+  {
+    "title": "Banca Intesa Processes",
+    "description": "As a student developer & researcher at the Center for Design I worked with a team alongside Banca IntesaSanpaolo, Italy's largest bank, to create a visualization interface to explore auditing risk and management data throughout different levels of the company",
+    "tags": [
+      "computer science, ",
+      "design"
+    ],
+    "img": "/assets/images/banca_intesa.jpg",
+    "year": 2024,
+    "url": "https://nu-center-for-design.github.io/banca-process/"
   },
   {
     "title": "Our Changing Lands",
@@ -19,17 +41,6 @@
     "img": "/assets/images/changing-lands/our_changing_lands.png",
     "year": 2023,
     "url": "/projects/our-changing-lands"
-  },
-  {
-    "title": "Banca Intesa Processes",
-    "description": "As a student developer & researcher at the Center for Design I worked with a team alongside Banca IntesaSanpaolo, Italy's largest bank, to create a visualization interface to explore auditing risk and management data throughout different levels of the company",
-    "tags": [
-      "computer science, ",
-      "design"
-    ],
-    "img": "/assets/images/banca_intesa.jpg",
-    "year": 2023,
-    "url": "https://nu-center-for-design.github.io/banca-process/"
   },
   {
     "title": "NUHOC on Film",
