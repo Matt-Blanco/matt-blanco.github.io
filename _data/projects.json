@@ -1,5 +1,16 @@
 [
   {
+    "title": "Surf's Up",
+    "description": "Assisting a four-day workshop hosted by the Ars Electronica FutureLab, Surf's Up attempts to brigde geographies by visualizing wave data from Nazaré, Portugal while attempting to bring together our natural and built environments.",
+    "tags": [
+      "computer science, ",
+      "design"
+    ],
+    "img": "/assets/images/aec_facade.jpg",
+    "year": 2024,
+    "url": "/projects/surfs-up"
+  },
+  {
     "title": "Exploring Hidden Worlds",
     "description": "We are becoming more dependent on technology, and yet fewer people know how it works. Software should not be created behind closed doors especially when it can have larger ramifications on our day-to-day lives. Exploring Hidden Worlds aims to lift the veil on what it takes to build modern software through an explorable 3D visualization. Through learning what it takes to build modern software, and having the ability to understand it people can have more agency when deciding whether to adopt new, potentially harmful, technologies.",
     "tags": [
