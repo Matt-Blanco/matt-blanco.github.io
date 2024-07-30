@@ -14,10 +14,6 @@ body {
   z-index: 2;
 }
 
-#navbar {
-  /* margin-left: 1%; */
-}
-
 #title {
   font-weight: 100;
   width: fit-content;
