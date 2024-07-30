@@ -11,6 +11,16 @@
     "url": "/projects/surfs-up"
   },
   {
+    "title": "eyeWatch",
+    "description": "A speculative service design project done for my design capstone creating an absurd app to showcase how our data is collected putting it front and center for the user. The goal of the service is to show users the amount of data that is being collected, how it can be used to affect your bevavior, and the stakeholders who want to control your data in an effort to bridge the gap between people and the often intangible resource of the 21st century.",
+    "tags": [
+      "service design"
+    ],
+    "img": "/assets/images/eyewatch/eyewatch_service_blueprint.png",
+    "year": 2024,
+    "url": "/"
+  },
+  {
     "title": "Exploring Hidden Worlds",
     "description": "We are becoming more dependent on technology, and yet fewer people know how it works. Software should not be created behind closed doors especially when it can have larger ramifications on our day-to-day lives. Exploring Hidden Worlds aims to lift the veil on what it takes to build modern software through an explorable 3D visualization. Through learning what it takes to build modern software, and having the ability to understand it people can have more agency when deciding whether to adopt new, potentially harmful, technologies.",
     "tags": [
