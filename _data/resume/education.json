@@ -4,9 +4,10 @@
     "location": "Boston, MA",
     "startDate": "09.2019",
     "endDate": "05.2024",
-    "gpa": 3.65,
+    "gpa": 3.70,
     "degreeType": "B.S.",
     "degree": "Computer Science & Design",
+    "honors": "Honors in Design",
     "clubs": ["NUHOC (Huskiers and Outing Club)", "Oasis Software Accelerator"]
   },
   {
@@ -17,6 +18,7 @@
     "gpa": 3.72,
     "degreeType": "B.A.",
     "degree": "Design Exchange Student",
+    "honors": "",
     "clubs": ["IE Climbing Club"]
   }
 ]
