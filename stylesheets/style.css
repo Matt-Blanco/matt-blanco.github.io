@@ -124,6 +124,13 @@ img {
   width: 100%;
   height: auto;
 }
+
+#boat {
+  max-width: 15%;
+  position: absolute;
+  top: 75%;
+  left: 75%;
+}
 /* 
 @media (min-width:801px)  {
   #graph {
