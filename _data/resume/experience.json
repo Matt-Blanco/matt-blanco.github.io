@@ -1,5 +1,18 @@
 [
   {
+    "position": "Creative Coding Program Assistant",
+    "company": "Northeastern University",
+    "location": "Vienna, AT",
+    "startDate": "07.2024",
+    "endDate": "08.2024",
+    "description": [
+      "Assisted teaching underclassmen students, of various degrees, Processing programming language throughout weekly project sprints.",
+      "Held workshops to teach students programming and version control principles including Git and basic functional programming.",
+      "Presented weekly projects to showcase what Processing and P5.js are cabable of within a graphic design practice.",
+      "Worked with professors to divide assistant responsibilities and make sure students were aware of course resources"
+    ]
+  },
+  {
     "position": "UI & Visualization Developer",
     "company": "Center for Design",
     "location": "Boston, MA",
