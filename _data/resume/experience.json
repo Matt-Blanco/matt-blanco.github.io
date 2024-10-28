@@ -1,5 +1,19 @@
 [
   {
+    "position": "UI Develoepr & Designer",
+    "company": "Nterprisers",
+    "location": "Providence, RI",
+    "startDate": "10.2024",
+    "endDate": "Present",
+    "description": [
+      "Design and implement visually intuitive, contextual graphic designs to enhance user experiences across the platform.", 
+      "Maintain and improve our web app, focusing on frontend layout and user experience.",
+      "Create wireframes, user flows, process flows, and site maps to communicate design concepts effectively",
+      "Participate in design discussions to ensure alignment and feasibility of design ideas",
+      "Customize themes for platform templates, layouts, CSS, and JavaScript"
+    ]
+  },
+  {
     "position": "Creative Coding Program Assistant",
     "company": "Northeastern University",
     "location": "Vienna, AT",
