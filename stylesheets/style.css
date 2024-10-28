@@ -1,5 +1,6 @@
 * {
   font-family: interstate;
+  cursor: url('/assets/images/ddw_boat.png'), auto;
 }
 
 body {
@@ -29,13 +30,13 @@ body {
 }
 
 .nodeText {
-  cursor: pointer;
   margin: 25px;
 }
 
 .nodeText:hover {
   text-decoration: underline;
   transition: 2s ease-in-out;
+  cursor: url('/assets/images/ddw_boat_outline.png'), auto !important;
 }
 
 #homeTitle {
@@ -56,6 +57,7 @@ a {
 a:hover {
   color: black;
   text-decoration: underline;
+  cursor: url('/assets/images/ddw_boat_outline.png'), auto !important;
 }
 
 .link:after{
@@ -98,7 +100,7 @@ a:hover {
 }
 
 #title:hover {
-  cursor: pointer;
+  cursor: url('/assets/images/ddw_boat_outline.png'), auto;
 }
 
 .card-img {
