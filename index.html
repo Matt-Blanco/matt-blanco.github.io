@@ -4,7 +4,10 @@ layout: default
 ---
 
 <script type="module" src="{{ "/assets/scripts/index.js" | prepend: site.baseurl }}"></script>
-<div id="info" class="row col-sm-6">
+<div class="row position-absolute overflow-hidden">
+  <div id="graph"></div>
+</div>
+<div id="info" class="row col-sm-6 position-relative z-4">
   <h1 id="title" class="link">
     hey, I'm matt.
   </h1>
@@ -13,7 +16,4 @@ layout: default
     Currently I am wrapping up my undergraduate studies at Northeastern University where I'm a candidate for a B.S. in Computer Science and Design.
     At the moment I'm a student researcher at the <a href="https://camd.northeastern.edu/center-for-design/">Center for Design</a>, and was previously affiliated with the <a target="_blank" className="AboutLink" href="https://vis.csail.mit.edu/">Visualization Group</a> at MIT CSAIL.
   </p>
-</div>
-<div class="row">
-  <div id="graph"></div>
 </div>
