@@ -47,7 +47,7 @@ new p5((p) => {
 
     p.beginShape();
     for (let i = 0; i <= 500; i++) {
-      let ang = p.map(i, 0, 500, 0, p.TWO_PI + 0.5);
+      let ang = p.map(i, 0, 500, 0, p.TWO_PI + 0.15);
       let rad = (maxRadius - t) * p.noise(i * xFactor, t * yFactor);
 
       let x, y;
