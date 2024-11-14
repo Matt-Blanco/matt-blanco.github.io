@@ -181,7 +181,8 @@ new p5((p) => {
   let t;
   let increaing = true;
   const maxFrames = 500;
-  const xOffset = 150;
+  let xOffset = 150;
+  let yOffset = 0;
 
 
   p.setup = () => {
@@ -190,6 +191,12 @@ new p5((p) => {
     p.noFill();
     p.frameRate(24);
     t = 0;
+
+    if (p.width < 800) {
+      xOffset = 0
+      yOffset = 100
+    }
+
   }
 
   p.draw = () => {
@@ -223,7 +230,7 @@ new p5((p) => {
 
       let x, y;
       x = rad * p.cos(ang) + xOffset;
-      y = rad * p.sin(ang);
+      y = rad * p.sin(ang) + yOffset;
 
       p.curveVertex(x, y);
     }
