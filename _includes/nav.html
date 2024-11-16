@@ -1,6 +1,8 @@
 <nav id="navbar" class="meta-text mx-3 mx-md-0 mt-2 mb-2">
   {% if page.active_section != "home" and page.active_section != "cv" %}
-  <h5 style="float: left;">Matthew Blanco</h5>
+  <a href="/" class="float-start">
+    <h5>Matthew Blanco</h5>
+  </a>
   {% endif %}
   <ul class="nav navbar-expand-lg navbar-light ms-auto w-fit">
     <li><a {% if page.active_section == 'home' %}class="nav-current nav-item"{% endif %} {% unless page.active_section == 'home' %} class="nav-item" href="{{ "/"  | prepend: site.baseurl }}"{% endunless %} title="Home">Home</a></li>

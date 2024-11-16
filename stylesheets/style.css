@@ -9,6 +9,10 @@ body {
   margin: 0;
 }
 
+.mt-3-5 {
+  margin-top: 1.25rem;
+}
+
 #info {
   margin: 3%;
   position: relative;

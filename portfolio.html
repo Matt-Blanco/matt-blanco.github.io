@@ -13,9 +13,11 @@ title: Portfolio
       </div>
     </a>
     <div class="project-info">
-      <a target="_blank" href="{{ project.url }}">
-        <h4 class="card-title">{{ project.title }}</h4>
+      <a class="d-flex" target="_blank" href="{{ project.url }}">
+            <h4 class="card-title w-fit">{{ project.title }}</h4>
+            <p class="w-fit ms-3 mt-3-5">[{{ project.type }}]</p>
       </a>
+      <p>{{project.role}}</p>
       <p>{{ project.description }}</p>
     </div>
     </a>
