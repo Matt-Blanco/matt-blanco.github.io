@@ -1,0 +1,27 @@
+---
+permalink: /portfolio/
+title: Portfolio
+---
+<br />
+<div class="projects-container d-flex flex-wrap">
+  {% for project in site.data.portfolio %}
+  {% assign loopindex = forloop.index | modulo: 2 %}
+  <div class="card w-50">
+    <a target="_blank" href="{{ project.url }}">
+      <div class="card-img">
+        <img src="{{ project.img }}" width="100" height="100" />
+      </div>
+    </a>
+    <div class="project-info">
+      <a target="_blank" href="{{ project.url }}">
+        <h4 class="card-title">{{ project.title }}</h4>
+      </a>
+      <p>{{ project.description }}</p>
+    </div>
+    </a>
+  </div>
+  {% endfor %}
+</div>
+</div>
+
+<script src="/assets/scripts/projects.js"></script>

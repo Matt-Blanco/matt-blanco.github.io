@@ -22,6 +22,17 @@
     "url": "/projects/not-so-meta"
   },
   {
+    "title": "Playing With Patterns",
+    "description": "Based on a mural in the Museum Quartier in Vienna, the project to combine graphic design and computer science principles to create patterns out of simple squares and rectangles.",
+    "tags": [
+      "computer science, ",
+      "design"
+    ],
+    "img": "/assets/images/patterns.png",
+    "year": 2024,
+    "url": "/projects/patterns"
+  },
+  {
     "title": "eyeWatch",
     "description": "A speculative service design project done for my design capstone creating an absurd app to showcase how our data is collected putting it front and center for the user. The goal of the service is to show users the amount of data that is being collected, how it can be used to affect your bevavior, and the stakeholders who want to control your data in an effort to bridge the gap between people and the often intangible resource of the 21st century.",
     "tags": [
@@ -105,5 +116,15 @@
     "img": "/assets/images/knowledge_map.png",
     "year": 2022,
     "url": "https://nu-center-for-design.github.io/DataViz_Elearning_phase-3/#/"
+  },
+  {
+    "title": "Excelsior",
+    "description": "The Northeastern University Huskiers and Outing Club semi-yearly magazine. Had the opportunity to design the cover and spreads of the 2022 edition combining member written stories with engaging photography taken throughout the semester.",
+    "tags": [
+      "design"
+    ],
+    "img": "/assets/images/excelsior.png",
+    "year": 2022,
+    "url": ""
   }
 ]
