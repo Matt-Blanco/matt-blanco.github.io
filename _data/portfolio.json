@@ -7,7 +7,7 @@
             "computer science, ",
             "design"
         ],
-        "img": "/assets/images/hidden_worlds.png",
+        "img": "/assets/images/hidden-worlds/full-vis.png",
         "year": 2024,
         "url": "/projects/exploring-hidden-worlds",
         "role": "Researcher - Undergraduate thesis"
@@ -20,7 +20,7 @@
             "computer science, ",
             "design"
         ],
-        "img": "/assets/images/passing_time.jpg",
+        "img": "https://pub-b2fdae8a32ba430298f257d3e7c2a231.r2.dev/sanibel-2013.mov",
         "year": 2024,
         "url": "/projects/surfs-up",
         "role": "Designer / Developer"
@@ -33,7 +33,7 @@
             "computer science, ",
             "design"
         ],
-        "img": "/assets/images/aec_facade.jpg",
+        "img": "/assets/images/surfs-up/wave_from_danube.mp4",
         "year": 2024,
         "url": "/projects/surfs-up",
         "role": "Designer"
@@ -64,9 +64,9 @@
         "role": "Designer"
     },
     {
-        "title": "Banca Intesa Processes",
+        "title": "Intesa SanPaolo Processes",
         "type": "Data Visualization Platform",
-        "description": "As a student developer & researcher at the Center for Design I worked with a team alongside Banca IntesaSanpaolo, Italy's largest bank, to create a visualization interface to explore auditing risk and management data throughout different levels of the company",
+        "description": "As a student developer & researcher at the Center for Design I worked with a team alongside Banca Intesa Sanpaolo, Italy's largest bank, to create a visualization interface to explore auditing risk and management data throughout different levels of the company",
         "tags": [
             "computer science, ",
             "design"
