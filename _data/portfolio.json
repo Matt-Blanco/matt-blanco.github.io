@@ -15,7 +15,7 @@
     {
         "title": "Passing Time",
         "type": "Data Visualization",
-        "description": "What begain as a piece of art as a gift to a friend, turned into creating abstract visualizations of weather over the course of a year.",
+        "description": "What begain as a piece of art as a gift to a friend, turned into creating abstract visualizations of weather over the course of a year. Using historic weather data of Sanibel Florida, organic forms are generated based on the temperature, cloud cover, and rainfall of the city. The visual system can also be used to create visualizations for any location on Earth.",
         "tags": [
             "computer science, ",
             "design"
