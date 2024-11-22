@@ -1,0 +1,77 @@
+---
+active_section: projects
+---
+
+<div class="row align-items-start">
+    <h2>Passing Time</h2>
+    <p>Project Type: Artistic Data Visualization Playform (p5.js)</p>
+    <div class="col">
+        <video class="img-fluid" loop autoplay muted
+            src="https://pub-b2fdae8a32ba430298f257d3e7c2a231.r2.dev/sanibel-2013.mov"></video>
+    </div>
+</div>
+<div class="row" style="margin-top: 2vh;">
+    <div class="col">
+        <h5>Background</h5>
+        <p>
+            Banca Intesa Processes is an exploratory business analytics application that allows the organization to
+            explore and audit risk management data to understand and manage the complexity. The application affords
+            users a visual understanding of how risk is distributed across organizational structures and how activities
+            are distributed among different actors at the company. Additionally, users can identify activities and
+            associated risks without appropriate controls and develop plans to redistribute workflows.
+        </p>
+        <p>
+            The power behind the design of this application is its minimal interface design that facilitates user
+            interaction. A query status pane allows users to filter, zoom, and highlight specific attributes of the
+            visualizations. Additionally, navigational controls create a visualization-first user experience by hiding
+            all non-visualization components on the screen.
+        </p>
+    </div>
+    <div class="w-25">
+        <h5>Team</h5>
+        <ul class="list-unstyled fst-italic">
+            <li>Matt Blanco - Designer</li>
+            <li>Silvia Gosalvez - Art Advisor</li>
+        </ul>
+    </div>
+</div>
+
+<div class="row align-items-start">
+    <h5>As Posters</h5>
+    <div class="col">
+        <img class="img-fluid float-right" src="/assets/images/passing/1999-poster.jpeg" />
+    </div>
+    <div class="col">
+        <img class="img-fluid float-right" src="/assets/images/passing/2020-poster.jpeg" />
+    </div>
+    <div class="col">
+        <img class="img-fluid float-right" src="/assets/images/passing/2023-poster.jpeg" />
+    </div>
+</div>
+
+<div class="row mb-5">
+    {% for i in (0..23) %}
+    <div class="w-25">
+        <div class="card-img mt-3">
+            {% if i < 10 %} <p class="mb-0">200{{i}}</p>
+                <img src="/assets/images/passing/sanibel-200{{i}}.jpg" width="100" height="100" />
+                {% else %}
+                <p class="mb-0">20{{i}}</p>
+                <img src="/assets/images/passing/sanibel-20{{i}}.jpg" width="100" height="100" />
+                {% endif %}
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<div class="row align-items-start">
+    <h5>Early Iterations</h5>
+    <div class="col">
+        <p>Version 1</p>
+        <img class="img-fluid float-right" src="/assets/images/passing/vis-v1.jpeg" />
+    </div>
+    <div class="col">
+        <p>Version 2</p>
+        <img class="img-fluid float-right" src="/assets/images/passing/vis-v2.jpeg" />
+    </div>
+</div>
