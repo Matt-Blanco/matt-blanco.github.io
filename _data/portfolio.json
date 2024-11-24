@@ -27,8 +27,8 @@
     },
     {
         "title": "Surf's Up",
-        "type": "Data Visualization",
-        "description": "Assisting a four-day workshop hosted by the Ars Electronica FutureLab, Surf's Up attempts to brigde geographies by visualizing wave data from Nazaré, Portugal while attempting to bring together our natural and built environments.",
+        "type": "Multimedia Visualization",
+        "description": "Assisting a four-day workshop hosted by the Ars Electronica FutureLab, Surf's Up attempts to bridge geographies by visualizing wave data from Nazaré, Portugal while attempting to bring together our natural and built environments.",
         "tags": [
             "computer science, ",
             "design"
@@ -49,7 +49,7 @@
         "img": "/assets/images/olli.png",
         "year": 2022,
         "url": "https://mitvis.github.io/olli/",
-        "role": "Lead Researcher"
+        "role": "Researcher"
     },
     {
         "title": "eyeWatch",
