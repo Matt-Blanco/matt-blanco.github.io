@@ -1,5 +1,18 @@
 [
   {
+    "title": "Passing Time",
+    "type": "Data Visualization",
+    "description": "What begain as a piece of art as a gift to a friend, turned into creating abstract visualizations of weather over the course of a year. Using historic weather data of Sanibel Florida, organic forms are generated based on the temperature, cloud cover, and rainfall of the city. The visual system can also be used to create visualizations for any location on Earth.",
+    "tags": [
+      "computer science, ",
+      "design"
+    ],
+    "img": "https://pub-b2fdae8a32ba430298f257d3e7c2a231.r2.dev/sanibel-2013.mov",
+    "year": 2024,
+    "url": "/projects/passing-time",
+    "role": "Designer / Developer"
+  },
+  {
     "title": "Surf's Up",
     "description": "Assisting a four-day workshop hosted by the Ars Electronica FutureLab, Surf's Up attempts to brigde geographies by visualizing wave data from Nazaré, Portugal while attempting to bring together our natural and built environments.",
     "tags": [

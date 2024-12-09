@@ -33,7 +33,7 @@
     "startDate": "05.2022",
     "endDate": "05.2024",
     "description": [
-      "Designed and Developed a modular UI to search, filter, and analyze company data from Banca Intesa Sanpaolo, Italy’s largest bank, to a rendered network and circular packing visualizations.",
+      "Designed and developed a modular UI to search, filter, and analyze company data from Banca Intesa Sanpaolo, Italy’s largest bank, to a rendered network and circular packing visualizations.",
       "Collaborated with other team members to properly implement visualization prototypes iterating off of feedback from team members and stakeholders",
       "Created an independent open-source ReactJS component library used throughout the visualization and in other Center for Design projects."
     ]
