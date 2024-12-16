@@ -11,7 +11,11 @@ title: Projects
   <div class="card w-50">
     <a target="_blank" href="{{ project.url }}">
       <div class="card-img">
+        {% if project.img contains "mp4" or project.img contains "mov" %}
+        <video class="img-fluid" loop autoplay muted src="{{ project.img }}"></video>
+        {% else %}
         <img src="{{ project.img }}" width="100" height="100" />
+        {% endif %}
       </div>
     </a>
     <div class="project-info">
