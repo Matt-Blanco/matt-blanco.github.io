@@ -1,5 +1,18 @@
+.inclusive-sans-regular {
+  font-family: "Inclusive Sans", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.inclusive-sans-regular-italic {
+  font-family: "Inclusive Sans", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+
 * {
-  font-family: interstate;
+  font-family: "Inclusive Sans";
   cursor: url('/assets/images/ddw_boat_outline.png'), auto;
 }
 
