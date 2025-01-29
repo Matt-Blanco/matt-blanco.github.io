@@ -67,8 +67,8 @@
     "position": "Programming Language Researcher",
     "company": "NUPRL",
     "location": "Boston, MA",
-    "startDate": "01.2023",
-    "endDate": "06.2023",
+    "startDate": "01.2021",
+    "endDate": "08.2021",
     "description": [
       "Contributed to the development of an open-source dynamic taint analysis tool for the JavaScript programming language.",
       "Added support to track program taint through JavaScript Promises and Async and Await operations through adding multiple function call stacks throughout the analysis and intercepting Promise events.",
