@@ -1,5 +1,27 @@
 [
   {
+    "title": "Curatorial Synapses",
+    "description": "Exhibited in the 19th International Venice Biennale of Architecture, and as part of 'Constructing La Biennale', Stretching across a 23-meter-long wall, this critical visualization unpacks the curatorial process behind the exhibition Intelligens. Natural. Artificial. Collective. From this nexus, threads representing the selected applications and projects extend, unfolding through the interpretative dimensions of curation. Ethnographic insights, presented as excerpts from interviews, further enrich the narrative by adding depth and context. ",
+    "tags": [
+      "data visualization, ",
+      "information design"
+    ],
+    "img": "https://pub-b2fdae8a32ba430298f257d3e7c2a231.r2.dev/curatorial-synapes.JPG",
+    "year": 2024,
+    "url": "/projects/curatorial-synapses"
+  },
+  {
+    "title": "Exploring Hidden Worlds",
+    "description": "We are becoming more dependent on technology, and yet fewer people know how it works. Software should not be created behind closed doors especially when it can have larger ramifications on our day-to-day lives. Exploring Hidden Worlds aims to lift the veil on what it takes to build modern software through an explorable 3D visualization. Through learning what it takes to build modern software, and having the ability to understand it people can have more agency when deciding whether to adopt new, potentially harmful, technologies.",
+    "tags": [
+      "computer science, ",
+      "design"
+    ],
+    "img": "/assets/images/hidden_worlds.png",
+    "year": 2024,
+    "url": "/projects/exploring-hidden-worlds"
+  },
+  {
     "title": "Passing Time",
     "type": "Data Visualization",
     "description": "What begain as a piece of art as a gift to a friend, turned into creating abstract visualizations of weather over the course of a year. Using historic weather data of Sanibel Florida, organic forms are generated based on the temperature, cloud cover, and rainfall of the city. The visual system can also be used to create visualizations for any location on Earth.",
@@ -54,17 +76,6 @@
     "img": "/assets/images/eyewatch/eyewatch_service_blueprint.png",
     "year": 2024,
     "url": "/projects/eyewatch"
-  },
-  {
-    "title": "Exploring Hidden Worlds",
-    "description": "We are becoming more dependent on technology, and yet fewer people know how it works. Software should not be created behind closed doors especially when it can have larger ramifications on our day-to-day lives. Exploring Hidden Worlds aims to lift the veil on what it takes to build modern software through an explorable 3D visualization. Through learning what it takes to build modern software, and having the ability to understand it people can have more agency when deciding whether to adopt new, potentially harmful, technologies.",
-    "tags": [
-      "computer science, ",
-      "design"
-    ],
-    "img": "/assets/images/hidden_worlds.png",
-    "year": 2024,
-    "url": "/projects/exploring-hidden-worlds"
   },
   {
     "title": "The Archive of a Designer",
