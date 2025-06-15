@@ -54,8 +54,11 @@ title: CV
           </div>
           <div class="row">
             <p>{{ edu.degreeType}} {{ edu.degree }}</p>
+            {% if edu.gpa != '' %}
             <p>GPA: {{ edu.gpa }} / 4.0</p>
+            {% endif %}
             <p>{{ edu.honors }}</p>
+            {% if edu.clubs != '' %}
             <div>
               <p>
                 <span>
@@ -66,6 +69,7 @@ title: CV
                 </span>
               </p>
             </div>
+            {% endif %}
           </div>
         </div>
         {% endfor %}
@@ -80,21 +84,22 @@ title: CV
         {% for exp in site.data.resume.experience %}
         <div class="mb-3">
           <div class="row align-items-start">
-            <div class="col col-md-auto">
-                <strong>
-                  {{ exp.position }}
-                </strong>
-                -
-                <em>
-                  {{ exp.company }}
-                </em>
-            </div>
+            <p class="col col-md-auto">
+              <strong>
+                {{ exp.position }}
+              </strong>
+            </p>
+            <p class="col col-md-auto">
+              <em>
+                {{ exp.company }}
+              </em>
+            </p>
             <div class="col d-flex justify-content-end">
               <span>{{ exp.startDate }} - {{ exp.endDate }}</span>
             </div>
           </div>
           <div class="row mb-2">
-            <h7>{{ exp.location }}</h7>
+            <h6>{{ exp.location }}</h6>
           </div>
           <div class="row">
             {% for bullet in exp.description %}
@@ -105,7 +110,7 @@ title: CV
         {% endfor %}
       </section>
 
-      <section class="mt-1 mb-1">
+      <!-- <section class="mt-1 mb-1">
         <h3>
           <strong>
             Projects
@@ -186,6 +191,34 @@ title: CV
           </div>
         </div>
         {% endfor %}
+      </section> -->
+
+      <section class="mt-1 mb-1">
+        <h3>
+          <strong>
+            Exhibitions
+          </strong>
+        </h3>
+        {% for exhibition in site.data.resume.exhibitions %}
+        <div class="mb-2">
+          <div class="row">
+            <p class="col-1">
+              {{ exhibition.year }}
+            </p>
+            <div class="col-11">
+              <p>
+                <strong>{{ exhibition.project }}</strong>
+              </p>
+              <p>
+                <em>{{ exhibition.exhibition }}</em>
+              </p>
+              {% for author in exhibition.participants %}
+              {{ author }}
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+        {% endfor %}
       </section>
 
       <section class="mt-1 mb-1">
@@ -197,13 +230,20 @@ title: CV
         {% for pub in site.data.resume.publications %}
         <div class="mb-2">
           <div class="row">
-            <p>
-              {{pub.year}}. <strong>{{ pub.title }}</strong>
-              {% for author in pub.authers %}
+            <p class="col-1">
+              {{pub.year}}
+            </p>
+            <div class="col-11">
+              <p>
+                <strong>{{ pub.title }}</strong>
+              </p>
+              <p>
+                <em>{{ pub.conference }}</em>
+              </p>
+              {% for author in pub.authors %}
               {{ author }}
               {% endfor %}
-              <em>{{ pub.conference }}</em>
-            </p>
+            </div>
           </div>
         </div>
         {% endfor %}
@@ -218,8 +258,11 @@ title: CV
         {% for award in site.data.resume.awards %}
         <div class="mb-2">
           <div class="row">
-            <p>
-              {{award.year}}. <strong>{{ award.name }}</strong>
+            <p class="col-1">
+              {{award.year}}
+            </p>
+            <p class="col-11">
+              <strong>{{ award.name }}</strong>
             </p>
           </div>
         </div>

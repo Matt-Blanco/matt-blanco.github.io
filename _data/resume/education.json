@@ -1,4 +1,14 @@
 [
+    {
+    "title": "New York University",
+    "location": "New York, NY",
+    "startDate": "09.2025",
+    "endDate": "05.2027",
+    "degreeType": "MPS",
+    "degree": "Interactive Telecommunications Program (ITP)",
+    "gpa": "",
+    "clubs": ""
+  },
   {
     "title": "Northeastern University",
     "location": "Boston, MA",

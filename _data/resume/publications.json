@@ -1,10 +1,18 @@
 [
   {
-    "year": 2024,
-    "title": "Exploring Hidden Worlds: Investigating a New Future of Code",
+    "year": 2025,
+    "title": "Providing Form to Function: Exploring Code Through Visualization",
     "authors": [
       "Matthew Blanco",
       "Todd Linkner"
+    ],
+    "conference": "The Conference on Communication, Computation, Aesthetics, and X (xCoAx 2025)"
+    },
+  {
+    "year": 2024,
+    "title": "Exploring Hidden Worlds: Investigating a New Future of Code",
+    "authors": [
+      "Matthew Blanco"
     ],
     "conference": "Northeastern University RISE 2024"
   },
