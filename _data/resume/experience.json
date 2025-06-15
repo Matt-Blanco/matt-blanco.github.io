@@ -72,7 +72,7 @@
     "description": [
       "Contributed to the development of an open-source dynamic taint analysis tool for the JavaScript programming language.",
       "Added support to track program taint through JavaScript Promises and Async and Await operations through adding multiple function call stacks throughout the analysis and intercepting Promise events.",
-      "Supported in part by National Science Foundation REU Project # 2109395."
+      "Supported in part by the National Science Foundation REU Project # 2109395."
     ]
   },
   {
