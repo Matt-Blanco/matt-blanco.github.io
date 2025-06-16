@@ -2,9 +2,9 @@
     {
     "title": "New York University",
     "location": "New York, NY",
-    "startDate": "09.2025",
-    "endDate": "05.2027",
-    "degreeType": "MPS",
+    "startDate": "09.25",
+    "endDate": "05.27",
+    "degreeType": "M.P.S.",
     "degree": "Interactive Telecommunications Program (ITP)",
     "gpa": "",
     "clubs": ""
@@ -12,8 +12,8 @@
   {
     "title": "Northeastern University",
     "location": "Boston, MA",
-    "startDate": "09.2019",
-    "endDate": "05.2024",
+    "startDate": "09.19",
+    "endDate": "05.24",
     "gpa": 3.70,
     "degreeType": "B.S.",
     "degree": "Computer Science & Design",
@@ -23,12 +23,12 @@
   {
     "title": "IE University",
     "location": "Madrid, Spain",
-    "startDate": "09.2022",
-    "endDate": "12.2022",
-    "gpa": 3.72,
-    "degreeType": "B.A.",
+    "startDate": "09.22",
+    "endDate": "12.22",
+    "gpa": "",
+    "degreeType": "",
     "degree": "Design Exchange Student",
     "honors": "",
-    "clubs": ["IE Climbing Club"]
+    "clubs": ""
   }
 ]

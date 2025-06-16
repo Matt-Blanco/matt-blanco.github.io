@@ -3,7 +3,7 @@
     "position": "UI Developer & Designer",
     "company": "Nterprisers Inc.",
     "location": "Providence, RI",
-    "startDate": "10.2024",
+    "startDate": "10.24",
     "endDate": "Present",
     "description": [
       "Designed and implemented visually intuitive, interfaces both improving existing pages or through new features across the platform.", 
@@ -17,8 +17,8 @@
     "position": "Creative Coding Program Assistant",
     "company": "Northeastern University",
     "location": "Vienna, AT",
-    "startDate": "07.2024",
-    "endDate": "08.2024",
+    "startDate": "07.24",
+    "endDate": "08.24",
     "description": [
       "Assisted teaching underclassmen students, of various degrees, Processing programming language throughout weekly project sprints.",
       "Held workshops to teach students programming and version control principles including Git and basic functional programming.",
@@ -30,8 +30,8 @@
     "position": "UI & Visualization Developer",
     "company": "Center for Design",
     "location": "Boston, MA",
-    "startDate": "05.2022",
-    "endDate": "05.2024",
+    "startDate": "05.22",
+    "endDate": "05.24",
     "description": [
       "Designed and developed a modular UI to search, filter, and analyze company data from Banca Intesa Sanpaolo, Italy’s largest bank, to a rendered network and circular packing visualizations.",
       "Collaborated with other team members to properly implement visualization prototypes iterating off of feedback from team members and stakeholders",
@@ -42,8 +42,8 @@
     "position": "Front-End Engineer",
     "company": "RECUR",
     "location": "Boston, MA",
-    "startDate": "01.2023",
-    "endDate": "05.2023",
+    "startDate": "01.23",
+    "endDate": "05.23",
     "description": [
       "Updated default brand styling when creating new brand marketplaces.",
       "Abstracted UI to more easily switch between brands and different visual styles.",
@@ -54,8 +54,8 @@
     "position": "Visualization Researcher & Designer",
     "company": "MIT Visualization Group",
     "location": "Boston, MA",
-    "startDate": "01.2022",
-    "endDate": "08.2022",
+    "startDate": "01.22",
+    "endDate": "08.22",
     "description": [
       "Created Olli, an open-source JavaScript library improving accessibility of data visualization with screen readers for blind and low-vision users.",
       "Implemented an adapter design pattern allowing the tool to be used alongside any visualization library such as Vega, Vega-Lite, and Observable Plot.",
@@ -67,8 +67,8 @@
     "position": "Programming Language Researcher",
     "company": "NUPRL",
     "location": "Boston, MA",
-    "startDate": "01.2021",
-    "endDate": "08.2021",
+    "startDate": "01.21",
+    "endDate": "08.21",
     "description": [
       "Contributed to the development of an open-source dynamic taint analysis tool for the JavaScript programming language.",
       "Added support to track program taint through JavaScript Promises and Async and Await operations through adding multiple function call stacks throughout the analysis and intercepting Promise events.",
@@ -79,8 +79,8 @@
     "position": "Teaching Assistant - Computer Science Fundamentals",
     "company": "Northeastern University",
     "location": "Boston, MA",
-    "startDate": "09.2020",
-    "endDate": "12.2020",
+    "startDate": "09.20",
+    "endDate": "12.20",
     "description": [
       "Graded assignments on a weekly basis providing thoughtful feedback on students code giving comments on both functionality and design of solutions",
       "Communicated with fellow TAs and faculty on assignment expectations and abnormal homework submissions"
@@ -90,8 +90,8 @@
     "position": "Software Engineer Intern",
     "company": "Alluxio",
     "location": "San Mateo, CA",
-    "startDate": "06.2019",
-    "endDate": "09.2019",
+    "startDate": "06.19",
+    "endDate": "09.19",
     "description": [
       "Developed automatic documentation generation for CLI commands by scraping current documentation files in Markdown and modifying the format to better suite the command line.",
       "Used Docker simulate an Alluxio cluster in order to test and improve metric collection and dashboard layouts to better visualize the health of an Alluxio cluster.",
