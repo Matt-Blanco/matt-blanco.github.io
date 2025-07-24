@@ -75,8 +75,19 @@ active_section: projects
     <h5 class="mt-3">Role</h5>
     <p>
         Throughout the project I contributed to writing the code that structured the main visualization before it was
-        further refined in Adobe Illustrator. Additionally, I worked on the data collection and analysis of the Biennale
-        data which our team was provided acces by La Biennale Venezia.
+        further refined in Adobe Illustrator. Access to this year's Biennale data was provided by La Biennale Venezia
+        through the platform Podio. Relying on the platform's API, I built a scraper in Python to fetch all available
+        metadata for every project (both work accepted into the Biennale and not). Once the data was analyzed by Todd
+        Linkner, we decided which fields would be visualized and the types of projects we would focus on.
+        <br />
+
+        Once we had a clear understanding of the data, I wrote the code that would generate the main visualization.
+        Written using D3.js, the visualization aimed to showcase the various curatorial fields of the accepted projects.
+        Giving viewers the ability to see a <em>shape</em> of the curatorial process. Through a series of expanding
+        dendrograms, the flows saw how the metadata reflected the main curatorial themes of the Biennale: Artificial,
+        Natural, and Collective Intelligences. Once the work was completed in D3, using an algorithmic process of
+        iterating through each project and identifying where it should be placed within the flow. The work was then
+        brought into Adobe Illustrator for final touches and to create a more organic flow of data.
     </p>
 </div>
 
@@ -91,13 +102,19 @@ active_section: projects
             alt="Early sketch of what the visualization could look like." />
     </div>
     <div class="row mt-4">
-        <div class="col">
+        <div class="col my-auto">
             <img class="img-fluid float-right" src="/assets/images/curatorial-synapes/close.JPG"
                 alt="Early sketch of what the visualization could look like." />
         </div>
         <div class="col">
-            <img class="img-fluid float-right" src="/assets/images/curatorial-synapes/wide.JPG"
+            <img class="img-fluid float-right" src="/assets/images/curatorial-synapes/hallway.JPG"
                 alt="Early sketch of what the visualization could look like." />
         </div>
     </div>
+</div>
+
+<div class="my-3">
+    <h5 class="mt-3">Visualization: Web Version</h5>
+    <iframe src="https://nu-center-for-design.github.io/curatorial-synapses/" name="curatorial-synapes" scrolling="yes"
+        frameborder="1" marginheight="0px" marginwidth="0px" height="800px" width="95%" allowfullscreen></iframe>
 </div>
