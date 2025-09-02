@@ -1,3 +1,5 @@
+
+
 .inclusive-sans-regular {
   font-family: "Inclusive Sans", serif;
   font-weight: 400;
@@ -12,7 +14,7 @@
 
 
 * {
-  font-family: "Inclusive Sans";
+  font-family: "hanken-grotesk", "Inclusive Sans";
   cursor: url('/assets/images/ddw_boat_outline.png'), auto;
 }
 
@@ -96,8 +98,9 @@ a:hover {
   cursor: url('/assets/images/ddw_boat.png'), auto !important;
 }
 
-#aboutImage {
-  max-width: 35vw;
+#about-image {
+  max-width: 25vw;
+  /* max-height: 25vh; */
 }
 
 .nav-item {
