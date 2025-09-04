@@ -13,8 +13,76 @@ title: Week 1
             Week 1
         </h3>
 
-        <p>
-
-        </p>
+        <div class="row">
+            <div class="container">
+                <p>
+                    The first week of labs and readings reinforced why I am here in ITP: To create and experiment with
+                    the ways we interact and use software (and more broadly computational technologies). The two
+                    readings expressed my own frustrations around modern interfaces, and will likely serve as a basis
+                    for projects I would like to work on as the semester continues. Interfaces are meant to be seen and
+                    felt. To respond and react to a user's input.
+                </p>
+                <p>
+                    The idea that software should be invisible is false and yet it's embedded in the terminology of the
+                    field and the cultural hivemind of software as a whole. Like the idea that digital data can't
+                    degrade and will be
+                    remembered forever. The readings and labs remind me of Wendy Chun's work <em><a
+                            href="https://direct.mit.edu/books/oa-monograph/3341/Programmed-VisionsSoftware-and-Memory"
+                            class="underline">Software
+                            as Memory</a></em> and I'm excited to bring my own expertise into my projects throughout the
+                    semester. Applying the concepts from the lessons and labs however, were difficult to understand at
+                    first. My
+                    expertise lies in software. Hardware though is another story. I used to have an arduino uno kit, but
+                    I could never get myself into working on projects and ultimately the kit just gathered dust.
+                </p>
+                <div class="row">
+                    <div class="col-4">
+                        <p>
+                            The first labs were confusing at first. Realizing I had to utilize The Shop took longer than
+                            it
+                            probably should have, but the labs were helpful teaching me the basics of the breadboard and
+                            to
+                            feel more comfortable with the materials at my disposal.
+                        </p>
+                        <p>
+                            The best way to describe the labs were like an adult's arts and crafts camp. The circuits I
+                            put together, while simple, made me excited about what I will be able to build throughout my
+                            time here at ITP especially as I become more comfortable fabricating and building more
+                            elaborate projects.
+                        </p>
+                    </div>
+                    <div class="col-8">
+                        <div class="row">
+                            <div class="my-2 col-6">
+                                <img src="/assets/images/itp-blog/pcomp/pcomp-lab2-setup.jpeg" alt="Lab 2 Materials"
+                                    class="img-fluid">
+                                <!-- <small>Figure 1. Obtaining materials for the second lab <em>Setting up a
+                                        Breadboard</em></small> -->
+                            </div>
+                            <div class="my-2 col-6">
+                                <img src="/assets/images/itp-blog/pcomp/pcomp-lab2.jpeg" alt="Lab 2 Materials"
+                                    class="img-fluid">
+                                <!-- <small>Figure 2. Completing the schematic in the lab <em>Setting up a
+                                        Breadboard</em></small> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <h3>Photo Gallery:</h3>
+                        <div class="row">
+                            {% assign pcomp_images = site.static_files | where_exp: "file", "file.path contains
+                            'assets/images/itp-blog/pcomp/'" %}
+                            {% for image in pcomp_images %}
+                            {% assign loopindex = forloop.index %}
+                            <div class="col-3 mx-1 my-1">
+                                <img src="{{ image.path }}" alt="image" class="img-fluid" />
+                                <!-- <small>Figure {{ loopindex }}.</small> -->
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
