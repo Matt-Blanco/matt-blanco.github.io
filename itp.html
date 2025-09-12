@@ -11,14 +11,24 @@ layout: default
                 <h3 class="mt-3">
                     Fall 2025
                 </h3>
-                <p>
+                <h5>
                     Physical Computing
-                </p>
+                </h5>
                 <ul>
                     {% for post in site.posts %}
-                    {% if post.category != 'itp' %}
-                    <a href="{{ post.url }}" class="clol-12">{{ post.title }}</a>
+                    {% if post.category == 'pcomp' %}
+                    <a href="{{ post.url }}" class="col-12 ">{{ post.title }}</a>
                     <!-- {{ post.excerpt }} -->
+                    {% endif %}
+                    {% endfor %}
+                </ul>
+                <h5>
+                    Intro to Fabrication
+                </h5>
+                <ul>
+                    {% for post in site.posts %}
+                    {% if post.category == 'fab' %}
+                    <a href="{{ post.url }}" class="col-12">{{ post.title }}</a>
                     {% endif %}
                     {% endfor %}
                 </ul>
