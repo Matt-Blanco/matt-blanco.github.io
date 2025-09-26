@@ -36,6 +36,18 @@ layout: default
                     {% endif %}
                     {% endfor %}
                 </ul>
+                <h5>
+                    Applications
+                </h5>
+                <ul>
+                    {% for post in site.posts %}
+                    {% if post.category == 'applications' %}
+                    <div class="col-12">
+                        <a href="{{ post.url }}" class="col-12">{{ post.title }}</a>
+                    </div>
+                    {% endif %}
+                    {% endfor %}
+                </ul>
             </div>
         </div>
     </div>
