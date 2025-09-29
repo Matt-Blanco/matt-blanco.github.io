@@ -1,0 +1,110 @@
+---
+active_section: itp
+layout: default
+author: Matt
+category: pcomp
+title: Week 4 - Taking a Step Back
+---
+
+<div class="row">
+    <div class="container">
+        <a href="/itp">&#8592; Back to ITP Blog</a>
+        <h3 class="my-3">
+            Week 4 - Taking a Step Back
+        </h3>
+        <div class="row">
+            <div class="container col-10 mx-auto">
+                <p>
+                    This week I took my Physical Computing work in a more relaxed manner and decided to focus on some of
+                    my other courses (specificall Into to Fabrication). The concepts from the lab I already felt fairly
+                    familiar with since it related to programming concepts I have worked with a lot. In week 2, I had
+                    already experimented with sensing different types of button presses and working with different input
+                    states, and I think the ideas are heavily related to a way of programmatic thinking I am comfortable
+                    with.
+                </p>
+                <div class="row col-12">
+                    <div class="col">
+                        <small>Lab-provided code to track button press types</small>
+                        <pre class="border border-1 border-dark col-12 mx-auto">
+                            <code>
+    void setup() {
+        Serial.begin(9600);
+        pinMode(buttonPin, INPUT);
+    }
+
+    void loop() {
+        int buttonState = digitalRead(buttonPin);
+        
+        if (buttonState != lastButtonState) {
+            if (buttonState == HIGH) {
+                pressTime = millis();
+            }
+            if (buttonState == LOW) {
+                long holdTime = millis() - pressTime;
+                if (holdTime > longPress) {
+                    Serial.println("long press");
+                } else if (holdTime > shortPress) {
+                    Serial.println("short press");
+                } else {
+                    Serial.println("Tap");
+                }
+            }
+        }
+
+        lastButtonState = buttonState;
+    }
+                            </code>
+                        </pre>
+                    </div>
+                    <div class="col">
+                        <small>Old code to manage three states with two LEDs</small>
+                        <pre class="border border-dark border-1 col-12 mx-auto">
+                            <code>
+    int count;
+    bool pressing;
+    void setup() {
+        count = 0;
+        pressing = false;
+    }
+
+    void loop() {
+        if (digitalRead(2) == HIGH) {
+            if (!pressing) {
+                pressing = true;
+                count += 1;
+                if (count >= 3) {
+                    count = 0;
+                }
+            }
+        } else {
+            pressing = false;
+        }
+
+        if (count <= 0) {
+            digitalWrite(3, LOW);
+            digitalWrite(4, LOW);
+        } else if (count == 1) {
+            digitalWrite(3, HIGH);
+            digitalWrite(4, LOW);
+        } else if (count >= 2) {
+            digitalWrite(3, LOW);
+            digitalWrite(4, HIGH);
+        }
+    }
+                            </code>
+                        </pre>
+                    </div>
+                </div>
+                <p>
+                    I'm beginning to connect everything I'm learning and practicing to my other courses and vice-versa.
+                    As my fabrication skills are getting better I want to make well-made enclosings and objects to hold
+                    my future physical computing projects, and I'm excited to connect the work with more of my coding
+                    skills (and eventually more creative coding work).
+                </p>
+                <p>
+                    - Matt
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

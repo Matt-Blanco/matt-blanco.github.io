@@ -3,7 +3,12 @@ active_section: itp
 layout: default
 ---
 
-<div class="row">
+
+<script type="module" src="{{ " /assets/scripts/index.js" | prepend: site.baseurl }}"></script>
+<div class="row position-absolute overflow-hidden">
+    <div id="graph"></div>
+</div>
+<div class="row z-4 position-relative">
     <div class="col-sm-8">
         <h2 class="mt-0">ITP Blog</h2>
         <div class="row">
