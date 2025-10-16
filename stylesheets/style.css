@@ -1,5 +1,10 @@
 
 
+@font-face {
+  font-family: Blanco;
+  src: url("../assets/Blanco.ttf"), auto;
+}
+
 .inclusive-sans-regular {
   font-family: "Inclusive Sans", serif;
   font-weight: 400;
@@ -14,8 +19,12 @@
 
 
 * {
-  font-family: "hanken-grotesk", "Inclusive Sans";
+  font-family: "Blanco", "hanken-grotesk", "Inclusive Sans" !important;
   cursor: url('/assets/images/ddw_boat_outline.png'), auto;
+}
+
+p {
+  font-family: "Inter 18pt" !important;
 }
 
 body {
