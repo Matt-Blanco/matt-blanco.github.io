@@ -24,8 +24,8 @@ new p5((p) => {
   p.draw = () => {
     p.translate(p.width / 2, p.height / 2);
 
-    radialPattern(p.color(168, 0, 10, 15), (p.width * .30), .02, .04)
-    radialPattern(p.color(247, 190, 69, 20), (p.width * .10), .02, .01)
+    radialPattern(p.color(240, 81, 100, 75), (p.width * .30), .02, .04)
+    radialPattern(p.color(255, 219, 63, 80), (p.width * .10), .02, .01)
 
     if (t == maxFrames || t == -1) {
       increaing = !increaing
