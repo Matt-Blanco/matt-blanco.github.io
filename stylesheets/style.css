@@ -23,7 +23,7 @@
   cursor: url('/assets/images/blanco-logo-outline-small.png'), auto;
 }
 
-p {
+p, small {
   font-family: "Inter 18pt" !important;
 }
 
