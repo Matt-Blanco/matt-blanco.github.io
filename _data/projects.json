@@ -120,16 +120,6 @@
     "url": "/projects/our-changing-lands"
   },
   {
-    "title": "NUHOC on Film",
-    "description": "What makes a community? Is it the shared common interests amongst a group of people or the people themselves? Shot using Super8 film \"NUHOC on Film\" captures the hidden history of why some of its members stuck around and showcasing what matters most: people.",
-    "tags": [
-      "design"
-    ],
-    "img": "/assets/images/nuhoc_on_film.jpg",
-    "year": 2022,
-    "url": "https://www.youtube.com/watch?v=MZDFxir7_3s"
-  },
-  {
     "title": "Olli",
     "description": "While working for the MIT Visualization Group I developed version 1.0 of Olli. An open-source library for converting data visualizations into accessible text structures for screen reader users. Starting with an existing visualization specification created with a supported toolkit, Olli produces a keyboard-navigable tree view with descriptions at varying levels of detail. Users can explore these structures both to get an initial overview, and to dive into the data in more detail.",
     "tags": [
@@ -150,15 +140,5 @@
     "img": "/assets/images/knowledge_map.png",
     "year": 2022,
     "url": "https://nu-center-for-design.github.io/DataViz_Elearning_phase-3/#/"
-  },
-  {
-    "title": "Excelsior",
-    "description": "The Northeastern University Huskiers and Outing Club semi-yearly magazine. Had the opportunity to design the cover and spreads of the 2022 edition combining member written stories with engaging photography taken throughout the semester.",
-    "tags": [
-      "design"
-    ],
-    "img": "/assets/images/excelsior.png",
-    "year": 2022,
-    "url": ""
   }
 ]
