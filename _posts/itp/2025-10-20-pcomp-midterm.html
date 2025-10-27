@@ -1,0 +1,160 @@
+---
+active_section: itp
+layout: default
+author: Matt
+category: pcomp
+title: Weeks 5-8 - The Midterm
+---
+
+<div class="row">
+    <div class="container">
+        <a href="/itp">&#8592; Back to ITP Blog</a>
+        <h3 class="my-3">
+            Weeks 5-8 - The Midterm
+        </h3>
+
+        <div class="row">
+            <div class="container col-10 mx-auto">
+                <p>
+                    Coming to ITP, the physical computing classes had been highlighted as one of the star pieces of the
+                    program. The course midterm had also been highly talked about because of the consistent Halloween
+                    theme (since the class' midterm always falls close to Halloween). Jules, Michael, and I decided to
+                    work together to come up with a project.
+                </p>
+                <p>
+                    In the initial stage we were brainstorming some ideas we've had for a halloween themed project,
+                    these are a few of the thoughts we've had in mind:
+                </p>
+                <ul>
+                    <li>
+                        A Jack in the box - something with a jump scare effect, perhaps with a sound played through an
+                        SD card connected to the arduino, maybe LEDs lighting up from some take on a jack O' lantern and
+                        other clichés. We had an idea that the scary thing in the box could be pumpkin spice, maybe
+                        thrown at the user but we abandoned the idea since it was to scary.
+                    </li>
+                    <li>
+                        Trick or treat oriented project where the user picks up candies and they scream or beg for help.
+                        we thought about using pressure sensors and attach each one a specific voice recording which it
+                        activates. we weren't sure how to present it though, we thought it might be weird to present
+                        only a few candies that the users can pick up to make sounds, something felt unclear about the
+                        idea, but we did like the concept of creating sound via pressure sensors. Another version of the
+                        same idea was having a basket full of candies the makes different spooky sounds.
+                    </li>
+                    <li>
+                        Creating a frustrating claw machine that do not collect anything (sounded a bit like the usual
+                        ones) and makes mean sounds.
+                        <div class="mb-2 col-6 mx-auto">
+                            <img src="/assets/images/itp-blog/pcomp/midterm//4f4da0_952f72785361425ea6771979cdfe652b~mv2.avif"
+                                class="img-fluid">
+                        </div>
+                    </li>
+                    <li>
+                        The last idea that was actually building off of the second idea was creating a stage where
+                        poeple can place different objects (we still weren't sure what) on platforms with load cells
+                        pressure sensors to generate different halloween sounds. The Idea was that there will be several
+                        platforms and it will allow a group of people to play the instrument together using differnt
+                        objects with different weights to generate sounds. Maybe some sort of a kids instrument for
+                        intreducing them to halloween.
+                        <div class="mb-2 col-6 mx-auto">
+                            <img src="/assets/images/itp-blog/pcomp/midterm/4f4da0_a0ba8f0540c64274afcc60062934669f~mv2.avif"
+                                class="img-fluid">
+                        </div>
+                    </li>
+                </ul>
+                <p>
+
+                    We moved on with the last idea. we decided to build the device like a small stage of a halloween
+                    festival not sure if we should decorate it like a halloween lawn or a pile of hay with haloween
+                    items decorating it. We agreed to move on with the technical side and start testing the pressure
+                    sensors.
+                    We soldered the load cells so we can connect it to the arduino, and later discovered that they
+                    work best when attached halfway to an object having half of the surface exposed and free to
+                    bend. After testing the sensors can read pressure value properly we went on to build the mockup
+                    for the stage so we can start testing the interaction of the instrument with different items.
+                </p>
+                <div class="mb-2 col-6 mx-auto">
+                    <img src="/assets/images/itp-blog/pcomp/midterm/4f4da0_a08afd627f7349d1a9d8616347dc37aa~mv2.avif"
+                        class="img-fluid">
+                </div>
+                <div class="mb-2 col-6 mx-auto">
+                    <img src="/assets/images/itp-blog/pcomp/midterm/4f4da0_eaa4d008fae94ca9bdd67d614d431219~mv2.avif"
+                        class="img-fluid">
+                </div>
+                <div class="mb-2 col-6 mx-auto">
+                    <img src="/assets/images/itp-blog/pcomp/midterm/4f4da0_3c9eb6ad346d471a8e08fafe5b581987~mv2.avif"
+                        class="img-fluid">
+                </div>
+                <p>
+                    For the music part we tried using the Mozzi library but didn't have a lot of sucsses with that. As
+                    an alternative we created some manipulations on regular tones so they would last longer. so the
+                    noteDuration is longer, it has a vibrato to make a more halloween-ish sound and detuneRange to give
+                    the sound a wobbly effect. the detune constantly bends the pitch of the the tone played. Here is the
+                    test on FSR's. each sensor is genereting a different octave in order to expend the available tones
+                    users can provoke.
+                </p>
+                <div class="mb-2 col-6 mx-auto">
+                    <video class="img-fluid" src="/assets/images/itp-blog/pcomp/midterm/fsr-sound-test.mp4"></video>
+                </div>
+                <p>
+                    The result was a sound of a halloween themed old computer game that we liked and it felt like it
+                    fits the concept of a children instrument. Testing the sounds on the mockup:
+                </p>
+                <div class="mb-2 col-6 mx-auto">
+                    <video class="img-fluid" src="/assets/images/itp-blog/pcomp/midterm/load-cell-sound.mp4"></video>
+                </div>
+                <p>
+                    One of the reasons we chose using small items to provoke the sensor was that the load cells are
+                    really sensitive and were concerned they might break. Later on we realized we can secure the load
+                    cells and we are less limited about pressure inflicted on them. We decided to change the interface
+                    so the user will use the hands to activate the sensors. We started designing the wooden stage/box
+                    and taking hand measures for the fabrication part.
+                </p>
+                <div class="mb-2 col-6 mx-auto">
+                    <img src="/assets/images/itp-blog/pcomp/midterm/4f4da0_a52cc33ca4474352ae5597762f4c8796~mv2.avif"
+                        class="img-fluid">
+                </div>
+                <p>
+                    Then we started designing sticker to for the hands to make it more appealing:
+                </p>
+                <div class="mb-2 col-6 mx-auto">
+                    <img src="/assets/images/itp-blog/pcomp/midterm/4f4da0_787bae69022e4f1e8a88d8b79d1dbec4~mv2.avif"
+                        class="img-fluid">
+                </div>
+                <p>
+                    Which later evolved to this after a cleaner design in Photoshop and textures with AI:
+                </p>
+                <div class="mb-2 col-6 mx-auto">
+                    <img src="/assets/images/itp-blog/pcomp/midterm/4f4da0_5f976875e4dd425d837da74012cc64f7~mv2.avif"
+                        class="img-fluid">
+                </div>
+                <p>
+                    And this is the simulation for the final decoration:
+                </p>
+                <div class="mb-2 col-6 mx-auto">
+                    <img src="/assets/images/itp-blog/pcomp/midterm/4f4da0_84fd34f6c84a462f8ce478b4aa403e01~mv2.avif"
+                        class="img-fluid">
+                </div>
+                <p>
+                    Next step was setting up the enclosure and securing the load cell and screwing the amps to the sides
+                    of the box:
+                </p>
+                <div class="mb-2 col-6 mx-auto">
+                    <img src="/assets/images/itp-blog/pcomp/midterm/4f4da0_5ae5eb9b7ff847ae8538c1f1b733fe91~mv2.avif"
+                        class="img-fluid">
+                </div>
+                <div class="mb-2 col-6 mx-auto">
+                    <img src="/assets/images/itp-blog/pcomp/midterm/4f4da0_e6696612c1234ef294750824dab07143~mv2.avif"
+                        class="img-fluid">
+                </div>
+                <div class="mb-2 col-6 mx-auto">
+                    <img src="/assets/images/itp-blog/pcomp/midterm/4f4da0_0bac8889b91f4631990b5ab83785e4ac~mv2.avif"
+                        class="img-fluid">
+                </div>
+                <div class="mb-2 col-6 mx-auto">
+                    <img src="/assets/images/itp-blog/pcomp/midterm/25c_mmb9544_matthew-blanco_cooperative-6.jpg"
+                        class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
