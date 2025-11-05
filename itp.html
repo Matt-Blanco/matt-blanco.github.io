@@ -30,6 +30,19 @@ layout: default
                     {% endfor %}
                 </ul>
                 <h5>
+                    Intro to Computational Media: Media
+                </h5>
+                <ul>
+                    {% for post in site.posts %}
+                    {% if post.category == 'icm' %}
+                    <div class="col-12">
+                        <a href="{{ post.url }}">{{ post.title }}</a>
+                    </div>
+                    <!-- {{ post.excerpt }} -->
+                    {% endif %}
+                    {% endfor %}
+                </ul>
+                <h5>
                     Intro to Fabrication
                 </h5>
                 <ul>
