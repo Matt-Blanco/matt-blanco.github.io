@@ -72,6 +72,76 @@ title: Weeks 5-7 - The Midterm
                     bend. After testing the sensors can read pressure value properly we went on to build the mockup
                     for the stage so we can start testing the interaction of the instrument with different items.
                 </p>
+                <p>Test code for the load cell sensors:</p>
+                 <pre class="border border-dark border-2 col-8 mx-auto">
+                    <code>
+                        #include <7semi_HX711.h>
+
+                        // HX711 pin configuration
+                        const int dataPin1 = 2;   // Sensor 1 DOUT
+                        const int clockPin1 = 3;  // Sensor 1 SCK
+
+                        const int dataPin2 = 4;   // Sensor 2 DOUT
+                        const int clockPin2 = 5;  // Sensor 2 SCK
+
+                        const int dataPin3 = 6;   // Sensor 2 DOUT
+                        const int clockPin3 = 7;  // Sensor 2 SCK
+
+                        const int dataPin4 = 8;   // Sensor 2 DOUT
+                        const int clockPin4 = 9;  // Sensor 2 SCK
+
+                        float scale = 230.00;  // Calibration factor (raw units per gram)
+
+                        HX711_7semi sensor1(dataPin1, clockPin1);
+                        HX711_7semi sensor2(dataPin2, clockPin2);
+                        HX711_7semi sensor3(dataPin3, clockPin3);
+                        HX711_7semi sensor4(dataPin4, clockPin4);
+
+                        void setup() {
+                        Serial.begin(9600);
+                        while (!Serial);  // Wait for Serial on boards like Nano 33 IoT
+
+                        sensor1.begin();
+                        sensor2.begin();
+                        sensor3.begin();
+                        sensor4.begin();
+
+                        sensor1.setScale(scale);
+                        sensor1.tare();
+
+                        sensor2.setScale(scale);
+                        sensor2.tare();
+
+                        sensor3.setScale(scale);
+                        sensor3.tare();
+
+                        sensor4.setScale(scale);
+                        sensor4.tare();
+
+                        Serial.println("Tare done. Starting weight measurement...");
+                        }
+
+                        void loop() {
+                        float weight1 = sensor1.getWeight();  // Get weight from sensor 1
+                        float weight2 = sensor2.getWeight();  // Get weight from sensor 2
+                        float weight3 = sensor3.getWeight();  // Get weight from sensor 2
+                        float weight4 = sensor4.getWeight();  // Get weight from sensor 2
+
+
+                        Serial.print("Weight 1: ");
+                        Serial.print(weight1, 2);
+                        Serial.print(" g\tWeight 2: ");
+                        Serial.print(weight2, 2);
+                        Serial.print(" g\tWeight 3: ");
+                        Serial.print(weight3, 2);
+                        Serial.print(" g\tWeight 4: ");
+                        Serial.print(weight4, 2);
+                        Serial.println(" g");
+
+                        // delay(100);  // Optional delay to reduce output rate
+                        }
+                    </code>
+                </pre>
                 <div class="mb-2 col-6 mx-auto">
                     <img src="/assets/images/itp-blog/pcomp/midterm/4f4da0_a08afd627f7349d1a9d8616347dc37aa~mv2.avif"
                         class="img-fluid">
