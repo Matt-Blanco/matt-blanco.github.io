@@ -1,0 +1,83 @@
+---
+active_section: itp
+layout: default
+author: Matt
+category: icm
+title: Weeks 13 - One Last Time
+---
+
+<div class="row">
+    <div class="container">
+        <a href="/itp">&#8592; Back to ITP Blog</a>
+        <h3 class="my-3">
+            Weeks 13 - One Last Time
+        </h3>
+
+        <div class="row">
+            <div class="container col-10 mx-auto">
+                <p>[Note: Photos coming soon]</p>
+                <p>
+                    For starters, I am glad I followed the advice I heard to take the second half of ICM. Through talks
+                    with Arjun and seeing how others approach code, it made me realize that my approach to programming
+                    is very structured and it is sometimes hard for me to think of new creating computing projects.
+                </p>
+                <p>
+                    That being said, what Arjun and I came up with made me excited. Though I only wish we both had more
+                    time to devote to the work. We began with finding where out interests overlapped and what ideas we
+                    wanted to explore. Arjun had done previous work on <em>n=4</em>. A project to determine all the
+                    different permeutations of the letter 'a' that were still readable as an a within for lines. Our
+                    goal started to expand this idea to a whole alphabet of latin characters and introducing 3D space.
+                </p>
+                <p>
+                    With the new layers of complexity, we new we had to include a more robust type set instead of four
+                    line letters, so we spent time drawing out different letter versions on grid paper debating if we
+                    need ascenders and descenders, or if all letters can be in lowercase or not. After many compromises
+                    and debates we found some middle ground.
+                </p>
+                <p>
+                    Through the midst of other finals, we both found time to implement our shared exploration. Arjun
+                    used a single letter and shifted its points throughout Z-space overtime. Meanwhile, I went for a
+                    more holistic approach thinking about how someone would type.
+                </p>
+                <p>
+                    The code breakdown:
+                </p>
+                <p>
+                    My first thought was that each letter would exist in a 3x3 grid, and that each point in the grid
+                    would need to be calculated based on a starting point. So I begain my sketch by making a
+                    <code>grid</code> class and drew a new empty grid whenever a key was pressed. Next I had to apply
+                    the actual letters to each grid. To draw each letter, I created an array of rules. Every letter has
+                    a set of rules which describes the lines between two points to draw. For example, an "O" would have
+                    eight elements in its rules array:
+                </p>
+                <code>
+                    [
+                        { start: "p1", end: "p2"},                        
+                        { start: "p1", end: "p4"},
+                        { start: "p2", end: "p3"},
+                        { start: "p3", end: "p6"},
+                        { start: "p6", end: "p9"},
+                        { start: "p9", end: "p8"}
+                        { start: "p7", end: "p8"}
+                    ]
+                </code>
+                <p>
+                    I had created an initial set of rules for a handful of letters to test the code, but Arjun had done
+                    a lot of the work refining the rules and filling out the alphabet. While adding all the rules, I
+                    also incorporated logic to delete characters with "backspace" along with a blinking cursor to follow
+                    the next letter to orient where someone would type.
+                </p>
+                <p>
+                    The most difficult part of the process was rotating each word and the canvas to new orientations.
+                    Not only would each word have its own depth, but every new word could exist on a diferent plane than
+                    the previous word. Trying to visualize how the canvas would rotate broke my brain but Arun helped as
+                    much as he could.
+                </p>
+                <p>
+                    The end result turned into an architecture of typography. Slightly legible, but more interesting in
+                    the final form than anything else.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
