@@ -6,8 +6,19 @@
       "fabrication"
     ],
     "img": "/assets/images/absurd-collection/IMG_4203.jpg",
-    "year": 2024,
+    "year": 2025,
     "url": "/projects/absurd-collection"
+  },
+    {
+    "title": "Nterprisers Platform",
+    "description": "While working for Nterprisers as their sole UI Developer & Designer, I had rebuilt their platform for small manufacturing business communication. From exploring new visual designs to improving the interaction design of the Nterprisers Platform. The work culminated in brand new software architecture and interface aesthetic as their user base grew.",
+    "tags": [
+      "interface design",
+      "engineering"
+    ],
+    "img": "/assets/images/nterprisers/nterprisers-project-logo.png",
+    "year": 2025,
+    "url": "/projects/"
   },
   {
     "title": "Curatorial Synapses",
@@ -17,7 +28,7 @@
       "information design"
     ],
     "img": "https://pub-b2fdae8a32ba430298f257d3e7c2a231.r2.dev/curatorial-synapes.JPG",
-    "year": 2024,
+    "year": 2025,
     "url": "/projects/curatorial-synapses"
   },
   {
