@@ -37,7 +37,7 @@ body {
   margin-top: 1.25rem;
 }
 
-#info {
+#info, #quick-projects {
   margin: 3%;
   position: relative;
   z-index: 4;
@@ -51,10 +51,10 @@ body {
 }
 
 #graph {
-  overflow-y: hidden;
-  overflow-x: hidden;
-  position: relative;
   z-index: 0;
+  position: fixed;
+  left: -50;
+  top: 10%;
 }
 
 .nodeText {

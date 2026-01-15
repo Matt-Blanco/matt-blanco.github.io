@@ -2,22 +2,44 @@
 active_section: home
 layout: default
 ---
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 <script type="module" src="{{ " /assets/scripts/index.js" | prepend: site.baseurl }}"></script>
-<div class="row position-absolute overflow-hidden">
-  <div id="graph"></div>
-</div>
-<div id="info" class="row col-sm-6 position-relative z-4">
+<div id="graph"></div>
+<div id="info" class="row col-sm-6 position-relative">
   <h1 id="title" class="link">
     Hey, I'm Matt.
   </h1>
   <p id="about">
-    I'm a designer, developer, & adventurer who uses design as a lens to look at how people interact with information.
-    Currently I am a pursuing my masters at NYU in the Interactive Telecommunication Program where I am experimenting
-    with new ways of interacting with code and data. I have been previously affiliated with <a
+    I'm a design engineer & adventurer based in New York City. Through design I observe how we interact with digital
+    technology and complex information and try to make everything a little easier to understand. Currently I'm pursuing
+    a Masters at NYU's Interactive Telecommunications Program (ITP) where I am experimenting with new methods of
+    interaction and fabrication. I have been previously affiliated with <a
       href="https://nterprisers.com">Nterprisers</a> as their lead UI Developer, the
     <a href="https://camd.northeastern.edu/center-for-design/">Center for Design</a> as a student researcher,
     and the <a target="_blank" className="AboutLink" href="https://vis.csail.mit.edu/">Visualization Group</a> at MIT
     CSAIL.
   </p>
+</div>
+
+<div class="row p-2" id="quick-projects" style="margin-top: 20vh;">
+  <h5 class="px-0">Projects</h5>
+  {% for project in site.data.projects %}
+  {% assign loopindex = forloop.index | modulo: 2 %}
+  <div class="col-12 px-0">
+    <div class="col-10 py-1">
+      <div class="project-info">
+        <button class="d-flex justify-content-between align-items-center border-0 border-top border-bottom border-dark bg-transparent w-100" type="button" data-bs-toggle="collapse"
+          data-bs-target="#project-{{ forloop.index }}" aria-expanded="false"
+          aria-controls="project-{{ forloop.index }}">
+          <a target="_blank" href="{{ project.url }}">
+            <h6 class="card-title fw-bold">{{ project.title }}</h6>
+          </a>
+          <p class="mb-0">{{ project.year }}</p>
+        </button>
+        <p class="collapse" id="project-{{ forloop.index }}">{{ project.description }}</p>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
 </div>
