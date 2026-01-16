@@ -44,18 +44,40 @@ new p5((p) => {
 
   function radialPattern(color, maxRadius, xFactor, yFactor) {
     p.stroke(color);
-
     p.beginShape();
+
+    let points = [];
+    
+    // Generate control points
     for (let i = 0; i <= 500; i++) {
-      let ang = p.map(i, 0, 500, 0, p.TWO_PI + 0.15);
+      let ang = p.map(i, 0, 500, 0, p.TWO_PI + .01);
       let rad = (maxRadius - t) * p.noise(i * xFactor, t * yFactor);
-
-      let x, y;
-      x = rad * p.cos(ang) + xOffset;
-      y = rad * p.sin(ang) + yOffset;
-
-      p.curveVertex(x, y);
+      
+      let x = rad * p.cos(ang) + xOffset;
+      let y = rad * p.sin(ang) + yOffset;
+      
+      points.push({x, y});
     }
-    p.endShape();
+
+    // Add the first point at the end to ensure seamless closing
+    points.push(points[0]);
+
+    // Interpolate between control points using curvePoint
+    for (let i = 0; i < points.length - 1; i++) {
+      let p0 = points[i === 0 ? points.length - 2 : i - 1];
+      let p1 = points[i];
+      let p2 = points[i + 1];
+      let p3 = points[i + 2] || points[1];
+
+      // Generate smooth curve segments with more resolution
+      for (let t_curve = 0; t_curve <= 1; t_curve += 0.1) {
+        let x = p.curvePoint(p0.x, p1.x, p2.x, p3.x, t_curve);
+        let y = p.curvePoint(p0.y, p1.y, p2.y, p3.y, t_curve);
+        p.vertex(x, y);
+      }
+    }
+
+    p.endShape(p.CLOSE);
   }
+
 }, document.getElementById('graph'))
