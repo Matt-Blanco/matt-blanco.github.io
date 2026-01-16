@@ -24,7 +24,7 @@
 }
 
 p, small {
-  font-family: "Inter 18pt" !important;
+  font-family: "Inter", sans-serif !important;
 }
 
 body {
