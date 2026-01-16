@@ -86,7 +86,7 @@ a {
   color: black;
 }
 
-a:hover {
+a:hover, button:hover {
   color: black;
   text-decoration: underline;
   cursor: url('/assets/images/blanco-logo-icon-small.png'), auto !important;
