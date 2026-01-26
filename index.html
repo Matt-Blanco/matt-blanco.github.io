@@ -27,7 +27,7 @@ layout: default
   {% for project in site.data.projects %}
   {% assign loopindex = forloop.index | modulo: 2 %}
   <div class="col-12 px-0">
-    <div class="col-10 py-1">
+    <div class="col-12 py-1">
       <div class="project-info" style="background: rgba(255, 255, 255, 0.75);">
         <button class="d-flex text-start justify-content-between align-items-center border-0 border-top border-bottom border-dark bg-transparent w-100" type="button" data-bs-toggle="collapse"
           data-bs-target="#project-{{ forloop.index }}" aria-expanded="false"

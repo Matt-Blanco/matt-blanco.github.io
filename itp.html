@@ -13,6 +13,24 @@ layout: default
         <h2 class="mt-0">ITP Blog</h2>
         <div class="row">
             <div class="container">
+                <h3>Spring 2026</h3>
+                <h5>
+                    Intangible Interactions
+                </h5>
+                <ul>
+                    {% for post in site.posts %}
+                    {% if post.category == 'intangible' %}
+                    <div class="col-12">
+                        <a href="{{ post.url }}">{{ post.title }}</a>
+                    </div>
+                    <!-- {{ post.excerpt }} -->
+                    {% endif %}
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="container">
                 <h3 class="mt-3">
                     Fall 2025
                 </h3>
