@@ -16,6 +16,21 @@ layout: default
                 <h3>Spring 2026</h3>
                 <div class="row">
                     <h5>
+                        Energy
+                    </h5>
+                    <ul>
+                        {% for post in site.posts %}
+                        {% if post.category == 'energy' %}
+                        <div class="col-12">
+                            <a href="{{ post.url }}">{{ post.title }}</a>
+                        </div>
+                        <!-- {{ post.excerpt }} -->
+                        {% endif %}
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="row">
+                    <h5>
                         Nature of Code
                     </h5>
                     <ul>
