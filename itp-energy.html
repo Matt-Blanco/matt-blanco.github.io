@@ -4,7 +4,6 @@ layout: default
 ---
 
 
-<script type="module" src="{{ " /assets/scripts/index.js" | prepend: site.baseurl }}"></script>
 <div class="row position-absolute overflow-hidden">
     <div id="graph"></div>
 </div>
@@ -29,3 +28,8 @@ layout: default
         </div>
     </div>
 </div>
+<script>
+  window.addEventListener("load", () => {
+    renderElements();
+  })
+</script>
