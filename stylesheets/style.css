@@ -17,10 +17,17 @@
   font-style: italic;
 }
 
+.fairplex-wide-book {
+  font-family: "fairplex", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 
 * {
-  font-family: "Blanco", "hanken-grotesk", "Inclusive Sans" !important;
-  cursor: url('/assets/images/blanco-logo-outline-small.png'), auto;
+  font-family: "Inter", "hanken-grotesk", "Inclusive Sans" !important;
+  /* cursor: url('/assets/images/blanco-logo-outline-small.png'), auto; */
+  cursor: crosshair
 }
 
 p, small {
@@ -55,6 +62,8 @@ body {
   position: fixed;
   left: -50;
   top: 10%;
+  width: 100%;
+  height: 100%;
 }
 
 .nodeText {
@@ -68,7 +77,8 @@ body {
 .nodeText:hover {
   text-decoration: underline;
   transition: 2s ease-in-out;
-  cursor: url('/assets/images/blanco-logo-icon-small.png'), auto !important;
+  cursor: pointer 
+   /* url('/assets/images/blanco-logo-icon-small.png'), auto !important; */
 }
 
 #homeTitle {
