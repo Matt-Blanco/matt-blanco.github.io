@@ -8,7 +8,7 @@ layout: default
   <div id="info" class="h-50 row col-10 row">
     <div class="my-auto position-relative d-md-flex d-block align-tems-center ">
       <div id="mini-sketch" class="col-sm-3 col-10" style="position: relative;"></div>
-      <div class="col-sm-8 col-12">
+      <div class="col-sm-8 col-12 ms-sm-3">
         <div class="ms-1">
           <h1 id="title" class="link fw-medium mb-0">
             <a href="/about">Hey I'm Matt(hew)</a>
@@ -20,7 +20,7 @@ layout: default
             pursuing
             a Masters at NYU's Interactive Telecommunications Program (ITP) where I am experimenting with new methods of
             interaction and fabrication. I have been previously affiliated with <a
-              href="https://nterprisers.com">Nterprisers</a> as their lead UI Developer, the
+              href="https://nterprisers.com">Nterprisers</a> as a Design Engineer, the
             <a href="https://camd.northeastern.edu/center-for-design/">Center for Design</a> as a student researcher,
             and the <a target="_blank" className="AboutLink" href="https://vis.csail.mit.edu/">Visualization Group</a>
             at MIT CSAIL.
@@ -33,7 +33,7 @@ layout: default
 
 <div class="row p-2 col-10 mx-auto" id="quick-projects">
   <h5 class="px-0 fw-normal">Recent Works</h5>
-  <div class="mx-auto px-0 overflow-scroll pb-4 d-none d-sm-flex">
+  <div class="mx-auto px-0 overflow-scroll pb-2 d-none d-sm-flex">
     {% for project in site.data.projects %}
     {% assign loopindex = forloop.index | modulo: 2 %}
     <div class="col-4 me-3">
