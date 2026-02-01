@@ -1,0 +1,198 @@
+---
+active_section: itp
+layout: default
+author: Matt
+category: intangible
+title: Week 2 - Proximity Sensor Research
+---
+
+<div class="row">
+    <div class="container">
+        <a href="/itp">&#8592; Back to ITP Blog</a>
+        <h3 class="my-3">
+            Week 2 - Proximity Sensor Research
+        </h3>
+
+        <div class="row">
+            <div class="container">
+                <p>
+                    Jisoo, Seeha, Jaye, and I worked together researching and experimenting with a LiDAR sensor. LiDAR
+                    stands for: <b> LiDAR, an acronym for &quot;light detection and ranging,&quot;</b>. Simply the
+                    sensor fires a laser from a transmitter and the sensor tracks how long it take until it hits an
+                    object and returns to the sensor's transciever. Unlike other types of proximity sensor
+                </p>
+                <div class="row mb-3">
+                    <h5>How LIDAR Works</h5>
+                    <div class="row col-4 mx-auto mb-2">
+                        <div class="px-1 my-2">
+                            <img src="/assets/images/itp-blog/intangible/week2/lidar-diagram.png" class="img-fluid">
+                        </div>
+                        <small class="col-12">Figure 1. A diagram showing simply how a LIDAR sensor fires and receives a
+                            laser</small>
+                    </div>
+                    <p>
+                        The LIDAR sensor works similarly to many other distance or proximity sensors like a PIR or
+                        Ultrasonis sensor. A LIDAR sensor first shoots a laser from one optical lens with a 905nm
+                        wavelength (invisible to the human eye). A receiver in the sensor waits for the laser to bounce
+                        off an object and return to the sensor. The time it takes the laser to return is used to
+                        calculate how far away an object it. Unlike other proximity sensors available to research LIDAR
+                        sensors have a long range and are used in a lot of application when the sensing takes place over
+                        large distances.
+                    </p>
+                    <p>
+                        Common use cases for LiDAR technology:
+                    </p>
+                    <ol>
+                        <li>Autonomus Vehicles object detection (ex: Waymo cars)</li>
+                        <li>Environmental Monitoring</li>
+                        <li>Aerial scanning (ex: topographic mapping and elevation modeling)</li>
+                    </ol>
+                    <p>
+                        Generally any long-distance use case of spatial mapping can use LiDAR technology.
+                    </p>
+                </div>
+                <h5>Setting Up the Sensor</h5>
+                <p>
+                    For the project, we were testing the <a href="https://www.sparkfun.com/lidar-lite-v3hp.html">Garmin
+                        LIDAR-lite V3HP</a>. Below is a short description found on Sparkfun's product page for the
+                    sensor:
+                </p>
+                <p class="ms-md-3 col-md-8">
+                    <small>
+                        The LIDAR-Lite v3HP is a compact, high-performance optical
+                        distance measurement LIDAR sensor from Garmin™. It represents the next generation of optical
+                        ranging, building on the popular LIDAR-Lite v3 by enhancing performance, improving power
+                        efficiency, and incorporating a rugged, IPX7-rated housing. It is the ideal, cost-effective
+                        ranging solution for drones, robots, and unmanned vehicles (UAV/UGV) applications.
+                    </small>
+                </p>
+                <p>
+                    Sensing Range: 1m - 40m
+                </p>
+                <p>
+                    <small>
+                        Though testing showed the sensor can read as close as 5cm
+                        On the floor, sensor became less accurate after 20m
+                        General accuracy is +/- 2.5cm
+                    </small>
+                </p>
+                <div class="row col-4 mx-auto">
+                    <div class="px-1 my-2">
+                        <img src="/assets/images/itp-blog/intangible/week2/sensor.png" class="img-fluid">
+                    </div>
+                    <small class="col-12">Figure 2. Photo of the LIDAR-Lite sensor</small>
+                </div>
+                <h5>Testing the sensor</h5>
+                <div class="row col-4 mx-auto my-2">
+                    <div class="px-1 my-2">
+                        <img src="/assets/images/itp-blog/intangible/week2/pin-diagram.png" class="img-fluid">
+                    </div>
+                    <small class="col-12">Figure 3. Digram showing the corresponding wire information</small>
+                </div>
+                <p>
+                    The sensor itself was easier to set up than expected. To observe general distance from the sensor,
+                    the <em>Mode</em> and <em>PWR EN</em> wires could be ignored. The rest of the system could be set up
+                    as a simple I2C connection communicating with an Arduiono through the SDA and SCL pins. In the
+                    system, the two I2C connections use a pull-up resistor to ensure adequate current flow. The
+                    sensor is powered by a minimum 680uf capacitor by 5V DC power.
+                </p>
+                <div class="row col-4 mx-auto my-2">
+                    <div class="px-1 my-2">
+                        <img src="/assets/images/itp-blog/intangible/week2/schematic.png" class="img-fluid">
+                    </div>
+                    <small class="col-12">Figure 4. Schematic to set up the LiDAR sensor</small>
+                </div>
+                <div class="row col-4 mx-auto my-2">
+                    <div class="px-1 my-2">
+                        <img src="/assets/images/itp-blog/intangible/week2/arduino-connection.jpeg" class="img-fluid">
+                    </div>
+                    <small class="col-12">Figure 5. Testing the LiDAR sensor ourselves</small>
+                </div>
+                <p>
+                    We placed the system and laptop on a chair to see what maximum distance could be read by the sensor
+                    on the Floor. To make sure an object was in line with the sensor we used a laser pointer on top of
+                    the LiDAR sensor. We found the sensor could accurately sense about 20m of ditance before the value
+                    being read by the Adriuno became inconsistent. The inconsistencies in distance could have been from
+                    a variety of factors such as reflectivness
+                    of the object being sensed. In larger applications, weather plays a large role in the accuracy of
+                    LiDAR systems too.
+                </p>
+                <div class="row col-10 mx-auto my-2">
+                    <div class="col-6">
+                        <div class="p1-">
+                            <div class="px-1 my-2">
+                                <img src="/assets/images/itp-blog/intangible/week2/sensor-testing.jpeg"
+                                    class="img-fluid">
+                            </div>
+                            <small class="col-12">Figure 6. Placing the system on a rolling chair</small>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="p1-">
+                            <div class="px-1 my-2">
+                                <img src="/assets/images/itp-blog/intangible/week2/laser-point.jpeg" class="img-fluid">
+                            </div>
+                            <small class="col-12">Figure 7. Object being sensed by the LiDAR sensor</small>
+                        </div>
+                    </div>
+                    <p>
+                        To program the Arduino, a library was needed to accruately convert the information being
+                        received by the sensor into distance. We used the example code provided by Sparkfun's hookup
+                        guide for the sensor:
+                    </p>
+                    <pre class="border border-dark border-2 col-10 mx-auto">
+                    <code>
+                        /**
+                        * LIDARLite I2C Example
+                        * Author: Garmin
+                        * Modified by: Shawn Hymel (SparkFun Electronics)
+                        * Date: June 29, 2017
+                        * 
+                        * Read distance from LIDAR-Lite v3 over I2C
+                        * 
+                        * See the Operation Manual for wiring diagrams and more information:
+                        * http://static.garmin.com/pumac/LIDAR_Lite_v3_Operation_Manual_and_Technical_Specifications.pdf
+                        */
+
+                        #include <Wire.h>
+                        #include <LIDARLite.h>
+
+                        // Globals
+                        LIDARLite lidarLite;
+                        int cal_cnt = 0;
+
+                        void setup() {
+                            Serial.begin(9600); // Initialize serial connection to display distance readings
+
+                            lidarLite.begin(0, true); // Set configuration to default and I2C to 400 kHz
+                            lidarLite.configure(0); // Change this number to try out alternate configurations
+                        }
+
+                        void loop() {
+                            int dist;
+
+                            // At the beginning of every 100 readings,
+                            // take a measurement with receiver bias correction
+                            if ( cal_cnt == 0 ) {
+                                dist = lidarLite.distance();      // With bias correction
+                            } else {
+                                dist = lidarLite.distance(false); // Without bias correction
+                            }
+
+                            // Increment reading counter
+                            cal_cnt++;
+                            cal_cnt = cal_cnt % 100;
+
+                            // Display distance
+                            Serial.print(dist);
+                            Serial.println(" cm");
+
+                            delay(10);
+                        }
+                    </code>
+                </pre>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
