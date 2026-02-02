@@ -1,0 +1,103 @@
+---
+active_section: itp
+layout: default
+author: Matt
+category: energy
+title: Week 1 - Getting Shocked
+---
+
+<div class="row">
+    <div class="container">
+        <a href="/itp">&#8592; Back to ITP Blog</a>
+        <h3 class="my-3">
+            Week 1 - Getting Shocked
+        </h3>
+
+        <div class="row">
+            <div class="container">
+                <p>
+                    While the first class for Energy was held on Zoom (due to a snow storm over the weekend), I still
+                    found
+                    the class exciting and a good reminder at the different types of energy that exist. The class also
+                    served as a relfection how how prominent energy is in the mundane, and how difficult and different
+                    life
+                    would be without it.
+                </p>
+                <p>
+                    I didn't know that in the early 2000s a blackout hit New York, mostly because I was only a few years
+                    old at the time, and how two decades ago it sitll drastically effected life in the city. Perhaps we
+                    need more reminders to simply observe our surroundings and be present with them instead of becoming
+                    lost in the intangible space of digital technology.
+                </p>
+                <h5>Experimenting</h5>
+                <p>
+                    While working on the floor, Aram approached me asking if I'd want to experiment with generating
+                    electricity from a stepper motor to prepare for the next class. The homework didn't explicitely
+                    state to test any circuits, but I wanted to just try it out and see what happens with my own eyes.
+                </p>
+                <p>
+                    To start we found simply tried attaching wires from a stepper motor to an LED but not surprisingly
+                    nothing happened, and we realized that mechanically turning a stepper motor generated an AC current,
+                    so after a quick search we found a video that helped direct us to turn a stepper motor into a proper
+                    generator:
+                </p>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/-zCTggoh994?si=SDlCG8eaZsPUgaXu"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                </iframe>
+                <p>
+                    Central to the process would be placing two bridge rectifiers in series or parallel depending on the
+                    need. In series the system would have the same voltage but increased amps and vice versa if in
+                    parallel. Two bridge rectifiers were also needed since the stepper motor has four wires A-, A+, B-,
+                    & B+.
+                </p>
+                <div class="row col-4 mx-auto mb-2">
+                    <div class="px-1 my-2">
+                        <img src="/assets/images/itp-blog/energy/week1/bridge-rectifier.png" class="img-fluid">
+                    </div>
+                    <small class="col-12">Figure 1. A circuit diagram of a bridge rectifier</small>
+                </div>
+                <p>
+                    After creating the bridge rectifiers and using alligator clips to connect them to a stepper motor
+                    and light we tested the system and it managed to work! I was genuinely surprised we managed to get
+                    the light on and for how stable the system was.
+                </p>
+                <div class="row col-4 mx-auto mb-2">
+                    <div class="px-1 my-2">
+                        <img src="/assets/images/itp-blog/energy/week1/generatorv1.jpeg" class="img-fluid">
+                    </div>
+                    <small class="col-12">Figure 2. The working generator</small>
+                </div>
+                <p>
+                    Later in the week I worked to remake the generator with a stepper motor I picked up from
+                    MicroCenter. I was able to get the system working several times, but when trying to simplify the
+                    circuits, I managed to (potentially) break them. I had used Wago clips to connect the motor,
+                    rectifiers, and LED together but I didn't realize each row of clips werw connected together and
+                    likely broke a diode. The circuit is continuous but not voltage builds in the capacitors and when
+                    connected no LED turned on.
+                </p>
+                <div class="row col-4 mx-auto mb-2">
+                    <div class="px-1 my-2">
+                        <img src="/assets/images/itp-blog/energy/week1/broken-rectifiers.jpeg" class="img-fluid">
+                    </div>
+                    <small class="col-12">Figure 3. Two likely broken bridge rectifiers</small>
+                </div>
+                <h5>Sketching</h5>
+                <p>
+                    Over the weekend, a friend brought over a broken record player from the early 2000s he found on the
+                    street, and after opening it up the components were simpler than I thought. Seeing the record player
+                    made me curious if 1) I coule get it working and 2) if I could power it using some hand-crank
+                    generator. If I were stuck on a deserted island I think it'd be fun to have music to listen to
+                    helping pass the time.
+                </p>
+                <div class="row col-4 mx-auto mb-2">
+                    <div class="px-1 my-2">
+                        <img src="/assets/images/itp-blog/energy/week1/sketch.png" class="img-fluid">
+                    </div>
+                    <small class="col-12">Figure 4. Sketch of a hand-crank record player</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
