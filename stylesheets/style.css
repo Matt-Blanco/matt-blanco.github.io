@@ -1,4 +1,4 @@
-@import url("https://use.typekit.net/bid6mab.css");
+
 
 @font-face {
   font-family: Blanco;
@@ -25,12 +25,12 @@
 
 
 * {
-  font-family: "goodland-variable", "hanken-grotesk", "Inclusive Sans" !important;
+  font-family: "Inter", "hanken-grotesk", "Inclusive Sans" !important;
   /* cursor: url('/assets/images/blanco-logo-outline-small.png'), auto; */
 }
 
 p, small {
-  font-family: "Helvetica", "Lato", "Inter", sans-serif !important;
+  font-family: "Inter", sans-serif !important;
 }
 
 body {
@@ -96,11 +96,8 @@ p {
 a {
   width: fit-content;
   text-decoration: none;
+  font-style: italic;
   color: black;
-}
-
-a, h2, h3, h4, h5 {
-  font-style: normal;
 }
 
 a:hover, button:hover {

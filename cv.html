@@ -35,9 +35,7 @@ title: CV
       <div class="mb-4">
         <div class="row">
           <div class="col col-md-auto edu-info">
-            <h5>
-              <strong>{{ edu.title }}</strong>
-            </h5>
+            <strong>{{ edu.title }}</strong>
           </div>
           <div class="col col-md-auto">
             <p>
@@ -82,11 +80,11 @@ title: CV
       {% for exp in site.data.resume.experience %}
       <div class="mb-3">
         <div class="row align-items-start">
-          <h5 class="col col-md-auto">
+          <p class="col col-md-auto">
             <strong>
               {{ exp.position }}
             </strong>
-          </h5>
+          </p>
           <p class="col col-md-auto">
             <em>
               {{ exp.company }}
