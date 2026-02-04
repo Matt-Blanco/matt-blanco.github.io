@@ -1,0 +1,83 @@
+---
+active_section: itp
+layout: default
+author: Matt
+category: noc
+title: Week 2 - Vector time
+---
+
+<div class="row">
+    <div class="container">
+        <a href="/itp">&#8592; Back to ITP Blog</a>
+        <h3 class="my-3">
+            Week 2 - Vector time
+        </h3>
+
+        <div class="row">
+            <div class="container">
+                <p>
+                    Going into the assignment I was stuck on what to experiment with. I had re-created the ideas of
+                    vectors
+                    before in custom classes usualling including an X and Y field to easily track positions of many
+                    elements. And including the vector math will help a lot going forward for more complicated sketches.
+                </p>
+                <p>
+                    Eventually, I came to the idea to simply play with elements orbiting the mouse with the elements
+                    easing from the previous mouse position to the new one. Also to make it harder for myself I wanted
+                    to make it in 3D space.
+                </p>
+                <div class="mb-2 col-10 mx-auto">
+                    <video class="img-fluid" src="/assets/images/itp-blog/noc/week2/01.mov" autoplay loop muted></video>
+                    <small>Figure 1. </small>
+                </div>
+                <p>
+                    First I just rendered points moving randomly in 3D space. Each point was given a random vector
+                    position along with a random X, Y, and Z vector between (-1,1). To better show depth and perspective
+                    the sketch, I added in boundary lines and rotated the camera to see the points move across all axes.
+                </p>
+                <div class="mb-2 col-10 mx-auto">
+                    <video class="img-fluid" src="/assets/images/itp-blog/noc/week2/02.mov" autoplay loop muted></video>
+                    <small>Figure 2. </small>
+                </div>
+                <p>
+                    My next step was to add in mouse interactivety to the system. And so I attempted to add an easing
+                    function to each point so they would gradually move towards the mouse position. After taking into
+                    account the difference of WEBGL mode in P5, the movement was still not quite right, but it did lead
+                    to some interesting visuals as clusters of points all move towards the same point.
+                </p>
+                <div class="mb-2 col-10 mx-auto">
+                    <video class="img-fluid" src="/assets/images/itp-blog/noc/week2/03.mov" autoplay loop muted></video>
+                    <small>Figure 3. </small>
+                </div>
+                <p>
+                    I took a step back to thing about how to first have the points orbit a point in space. I had to
+                    think back to high school geometry and learned instead of setting an initial position vector, I can
+                    set an initial theta and phi angles of each point towards the origin in order to calculate each
+                    points' orbit. So I placed a sphere at the sketches' origin to demonstrate what all the points were
+                    orbiting.
+                </p>
+                <div class="mb-2 col-10 mx-auto">
+                    <video class="img-fluid" src="/assets/images/itp-blog/noc/week2/04.mov" autoplay loop muted></video>
+                    <small>Figure 4. </small>
+                </div>
+                <p>
+                    To avoid any complicated math as the mouse moved, I used <em>push()</em> and <em>pop()</em> to
+                    translate the origin to the mouse position before drawing the sphere and each orbiting point. It
+                    didn't create the easing effect I was initially looking for but the sketch had become a mixture of
+                    what I had inteded and happy accidents as I altered different parameters.
+                </p>
+                <div class="mb-2 col-10 mx-auto">
+                    <video class="img-fluid" src="/assets/images/itp-blog/noc/week2/05.mov" autoplay loop muted></video>
+                    <small>Figure 5. </small>
+                </div>
+                <div class="mb-2 col-10 mx-auto">
+                    <video class="img-fluid" src="/assets/images/itp-blog/noc/week2/06.mov" autoplay loop muted></video>
+                    <small>Figure 6. </small>
+                </div>
+                <h4>Sketch</h4>
+                <iframe class="mx-auto col-12 mb-4" height="600"
+                    src="https://mattblanco.me/itp-nature-of-code/02-vectors/index.html"></iframe>
+            </div>
+        </div>
+    </div>
+</div>
