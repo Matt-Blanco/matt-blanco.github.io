@@ -1,0 +1,93 @@
+---
+active_section: itp
+layout: default
+author: Matt
+category: intangible
+title: Week 3 - Prototype time
+---
+
+<div class="row">
+    <div class="container">
+        <a href="/itp">&#8592; Back to ITP Blog</a>
+        <h3 class="my-3">
+            Week 3 - Prototype time
+        </h3>
+
+        <div class="row">
+            <div class="container">
+                <p>
+                    Going into class I had come up with an idea for the curcious cube project, and I spent the week
+                    prototyping a circuit and mechanism to make sure the idea was possible.
+                </p>
+                <h4>The goal</h4>
+                <p>
+                    For the project, I want to create a cube that responded to a person's proximity. Each face of the
+                    cube would be made of a series of vertical panels that rotated 90º. Inside the cube would be a
+                    speaker whose sound would change based on how physically open the cube is. The goal is to experiment
+                    with materiality of sound and the experience a person can have modifying it.
+                </p>
+                <p>
+                    Since the project, which I'm considering a 'sound sculpture', is complex for the midterm I will only
+                    focus on moving a single face of the cube. Each process of the sculpture will be iterative and as
+                    each piece comes together it will inform the next. The mechanical mechanism for the face panels will
+                    be the most difficult so I started the week prototyping how it could work.
+                </p>
+                <p>
+                    Luckily, in my Energy course we are also working on a project to convert kinetic energy into
+                    electrical energy, and for that project I am also working with mechanical motion (just in a
+                    different way). In Energy I need a large gear to conert more torque to move a smaller gear faster.
+                    Meanwhile for the cube I will need gears that are the same size to transfer an equal rotaitonal
+                    movement.
+                </p>
+                <div class="mb-2 col-8 mx-auto">
+                    <img class="img-fluid" src="/assets/images/itp-blog/intangible/week3/IMG_5287.JPG" />
+                    <small>Figure 1. Simple gear prototype for Energy</small>
+                </div>
+                <p>
+                    Focusing on the the cube and each panel, as a person approaches the cube a motor or servo would need
+                    to rotate 90º. I believe a servo would work best since it has more control over the position of the
+                    gear and it already works in angles. First, looking back into my pcomp labs I set up a servo to be
+                    controlled by a potentiometer.
+                </p>
+                <div class="mb-2 col-8 mx-auto">
+                    <img class="img-fluid" src="/assets/images/itp-blog/intangible/week3/IMG_5289.JPG" />
+                    <small>Figure 2. Circuit to control a servo</small>
+                </div>
+                <p>
+                    The next part was adding in a proximity sensor. I picked up an ultrasonic sensor since it has a good
+                    sensing range and I would want a person to approach the cube from a wide angle rather than straight
+                    on. Setting up the sensor was harder than I thought. The pcomp lab seems outdated and with the code
+                    example the distance readings were really inconsistent with the sensor. I ended up finding a library
+                    called New Ping which aims to simplify ultrasonic sensor readings and it worked much better.
+                </p>
+                <p>
+                    Another problem I ran into was that the servo and sensor combination was drawing more currant than
+                    an external power supply could provide. For now, the servo is being powered by external power, and
+                    the proximity sensor is relying on the Arduino's 5v Vin pin. However, I'd like both to be powered by
+                    the power supply eventually.
+                </p>
+                <div class="mb-2 col-8 mx-auto">
+                    <video class="img-fluid" src="/assets/images/itp-blog/intangible/week3/circuit-test.mov" autoplay
+                        loop muted></video>
+                    <small>Figure 3. Testing the prototype circuit</small>
+                </div>
+                <p>
+                    With the circuit made, I pivoted to creating a prototype mechanism to test how the servo could
+                    rotate a gear. Using scrap material by the laster cutters I found enough material to make a box and
+                    two gears. The box's height was fit to the servo so the gear could be as close to the ground as
+                    possible. Another gear was mounted to a dowel which was cut to the same height as the servo so both
+                    gears could be aligned. Since I used scrap wood, the plywood was slightly warped so the gear's teeth
+                    did not alsoway fit perfectly. Though I was surprised to see the system actually work.
+                </p>
+                <div class="mb-2 col-8 mx-auto">
+                    <img class="img-fluid" src="/assets/images/itp-blog/intangible/week3/IMG_5298.JPG" />
+                    <small>Figure 4. Prototype circuit and mechanism</small>
+                </div>
+                <div class="mb-2 col-8 mx-auto">
+                    <video class="img-fluid" src="/assets/images/itp-blog/intangible/week3/prototype-test.mov" autoplay
+                        loop muted></video>
+                    <small>Figure 5. Proof the mechanism sort of works</small>
+                </div>
+            </div>
+        </div>
+    </div>
