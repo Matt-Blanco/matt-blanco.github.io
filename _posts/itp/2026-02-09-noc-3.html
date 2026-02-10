@@ -1,0 +1,92 @@
+---
+active_section: itp
+layout: default
+author: Matt
+category: noc
+title: Week 3 - Laws of Attraction
+---
+
+<div class="row">
+    <div class="container">
+        <a href="/itp">&#8592; Back to ITP Blog</a>
+        <h3 class="my-3">
+            Week 3 - Laws of Attraction
+        </h3>
+
+        <div class="row">
+            <div class="container">
+                <p>
+                    This week I had a hard time coming up with an idea. Implementing forces felt like a really broad
+                    brief that could apply to a lot of different sketches. Following the theme of maps from week 1, I
+                    was thinking of using a flow of forces to simulate a river, and how it can change over time (similar
+                    to river system visualization). After reading through the Nature of Code chapter, I realized that
+                    implementing the river system would be difficult and propably best suited for when we get to
+                    particle systems
+                </p>
+                <div class="mb-2 col-8 mx-auto">
+                    <img class="img-fluid"
+                        src="/assets/images/itp-blog/noc/week3/52205146636_d93c0f4bd6_k-2-610219703.jpg" />
+                    <small>Figure 1. River system visualization</small>
+                </div>
+                <p>
+                    Instead of river systems I thought to try and use video to effect various forces over the canvas. My
+                    thought would be to reduce a video to a series of pixelated boxes to average out the values, within
+                    each box set a foce based on the color, and then apply the forces to an element as it moves across
+                    the canvas.
+                </p>
+                <p>
+                    The first step to simplify the video into pixels took my some time as I had to remember back to ICM
+                    and how to iterate across the pixel array. At first I was creating a. series of colored squares but
+                    both their spacing and color were far from what I was looking for.
+                </p>
+                <div class="mb-2 col-8 mx-auto">
+                    <img class="img-fluid"
+                        src="/assets/images/itp-blog/noc/week3/Screenshot 2026-02-10 at 2.58.29PM.png" />
+                    <small>Figure 2. Early pixel grid attempt</small>
+                </div>
+                <p>
+                    I fixed up the code to actually generate the pixel grid correctly, and set the each color to be the
+                    brightness of the pixel so the sketch's foreground would be easier to see.
+                </p>
+                <div class="mb-2 col-8 mx-auto">
+                    <img class="img-fluid"
+                        src="/assets/images/itp-blog/noc/week3/Screenshot 2026-02-10 at 2.57.21PM.png" />
+                    <small>Figure 3. Generated pixel grid</small>
+                </div>
+                <p>
+                    Once the grid was added, a force vector was added for each pixel. The pixel's brightness value would
+                    set the y vector, and the saturation would set the x vector. To visualize the force each pixel had,
+                    I added a line pointing in the dicrection of the force, and to debug, added the color value text
+                    too.
+                </p>
+                <div class="mb-2 col-8 mx-auto">
+                    <img class="img-fluid"
+                        src="/assets/images/itp-blog/noc/week3/Screenshot 2026-02-10 at 3.12.08PM.png" />
+                    <small>Figure 4. Visualizing force vectors</small>
+                </div>
+                <div class="mb-2 col-8 mx-auto">
+                    <video class="img-fluid col-12" src="/assets/images/itp-blog/noc/week3/sketch-test-1.mov" autoplay
+                        loop muted></video>
+                    <small>Figure 5. Video of the force field changing</small>
+                </div>
+                <div class="mb-2 col-8 mx-auto">
+                    <video class="img-fluid col-12" src="/assets/images/itp-blog/noc/week3/sketch-test-2.mov" autoplay
+                        loop muted></video>
+                    <small>Figure 6.</small>
+                </div>
+                <div class="mb-2 col-8 mx-auto">
+                    <video class="img-fluid col-12" src="/assets/images/itp-blog/noc/week3/sketch-final.mov" autoplay
+                        loop muted></video>
+                    <small>Figure 7.</small>
+                </div>
+                <iframe class="mx-auto col-12 mb-4" height="600"
+                    src="https://mattblanco.me/itp-nature-of-code/03_forces/index.html" allow="camera">
+                </iframe>
+                <p>
+                    To finalize the sketch, I updated how the force is applied to the element and visualized the path
+                    the mover takes to make the sketch into a time-based composition.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
