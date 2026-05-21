@@ -1,4 +1,18 @@
 [
+  
+  {
+    "position": "Design Engineer",
+    "company": "Undaunted Development",
+    "location": "Remote",
+    "startDate": "01.25",
+    "endDate": "05.26",
+    "description": [ 
+      "Designed the end-to-end user interface for a code visualization platform, translating complex data structures into intuitive, interactive visual representations across multiple view modes.",
+      "Led front-end development and conducted iterative design reviews and usability testing, synthesizing user feedback to refine interaction patterns and interface polish.",
+      "Built a scalable, reusable component library with a modular architecture, establishing consistent design patterns and accelerating the delivery of new UI features.",
+      "Designed and implemented an extensible rendering abstraction layer, decoupling visualization logic from UI components to support flexible layout and display strategies.",
+    ]
+  },
   {
     "position": "Design Engineer",
     "company": "Nterprisers Inc.",
