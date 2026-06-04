@@ -191,8 +191,10 @@ a:hover, button:hover {
 
 .card:hover {
   transition: all ease-in-out 0.2s;
-  box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.3);
+  /* box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.3); */
+  border: 1px solid black;
   cursor: pointer;
+  border-radius: 0px;
   /* cursor: url('/assets/images/blanco-logo-icon-small.png'), auto !important; */
 }
 
@@ -233,3 +235,18 @@ img {
     top: 0vh;
   }
 } */
+
+.project-column {
+  transition:
+    flex-basis 350ms cubic-bezier(0.4, 0, 0.2, 1),
+    max-width 350ms cubic-bezier(0.4, 0, 0.2, 1),
+    width 350ms cubic-bezier(0.4, 0, 0.2, 1),
+    filter 250ms ease-in-out,
+    opacity 250ms ease-in-out;
+  will-change: width, flex-basis, max-width;
+}
+
+.projects-container:has(.project-column:hover) .project-column:not(:hover) {
+  filter: grayscale(1);
+  opacity: 0.33;
+}

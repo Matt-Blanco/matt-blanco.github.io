@@ -1,0 +1,17 @@
+<div class="card bg-transparent bg-none">
+  <a target="_blank" class="asset-container" href="{{ include.project.url }}">
+    <div class="card-img">
+      {% if include.project.img contains "mp4" or include.project.img contains "mov" %}
+      <video class="img-fluid lazy-video" loop muted playsinline preload="none" data-src="{{ include.project.img }}"></video>
+      {% else %}
+      <img loading="lazy" decoding="async" src="{{ include.project.img }}" width="100" height="100" />
+      {% endif %}
+    </div>
+  </a>
+  <div class="project-info">
+    <a target="_blank" href="{{ include.project.url }}">
+      <h4 class="card-title">{{ include.project.title }}</h4>
+    </a>
+    <p>{{ include.project.description }}</p>
+  </div>
+</div>

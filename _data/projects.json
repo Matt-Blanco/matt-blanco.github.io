@@ -9,7 +9,8 @@
     ],
     "img": "/assets/images/ped/demo-shortened.mov",
     "year": 2025,
-    "url": "/projects/ped"
+    "url": "/projects/ped",
+    "isArt": true
   },
   {
     "title": "Absurd Fabrications",
@@ -19,7 +20,8 @@
     ],
     "img": "/assets/images/absurd-collection/IMG_4203.jpg",
     "year": 2025,
-    "url": "/projects/absurd-collection"
+    "url": "/projects/absurd-collection",
+    "isArt": true
   },
     {
     "title": "Nterprisers Platform",
@@ -30,7 +32,8 @@
     ],
     "img": "/assets/images/nterprisers/nterprisers-project.png",
     "year": 2025,
-    "url": "/projects/nterprisers"
+    "url": "/projects/nterprisers",
+    "isArt": false
   },
   {
     "title": "Curatorial Synapses",
@@ -41,7 +44,8 @@
     ],
     "img": "https://pub-b2fdae8a32ba430298f257d3e7c2a231.r2.dev/curatorial-synapes.JPG",
     "year": 2025,
-    "url": "/projects/curatorial-synapses"
+    "url": "/projects/curatorial-synapses",
+    "isArt": true
   },
   {
     "title": "Exploring Hidden Worlds",
@@ -52,7 +56,8 @@
     ],
     "img": "/assets/images/hidden_worlds.png",
     "year": 2024,
-    "url": "/projects/exploring-hidden-worlds"
+    "url": "/projects/exploring-hidden-worlds",
+    "isArt": true
   },
   {
     "title": "Passing Time",
@@ -65,7 +70,8 @@
     "img": "https://pub-b2fdae8a32ba430298f257d3e7c2a231.r2.dev/sanibel-2013.mov",
     "year": 2024,
     "url": "/projects/passing-time",
-    "role": "Designer / Developer"
+    "role": "Designer / Developer",
+    "isArt": true
   },
   {
     "title": "Surf's Up",
@@ -76,7 +82,8 @@
     ],
     "img": "/assets/images/surfs-up/wave_from_danube.mp4",
     "year": 2024,
-    "url": "/projects/surfs-up"
+    "url": "/projects/surfs-up",
+    "isArt": true
   },
   {
     "title": "(Not so) Meta-Data",
@@ -87,18 +94,8 @@
     ],
     "img": "https://pub-b2fdae8a32ba430298f257d3e7c2a231.r2.dev/meta-01.png",
     "year": 2024,
-    "url": "/projects/not-so-meta"
-  },
-  {
-    "title": "Playing With Patterns",
-    "description": "Based on a mural in the Museum Quartier in Vienna, the project to combine graphic design and computer science principles to create patterns out of simple squares and rectangles.",
-    "tags": [
-      "computer science, ",
-      "design"
-    ],
-    "img": "/assets/images/patterns.png",
-    "year": 2024,
-    "url": "/projects/patterns"
+    "url": "/projects/not-so-meta",
+    "isArt": true
   },
   {
     "title": "eyeWatch",
@@ -108,7 +105,8 @@
     ],
     "img": "/assets/images/eyewatch/eyewatch_service_blueprint.png",
     "year": 2024,
-    "url": "/projects/eyewatch"
+    "url": "/projects/eyewatch",
+    "isArt": false
   },
   {
     "title": "The Archive of a Designer",
@@ -119,7 +117,8 @@
     ],
     "img": "/assets/images/designer_archive.png",
     "year": 2024,
-    "url": "/projects/designers-archive"
+    "url": "/projects/designers-archive",
+    "isArt": false
   },
   {
     "title": "Banca Intesa Processes",
@@ -130,7 +129,8 @@
     ],
     "img": "/assets/images/banca_intesa.png",
     "year": 2024,
-    "url": "/projects/intesa_processes"
+    "url": "/projects/intesa_processes",
+    "isArt": false
   },
   {
     "title": "Our Changing Lands",
@@ -140,7 +140,8 @@
     ],
     "img": "/assets/images/changing-lands/our_changing_lands.png",
     "year": 2023,
-    "url": "/projects/our-changing-lands"
+    "url": "/projects/our-changing-lands",
+    "isArt": true
   },
   {
     "title": "Olli",
@@ -151,7 +152,8 @@
     ],
     "img": "/assets/images/olli.png",
     "year": 2022,
-    "url": "https://mitvis.github.io/olli/"
+    "url": "https://mitvis.github.io/olli/",
+    "isArt": false
   },
   {
     "title": "Knowledge Map",
@@ -162,6 +164,7 @@
     ],
     "img": "/assets/images/knowledge_map.png",
     "year": 2022,
-    "url": "https://nu-center-for-design.github.io/DataViz_Elearning_phase-3/#/"
+    "url": "https://nu-center-for-design.github.io/DataViz_Elearning_phase-3/#/",
+    "isArt": false
   }
 ]
