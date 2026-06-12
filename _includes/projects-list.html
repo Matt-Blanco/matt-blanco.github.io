@@ -2,15 +2,15 @@
 {% assign art_projects = site.data.projects | where: "isArt", true %}
 {% assign other_projects = site.data.projects | where: "isArt", false %}
 
-<div class="projects-container row d-none d-md-flex justify-content-between">
+<div class="projects-container row d-none d-md-flex justify-content-between z-3">
   <div class="col-12 col-md-6 project-column bg-art-hover" id="art-projects">
-    <h4>Art</h4>
+    <h4 class="sticky-top bg-white" style="top: 2rem;">Art</h4>
     {% for project in art_projects %}
     {% include project-card.html project=project %}
     {% endfor %}
   </div>
   <div class="col-12 col-md-6 project-column bg-work-hover" id="work-projects">
-    <h4>Work</h4>
+    <h4 class="sticky-top bg-white" style="top:2rem;">Work</h4>
     {% for project in other_projects %}
     {% include project-card.html project=project %}
     {% endfor %}
