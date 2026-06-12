@@ -1,12 +1,26 @@
 [
-    {
+  {
+    "title": "VizDev",
+    "description": "As a contractor for Undaunted Development, I led the front-end engineering and interface design for VizDev. A tool to visualize code, and store information about code in code. If you'd like to learn more about the work, please reach out.",
+    "tags": ["data visualization", "software architecture", "engineering"],
+    "img": "/assets/images/undaunted-project-img.png",
+    "year": 2026,
+    "url": "/",
+    "isArt": false
+  },
+  {
+    "title": "In 26 Slides",
+    "description": "In 26 Slides explores how the MTA, New York's public transit, became the MTA. The data physicalization explores 26 years of archival data from 1920 to 1945 and presents a stacked view of each year's subway map with text annotations, and ridership comparisons.",
+    "tags": ["data visualization", "archival analysis", "sculpture"],
+    "img": "/assets/images/26-slides/26-slides-kid.jpg",
+    "year": 2026,
+    "url": "/projects/26_slides",
+    "isArt": true
+  },
+  {
     "title": "P.E.D - Personal Enrichment Device",
     "description": "A handheld device that incorporates the addictive and satisfying elements of a smartphone into a simple analog gadget. With a ferrofluid display and few interface elements, the P.E.D creates a visual, audible, and tactile feedback loop keeping users engaged.",
-    "tags": [
-      "physical computing",
-      "fabrication",
-      "industrial design"
-    ],
+    "tags": ["physical computing", "fabrication", "industrial design"],
     "img": "/assets/images/ped/demo-shortened.mov",
     "year": 2025,
     "url": "/projects/ped",
@@ -15,21 +29,16 @@
   {
     "title": "Absurd Fabrications",
     "description": "Exhibited in the 19th International Venice Biennale of Architecture, and as part of 'Constructing La Biennale', Stretching across a 23-meter-long wall, this critical visualization unpacks the curatorial process behind the exhibition Intelligens. Natural. Artificial. Collective. From this nexus, threads representing the selected applications and projects extend, unfolding through the interpretative dimensions of curation. Ethnographic insights, presented as excerpts from interviews, further enrich the narrative by adding depth and context. ",
-    "tags": [
-      "fabrication"
-    ],
+    "tags": ["fabrication"],
     "img": "/assets/images/absurd-collection/IMG_4203.jpg",
     "year": 2025,
     "url": "/projects/absurd-collection",
     "isArt": true
   },
-    {
+  {
     "title": "Nterprisers Platform",
     "description": "During 2025 I was working for Nterprisers as their sole UI Developer & Designer, I had rebuilt their platform for small manufacturing business communication. From exploring new visual designs to improving the interaction design of the Nterprisers Platform. The work culminated in brand new software architecture and interface aesthetic as their user base grew.",
-    "tags": [
-      "interface design",
-      "engineering"
-    ],
+    "tags": ["interface design", "engineering"],
     "img": "/assets/images/nterprisers/nterprisers-project.png",
     "year": 2025,
     "url": "/projects/nterprisers",
@@ -38,10 +47,7 @@
   {
     "title": "Curatorial Synapses",
     "description": "Exhibited in the 19th International Venice Biennale of Architecture, and as part of 'Constructing La Biennale', Stretching across a 23-meter-long wall, this critical visualization unpacks the curatorial process behind the exhibition Intelligens. Natural. Artificial. Collective. From this nexus, threads representing the selected applications and projects extend, unfolding through the interpretative dimensions of curation. Ethnographic insights, presented as excerpts from interviews, further enrich the narrative by adding depth and context. ",
-    "tags": [
-      "data visualization, ",
-      "information design"
-    ],
+    "tags": ["data visualization, ", "information design"],
     "img": "https://pub-b2fdae8a32ba430298f257d3e7c2a231.r2.dev/curatorial-synapes.JPG",
     "year": 2025,
     "url": "/projects/curatorial-synapses",
@@ -50,10 +56,7 @@
   {
     "title": "Exploring Hidden Worlds",
     "description": "We are becoming more dependent on technology, and yet fewer people know how it works. Software should not be created behind closed doors especially when it can have larger ramifications on our day-to-day lives. Exploring Hidden Worlds aims to lift the veil on what it takes to build modern software through an explorable 3D visualization. Through learning what it takes to build modern software, and having the ability to understand it people can have more agency when deciding whether to adopt new, potentially harmful, technologies.",
-    "tags": [
-      "computer science, ",
-      "design"
-    ],
+    "tags": ["computer science, ", "design"],
     "img": "/assets/images/hidden_worlds.png",
     "year": 2024,
     "url": "/projects/exploring-hidden-worlds",
@@ -63,10 +66,7 @@
     "title": "Passing Time",
     "type": "Data Visualization",
     "description": "What begain as a piece of art as a gift to a friend, turned into creating abstract visualizations of weather over the course of a year. Using historic weather data of Sanibel Florida, organic forms are generated based on the temperature, cloud cover, and rainfall of the city. The visual system can also be used to create visualizations for any location on Earth.",
-    "tags": [
-      "computer science, ",
-      "design"
-    ],
+    "tags": ["computer science, ", "design"],
     "img": "https://pub-b2fdae8a32ba430298f257d3e7c2a231.r2.dev/sanibel-2013.mov",
     "year": 2024,
     "url": "/projects/passing-time",
@@ -76,10 +76,7 @@
   {
     "title": "Surf's Up",
     "description": "Assisting a four-day workshop hosted by the Ars Electronica FutureLab, Surf's Up attempts to brigde geographies by visualizing wave data from Nazaré, Portugal while attempting to bring together our natural and built environments.",
-    "tags": [
-      "computer science, ",
-      "design"
-    ],
+    "tags": ["computer science, ", "design"],
     "img": "/assets/images/surfs-up/wave_from_danube.mp4",
     "year": 2024,
     "url": "/projects/surfs-up",
@@ -88,10 +85,7 @@
   {
     "title": "(Not so) Meta-Data",
     "description": "Photography has become a hobby for everyone. However, no matter the type of camera, or editing tool, used there is hidden information within every photo.",
-    "tags": [
-      "computer science, ",
-      "design"
-    ],
+    "tags": ["computer science, ", "design"],
     "img": "https://pub-b2fdae8a32ba430298f257d3e7c2a231.r2.dev/meta-01.png",
     "year": 2024,
     "url": "/projects/not-so-meta",
@@ -100,9 +94,7 @@
   {
     "title": "eyeWatch",
     "description": "A speculative service design project done for my design capstone creating an absurd app to showcase how our data is collected putting it front and center for the user. The goal of the service is to show users the amount of data that is being collected, how it can be used to affect your bevavior, and the stakeholders who want to control your data in an effort to bridge the gap between people and the often intangible resource of the 21st century.",
-    "tags": [
-      "service design"
-    ],
+    "tags": ["service design"],
     "img": "/assets/images/eyewatch/eyewatch_service_blueprint.png",
     "year": 2024,
     "url": "/projects/eyewatch",
@@ -111,10 +103,7 @@
   {
     "title": "The Archive of a Designer",
     "description": "It is common practice for designers to have a lot of collected artifacts to look back on or inspire them throughout the design process. The visualization showcases the archive of design artifacts that can be found throughout my apartment.",
-    "tags": [
-      "computer science, ",
-      "design"
-    ],
+    "tags": ["computer science, ", "design"],
     "img": "/assets/images/designer_archive.png",
     "year": 2024,
     "url": "/projects/designers-archive",
@@ -123,10 +112,7 @@
   {
     "title": "Banca Intesa Processes",
     "description": "As a student developer & researcher at the Center for Design I worked with a team alongside Banca IntesaSanpaolo, Italy's largest bank, to create a visualization interface to explore auditing risk and management data throughout different levels of the company",
-    "tags": [
-      "computer science, ",
-      "design"
-    ],
+    "tags": ["computer science, ", "design"],
     "img": "/assets/images/banca_intesa.png",
     "year": 2024,
     "url": "/projects/intesa_processes",
@@ -135,9 +121,7 @@
   {
     "title": "Our Changing Lands",
     "description": "A semester long project focused on rethinking our relationship to the outdoors. Organized as three parts: a poster, dimensional, and screen based series all focused on the same social cause and to practice different aspects of design.",
-    "tags": [
-      "design"
-    ],
+    "tags": ["design"],
     "img": "/assets/images/changing-lands/our_changing_lands.png",
     "year": 2023,
     "url": "/projects/our-changing-lands",
@@ -146,10 +130,7 @@
   {
     "title": "Olli",
     "description": "While working for the MIT Visualization Group I developed version 1.0 of Olli. An open-source library for converting data visualizations into accessible text structures for screen reader users. Starting with an existing visualization specification created with a supported toolkit, Olli produces a keyboard-navigable tree view with descriptions at varying levels of detail. Users can explore these structures both to get an initial overview, and to dive into the data in more detail.",
-    "tags": [
-      "computer science, ",
-      "design"
-    ],
+    "tags": ["computer science, ", "design"],
     "img": "/assets/images/olli.png",
     "year": 2022,
     "url": "https://mitvis.github.io/olli/",
@@ -158,10 +139,7 @@
   {
     "title": "Knowledge Map",
     "description": "Collaborating as part of a small team in the Center for Design, we partnered with Banca Intesa Sanpaolo, Italy's largest bank, to design and develop an interactive visualization platform for managers to understand knowledge distribution throughout the bank, and see through interactive explorations which sections of the company were more knowledgeable about various aspects of company operations.",
-    "tags": [
-      "computer science, ",
-      "design"
-    ],
+    "tags": ["computer science, ", "design"],
     "img": "/assets/images/knowledge_map.png",
     "year": 2022,
     "url": "https://nu-center-for-design.github.io/DataViz_Elearning_phase-3/#/",
