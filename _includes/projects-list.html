@@ -1,0 +1,59 @@
+<br />
+{% assign art_projects = site.data.projects | where: "isArt", true %}
+{% assign other_projects = site.data.projects | where: "isArt", false %}
+
+<div class="projects-container row d-none d-md-flex justify-content-between">
+  <div class="col-12 col-md-6 project-column bg-art-hover" id="art-projects">
+    <h4>Art</h4>
+    {% for project in art_projects %}
+    {% include project-card.html project=project %}
+    {% endfor %}
+  </div>
+  <div class="col-12 col-md-6 project-column bg-work-hover" id="work-projects">
+    <h4>Work</h4>
+    {% for project in other_projects %}
+    {% include project-card.html project=project %}
+    {% endfor %}
+  </div>
+</div>
+
+<div class="projects-container d-md-none">
+  {% for project in site.data.projects %}
+  {% include project-card.html project=project %}
+  {% endfor %}
+</div>
+
+<script src="/assets/scripts/projects.js"></script>
+
+<script>
+  const artProjectContainer = document.getElementById("art-projects")
+  const workProjectContainer = document.getElementById("work-projects")
+
+  const containers = document.getElementsByClassName("project-column")
+  const projectsRow = artProjectContainer.closest(".projects-container")
+
+  const getSibling = (container) => container.id === "art-projects" ? workProjectContainer : artProjectContainer;
+
+  const expandOnHover = (container) => {
+    container.classList.remove("col-md-6", "col-md-2")
+    container.classList.add("col-md-10")
+
+    const sibling = getSibling(container)
+    sibling.classList.remove("col-md-6", "col-md-10")
+    sibling.classList.add("col-md-2")
+  }
+
+  const resetColumns = () => {
+    for (const container of containers) {
+      container.classList.remove("col-md-10", "col-md-2")
+      container.classList.add("col-md-6")
+    }
+  }
+
+  for (const container of containers) {
+    container.addEventListener("mouseenter", () => expandOnHover(container));
+  }
+
+  projectsRow.addEventListener("mouseleave", resetColumns);
+
+</script>

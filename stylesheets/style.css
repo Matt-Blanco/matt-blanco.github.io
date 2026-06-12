@@ -223,18 +223,11 @@ img {
   width: 4rem;
 }
 
-/* 
-@media (min-width:801px)  {
-  #graph {
-    top: -10vh;
+@media screen and (max-width: 760px) {
+  .card-img {
+    height: 200px;
   }
-}
-
-@media screen and (max-width: 480px) {
-  #graph {
-    top: 0vh;
-  }
-} */
+} 
 
 .project-column {
   transition:

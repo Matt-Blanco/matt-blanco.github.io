@@ -8,7 +8,7 @@ layout: default
   <div id="info" class="h-50 row col-10 row">
     <div class="my-auto position-relative d-md-flex d-block align-tems-center ">
       <div id="mini-sketch" class="col-sm-3 col-10" style="position: relative;"></div>
-      <div class="col-sm-8 col-12 ms-sm-3">
+      <div class="col-md-8 col-12 ms-sm-3">
         <div class="ms-1">
           <h1 id="title" class="link fw-medium mb-0">
             <a href="/about">Hey I'm Matt(hew)</a>
@@ -31,7 +31,12 @@ layout: default
   </div>
 </div>
 
-<div class="row p-2 col-10 mx-auto" id="quick-projects">
+<div class="col-12">
+  <h3>Things I've worked on</h3>
+  {% include projects-list.html %}
+</div>
+
+<!-- <div class="row p-2 col-10 mx-auto" id="quick-projects">
   <h5 class="px-0 fw-normal">Recent Works</h5>
   <div class="mx-auto px-0 overflow-scroll pb-2 d-none d-sm-flex">
     {% for project in site.data.projects %}
@@ -76,9 +81,9 @@ layout: default
       </a>
     </div>
     {% endfor %}
-  </div>
-  <script>
-    window.addEventListener("load", () => {
-      renderElements("mini-sketch", 2, [[240, 81, 100, 75], [255, 219, 63, 80]], 0.03, 150, false);
-    })
-  </script>
+  </div> -->
+<script>
+  window.addEventListener("load", () => {
+    renderElements("mini-sketch", 2, [[240, 81, 100, 75], [255, 219, 63, 80]], 0.03, 150, false);
+  })
+</script>
