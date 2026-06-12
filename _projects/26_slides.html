@@ -17,7 +17,7 @@ active_section: projects
 </div>
 
 <div class="row mt-3">
-    <div class="w-25">
+    <div class="col-2">
         <h5>Team</h5>
         <ul class="list-unstyled fst-italic">
             <li>Matthew Blanco</li>
@@ -26,20 +26,128 @@ active_section: projects
         </ul>
     </div>
 
+    <div class="col-4">
+        <p class="mb-0">13in x 13in x 30in</p>
+        <p>
+            Acrylic and Wood data sculpture
+        </p>
+    </div>
 
     <div class="col">
         <p>
             Using archival subway ridership data from 1920-1945, <em>In 26 Slides</em> tells the story of how the MTA
             became as we know it today. The work was showcased at the New York Transit Museum during The Transit Operas
-            show.
+            show. Material for the piece was provided by the Interactive Telecommunications Program at NYU.
         </p>
     </div>
 </div>
 
 <div class="row">
-    <div class="col-md-4 col-12">
-        <p>
-            
+    <div class="col-12 row">
+        <p class="col-md-4">
+            The goal of the project was to demonstrate how the ways people moved throughout the city changed over the
+            decades. Through our research we learned about the rich history of the MTA, and that many of the modern
+            quirks of the system were intentional design decisions when the subway was operated by three different
+            companies. The piece consisted of 26 individual slides that could be pulled from its stand and read read on
+            its own. The stacked view turned the visualized data into an abstract form where each side of the sculpture
+            had it's own composition. Each slide contained a map of the transit system from that year, a short summary
+            of historical context than may have effected ridership, and a bar graph comparing ridership from each
+            transit company.
         </p>
+        <div class="col-md-8 col-12 align-items-center">
+            <img loading="lazy" decoding="async" class="img-fluid float-right"
+                src="/assets/images/26-slides/top-down.jpg" />
+        </div>
     </div>
-</div>
+
+    <div class="row my-2">
+        <div class="col-12 align-items-center">
+            <img loading="lazy" decoding="async" class="img-fluid float-right"
+                src="/assets/images/26-slides/reading.jpg" />
+        </div>
+    </div>
+
+    <div class="row my-2">
+        <div class="col-md-4 col-12">
+            <p>
+                Throughout the exhibition, viewers would talk to us about their own experiences on the subway and try to
+                find the lines and stops they visited most. The conversations demonstrated that the city, and the ways
+                we move through it, is a living system. Over the course of the MTA's over hundred year history few
+                subway stops have been decommisioned. For the most part new stops have been added and routes have
+                changed names and ownership. New York has changed a lot since the first subway opened in 1907, but it
+                continues to be the primary way people move.
+            </p>
+        </div>
+        <div class="col-md-8 col-12 align-items-center">
+            <img loading="lazy" decoding="async" class="img-fluid float-right"
+                src="/assets/images/26-slides/through-window.jpg" />
+        </div>
+    </div>
+    <div class="row my-2">
+        <div class="col-md-6 col-12 align-items-center">
+            <img loading="lazy" decoding="async" class="img-fluid float-right my-2"
+                src="/assets/images/26-slides/group-photo.jpg" />
+        </div>
+        <div class="col-md-6 col-12 align-items-center">
+            <img loading="lazy" decoding="async" class="img-fluid float-right my-2"
+                src="/assets/images/26-slides/abstract.jpg" />
+        </div>
+        <div class="col-md-6 col-12 align-items-center">
+            <img loading="lazy" decoding="async" class="img-fluid float-right my-2"
+                src="/assets/images/26-slides/tobi-photo.jpg" />
+        </div>
+        <div class="col-md-6 col-12 align-items-center">
+            <img loading="lazy" decoding="async" class="img-fluid float-right my-2"
+                src="/assets/images/26-slides/through-window.jpg" />
+        </div>
+    </div>
+    <div class="row my-2">
+        <h3 class="col-12">Process</h3>
+        <div class="row">
+            <div class="col-md-4 col-12">
+                <p>
+                    First the New York Transit Museum provided us with decades archival ridership data in the form of
+                    PDF files. Each file contained records of a variety of subway stops from different transit
+                    companies. Using OCR, the data was converted into spreadsheets to work with them more easily.
+                </p>
+                <p>
+                    Originally we wanted to analyze the ridership of individual stops across historical subway lines,
+                    but the archival ridership data also provided incomplete subway routes. We researched old subway
+                    routes were to fill out and unavailable data. Using historical websites, all of the old routes paths
+                    were reconstructed, and luckily few stops were removed. Manhattan's above ground subway lines were
+                    decommisioned in 1938, but otherwise only new stops were added between 1920-1945.
+                </p>
+            </div>
+            <div class="col-md-8 col-12 align-items-center">
+                <img loading="lazy" decoding="async" class="img-fluid float-right"
+                    src="/assets/images/26-slides/digital-map.png" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 col-12">
+                <p>
+                    Using D3, a JavaScript data visualization library, exploratory digital versions of the subway maps
+                    were created. The digital visualizations were refined to be easily explorted into a handful of SVG
+                    layers that could be brought into Adobe Illustrator to prepare for laser cutting. 12x12 panels of
+                    clear acrylic were engraved with a map of New York City before cutting the routes for each
+                    individual subway company. Overlapping subway routes were stacked on one another providing a small
+                    amount of depth to each slide.
+                </p>
+            </div>
+            <div class="col-md-8 col-12 align-items-center">
+                <img loading="lazy" decoding="async" class="img-fluid float-right"
+                    src="/assets/images/26-slides/laser-cut-progress.jpeg" />
+            </div>
+        </div>
+        <div class="row my-2">
+            <div class="col-md-6 col-12 align-items-center">
+                <img loading="lazy" decoding="async" class="img-fluid float-right"
+                    src="/assets/images/26-slides/router.JPG" />
+            </div>
+            <div class="col-md-6 col-12 align-items-center">
+                <img loading="lazy" decoding="async" class="img-fluid float-right"
+                    src="/assets/images/26-slides/stand-measuring.JPG" />
+            </div>
+        </div>
+
+    </div>
