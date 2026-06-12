@@ -1,18 +1,21 @@
 <div class="card bg-transparent bg-none">
+  <a target="_blank" class="project-info" href="{{ include.project.url }}">
+    <h4 class="card-title">{{ include.project.title }}</h4>
+  </a>
   <a target="_blank" class="asset-container" href="{{ include.project.url }}">
     <div class="card-img">
-      {% if include.project.isArt %}{% assign img_class = "art-img" %}{% else %}{% assign img_class = "work-img" %}{% endif %}
+      {% if include.project.isArt %}{% assign img_class = "art-img" %}{% else %}{% assign img_class = "work-img" %}{%
+      endif %}
       {% if include.project.img contains "mp4" or include.project.img contains "mov" %}
-      <video class="img-fluid lazy-video {{ img_class }}" loop muted playsinline preload="none" data-src="{{ include.project.img }}"></video>
+      <video class="img-fluid lazy-video {{ img_class }}" loop muted playsinline preload="none"
+        data-src="{{ include.project.img }}"></video>
       {% else %}
-      <img class="{{ img_class }}" loading="lazy" decoding="async" src="{{ include.project.img }}" width="100" height="100" />
+      <img class="{{ img_class }}" loading="lazy" decoding="async" src="{{ include.project.img }}" width="100"
+        height="100" />
       {% endif %}
     </div>
   </a>
-  <div class="project-info">
-    <a target="_blank" href="{{ include.project.url }}">
-      <h4 class="card-title">{{ include.project.title }}</h4>
-    </a>
+  <div class="project-info mt-2">
     <p>{{ include.project.description }}</p>
   </div>
 </div>
