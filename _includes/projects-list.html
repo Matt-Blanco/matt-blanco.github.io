@@ -4,7 +4,7 @@
 
 <div class="projects-container row d-none d-md-flex justify-content-between z-3">
   <div class="col-12 col-md-6 project-column bg-art-hover" id="art-projects">
-    <h4 class="sticky-top bg-white" style="top: 2rem;">Art</h4>
+    <h4 class="sticky-top bg-white ps-2" style="top: 3.5rem; z-index: 1021;">Art</h4>
     {% for project in art_projects %}
     {% if project.isVisible %}
       {% include project-card.html project=project %}
@@ -12,7 +12,7 @@
     {% endfor %}
   </div>
   <div class="col-12 col-md-6 project-column bg-work-hover" id="work-projects">
-    <h4 class="sticky-top bg-white" style="top:2rem;">Work</h4>
+    <h4 class="sticky-top bg-white ps-2" style="top: 3.5rem; z-index: 1021;">Work</h4>
     {% for project in other_projects %}
     {% if project.isVisible %}
       {% include project-card.html project=project %}
@@ -61,5 +61,20 @@
   }
 
   projectsRow.addEventListener("mouseleave", resetColumns);
+
+  // Toggle a "stuck" class on the headers once they pin beneath the fixed nav (top: 3.5rem)
+  // so they grow borders on their start, end, and bottom edges and merge with the nav.
+  const stickyObserver = new IntersectionObserver(
+    (entries) => {
+      for (const entry of entries) {
+        entry.target.classList.toggle("stuck", entry.intersectionRatio < 1)
+      }
+    },
+    { threshold: [1], rootMargin: "-57px 0px 0px 0px" }
+  );
+
+  for (const header of document.querySelectorAll("h4.sticky-top")) {
+    stickyObserver.observe(header);
+  }
 
 </script>

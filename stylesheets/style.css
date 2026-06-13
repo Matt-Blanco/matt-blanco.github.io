@@ -222,8 +222,8 @@ img {
 }
 
 @media screen and (max-width: 760px) {
-  .card-img {
-    height: 200px;
+  .card-img img, .card-img video {
+    max-height: 200px;
   }
 } 
 
@@ -240,4 +240,15 @@ img {
 .projects-container:has(.project-column:hover) .project-column:not(:hover) {
   filter: grayscale(1);
   opacity: 0.33;
+}
+
+.project-column h4.sticky-top {
+  border-left: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+  border-right: 2px solid transparent;
+  transition: border-color 150ms ease-in-out;
+}
+
+.project-column h4.sticky-top.stuck {
+  border-color: transparent var(--bs-dark, #212529) var(--bs-dark, #212529);
 }

@@ -16,9 +16,11 @@
     </div>
   </a>
   <div class="project-info mt-2">
+    <div class="d-none">
         {% for tag in include.project.tags %}
           <span class="">{{ tag }}</span>
         {% endfor %}
+      </div>
     <p class="">{{ include.project.description }}</p>
   </div>
 </div>
