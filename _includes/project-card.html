@@ -16,6 +16,9 @@
     </div>
   </a>
   <div class="project-info mt-2">
-    <p>{{ include.project.description }}</p>
+        {% for tag in include.project.tags %}
+          <span class="">{{ tag }}</span>
+        {% endfor %}
+    <p class="">{{ include.project.description }}</p>
   </div>
 </div>
