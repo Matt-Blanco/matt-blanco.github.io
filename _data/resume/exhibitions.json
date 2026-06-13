@@ -1,23 +1,23 @@
 [
-    {
-        "year": 2025,
-        "project": "P.E.D - Personal Enrichment Device",
-        "participants": [
-            "Matthew Blanco",
-            "Jean Jules Irakoze"
-        ],
-        "exhibition": "2025 NYU ITP Winter Show",
-        "description": "A satirical play on the addictive elements of smartphones. The P.E.D combines physical, auditory, and haptic feedback for a satisfying user experience allowing users to control ferrofluid display."
-    },
-    {
-        "year": 2025,
-        "project": "Curatorial Synapses // Constructing La Biennale",
-        "participants": [
-            "Paolo Ciccuarelli",
-            "Matthew Blanco",
-            "Todd Linkner"
-        ],
-        "exhibition": "19th International Venice Biennale of Architecture",
-        "description": "Stretching across a 23-meter-long wall, this critical visualization unpacks the curatorial process behind the exhibition Intelligens. Natural. Artificial. Collective. From the nexus, threads representing the selected applications and projects extend, unfolding through the interpretative dimensions of curation. Ethnographic insights, presented as excerpts from interviews, further enrich the narrative by adding depth and context."
-    }
+  {
+    "year": 2026,
+    "project": "In 26 Slides",
+    "participants": ["Matthew Blanco", "Ryan Webber", "Christina Tran"],
+    "exhibition": "The Transit Operas – New York Transit Museum",
+    "description": "A visualization sculpture depicting 26 years of historical ridership data telling the story of how New York's MTA became the MTA."
+  },
+  {
+    "year": 2025,
+    "project": "P.E.D - Personal Enrichment Device",
+    "participants": ["Matthew Blanco", "Jean Jules Irakoze"],
+    "exhibition": "2025 NYU ITP Winter Show",
+    "description": "A satirical play on the addictive elements of smartphones. The P.E.D combines physical, auditory, and haptic feedback for a satisfying user experience allowing users to control ferrofluid display."
+  },
+  {
+    "year": 2025,
+    "project": "Curatorial Synapses // Constructing La Biennale",
+    "participants": ["Paolo Ciccuarelli", "Matthew Blanco", "Todd Linkner"],
+    "exhibition": "19th International Venice Biennale of Architecture",
+    "description": "Stretching across a 23-meter-long wall, this critical visualization unpacks the curatorial process behind the exhibition Intelligens. Natural. Artificial. Collective. From the nexus, threads representing the selected applications and projects extend, unfolding through the interpretative dimensions of curation. Ethnographic insights, presented as excerpts from interviews, further enrich the narrative by adding depth and context."
+  }
 ]
