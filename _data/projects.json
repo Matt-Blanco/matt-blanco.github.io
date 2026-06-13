@@ -20,6 +20,16 @@
     "isVisible": true
   },
   {
+    "title": "Inside Our Computers",
+    "description": "Batteries have become an everyday object yet they way they're measured and understood is confusing between Watts, amp-hours, voltage, AC current, and DC current. Inside Our Computers presents a deconstructed tablet as a sculptural, yet functioning, object connected to a kinetic generator. Viewers can see the effort it takes to charge a tablet battery and better understand the scale of energy.",
+    "tags": ["data visualization", "sculpture", "physical computing"],
+    "img": "/assets/images/inside-our-computers/top-down.jpg",
+    "year": 2026,
+    "url": "/projects/inside_our_computers",
+    "isArt": true,
+    "isVisible": true
+  },
+  {
     "title": "P.E.D - Personal Enrichment Device",
     "description": "A handheld device that incorporates the addictive and satisfying elements of a smartphone into a simple analog gadget. With a ferrofluid display and few interface elements, the P.E.D creates a visual, audible, and tactile feedback loop keeping users engaged.",
     "tags": ["physical computing", "fabrication", "industrial design"],
