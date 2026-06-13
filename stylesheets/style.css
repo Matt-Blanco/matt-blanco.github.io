@@ -176,7 +176,7 @@ a:hover, button:hover {
 }
 
 .card {
-  padding: 15px;
+  padding: 0 8px;
   border: none;
   margin-bottom: 15px;
   height: fit-content;
