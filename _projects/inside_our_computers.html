@@ -85,6 +85,15 @@ active_section: projects
     </div>
 </div>
 
+<div class="row my-2 align-items-center d-flex">
+    {% assign gallery_images = site.static_files | where_exp: "file", "file.path contains '/assets/images/inside-our-computers/gallery/'" %}
+    {% for file in gallery_images %}
+    <div class="col-md-6 col-12 align-items-center my-2">
+        <img loading="lazy" decoding="async" class="img-fluid float-right" src="{{ file.path | relative_url }}" />
+    </div>
+    {% endfor %}
+</div>
+
 <div class="row">
     <h3>Process</h3>
     <div class="row my-2">
