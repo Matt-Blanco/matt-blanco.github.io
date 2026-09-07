@@ -165,6 +165,10 @@ a:hover, button:hover {
   justify-content: center;
 }
 
+.object-fit-contain {
+object-fit: contain !important;
+}
+
 .card-img img,
 .card-img video {
   max-height: 400px;
