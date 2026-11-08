@@ -160,7 +160,8 @@ a:hover, button:hover {
   position: absolute;
   left: 0;
   right: 0;
-  top: 100%;
+  top: auto;
+  bottom: 100%;
   height: 2rem;
   pointer-events: none;
   background: linear-gradient(to top, #fff, rgba(255, 255, 255, 0));

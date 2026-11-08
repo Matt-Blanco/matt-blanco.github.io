@@ -2,7 +2,21 @@
 active_section: posts
 layout: default
 ---
-<div class="vh-100 col-8 mx-auto">
+
+<style>
+    /* Content fills the viewport and pushes the footer to the bottom without scrolling */
+    body {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    body > .container {
+        flex: 1 0 auto;
+    }
+</style>
+
+<div class="col-8 mx-auto mt-1">
         <p>
             The writing below exists as a more stream-of-consciousness that structured writing and takes the form of
             things
