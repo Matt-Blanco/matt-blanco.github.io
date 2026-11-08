@@ -147,7 +147,7 @@ To test that the Link Layer was in fact working, I loaded a website. I'm not the
     <small class="d-block text-center mb-3">Loading the Webber homepage through the Webber browser</small>
   </div>
 </div>
-#### Conclusion
+#### Wrapping it up
 
 After two months of work between debugging hardware and software issues, navigating through decades worth of forum discussions, and reading through old & new code repositories, I had accomplished what I set out to do: Connecting a 40 year old computer to the Internet. While the path I took to accomplish this goal wasn't conventional it did allow me to traverse the layers of abstractions of computers.
 
