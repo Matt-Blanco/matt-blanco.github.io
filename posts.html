@@ -1,0 +1,27 @@
+---
+active_section: posts
+layout: default
+---
+<div class="vh-100 col-8 mx-auto">
+        <p>
+            The writing below exists as a more stream-of-consciousness that structured writing and takes the form of
+            things
+            that currently interest me. Expect writing about data visualization, media theory, and technology.
+        </p>
+        <div>
+            <h3>Writing</h3>
+            {% assign months = "Jan,Feb,Mar,Apr,May,June,July,Aug,Sept,Oct,Nov,Dec" | split: "," %}
+            {% assign last_month = "" %}
+            {% for post in site.posts %}
+            {% assign post_month = post.date | date: "%Y-%m" %}
+            <h5>
+                {% if post_month != last_month %}
+                {% assign month_index = post.date | date: "%-m" | minus: 1 %}
+                <small class="text-muted me-2">{{ months[month_index] }} {{ post.date | date: "%Y" }}</small>
+                {% endif %}
+                <a href="{{ post.url }}">{{ post.title }}</a>
+            </h5>
+            {% assign last_month = post_month %}
+            {% endfor %}
+    </div>
+</div>
