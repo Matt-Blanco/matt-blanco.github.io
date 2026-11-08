@@ -138,6 +138,38 @@ a:hover, button:hover {
   margin-right: 0.5vw;
 }
 
+/* Soft fade below the fixed navbar so content blurs into it */
+#navbar::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  height: 2rem;
+  pointer-events: none;
+  background: linear-gradient(to bottom, #fff, rgba(255, 255, 255, 0));
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  -webkit-mask-image: linear-gradient(to bottom, #000, transparent);
+  mask-image: linear-gradient(to bottom, #000, transparent);
+}
+
+/* Soft fade below the fixed navbar so content blurs into it */
+#footer::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  height: 2rem;
+  pointer-events: none;
+  background: linear-gradient(to top, #fff, rgba(255, 255, 255, 0));
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  -webkit-mask-image: linear-gradient(to top, #000, transparent);
+  mask-image: linear-gradient(to bottom, #000, transparent);
+}
+
 .nav-current {
   text-decoration: underline;
 }
