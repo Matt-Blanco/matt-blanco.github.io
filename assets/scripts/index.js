@@ -7,7 +7,8 @@ window.renderElements = (
   ],
   initialMaxRadius = 0.3,
   maxFrames = 500,
-  fade = false
+  fade = false,
+  contain = false
 ) => {
   let rings;
   const root = document.getElementById(id);
@@ -80,23 +81,29 @@ window.renderElements = (
       } else {
         t += 1;
       }
-
-      // clear the background every 500 frames using mod (%) operator
-      // if (p.frameCount % maxFrames == 0) {
-      //   p.noLoop();
-      // }
     };
+
+    // Contains visualization within its root element, and scales the visualization otherwise
+    function containScale(maxRadius) {
+      if (!contain) return 1;
+      const margin = 2; // stroke width plus a little curve overshoot
+      const limit =
+        Math.min(p.width / 2 - Math.abs(xOffset), p.height / 2 - Math.abs(yOffset)) - margin;
+      const peak = Math.max(Math.abs(maxRadius + 1), Math.abs(maxRadius - maxFrames));
+      return peak > 0 ? Math.min(1, Math.max(0, limit) / peak) : 1;
+    }
 
     function radialPattern(color, maxRadius, xFactor, yFactor) {
       p.stroke(color);
       p.beginShape();
 
       let points = [];
+      const scale = containScale(maxRadius);
 
       // Generate control points
       for (let i = 0; i <= 500; i++) {
         let ang = p.map(i, 0, 500, 0, p.TWO_PI + 0.01);
-        let rad = (maxRadius - t) * p.noise(i * xFactor, t * yFactor);
+        let rad = scale * (maxRadius - t) * p.noise(i * xFactor, t * yFactor);
 
         let x = rad * p.cos(ang) + xOffset;
         let y = rad * p.sin(ang) + yOffset;
