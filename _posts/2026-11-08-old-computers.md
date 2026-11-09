@@ -51,6 +51,13 @@ Carefully opening the Apple II, it was straightforward to insert the expansion c
   </div>
 </div>
 
+<div class="row justify-content-center">
+  <div class="col-10 col-md-6">
+    <img loading="lazy" decoding="async" class="img-fluid mb-3" src="/assets/images/posts/old-computers/control-panel.png" alt="" />
+    <small class="d-block text-center mb-3">Navigating to the Apple II built-in control panel</small>
+  </div>
+</div>
+
 #### From Hardware to Software
 
 Again, another hurdle came up, and software wouldn't load properly. From the BlueSCSI documentation, `.hda` disk files were the standard since they could store up to a maximum of 516MB as opposed to 800KB from other file formats. Even creating the files was antiquated requiring specialized software called [CiderPress](https://a2ciderpress.com/) to open disk files. While MacOS could recognize `.hda` and `.po` files as disk images they could not be altered.
