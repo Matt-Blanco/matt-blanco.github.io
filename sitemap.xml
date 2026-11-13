@@ -1,0 +1,33 @@
+---
+layout: null
+permalink: /sitemap.xml
+---
+{%- assign base = "https://mattblanco.me" -%}
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{%- for page in site.html_pages %}
+  {%- unless page.url == "/404.html" or page.sitemap == false %}
+  <url>
+    <loc>{{ base }}{{ page.url | replace: "/index.html", "/" }}</loc>
+  </url>
+  {%- endunless %}
+{%- endfor %}
+{%- for post in site.posts %}
+  {%- unless post.sitemap == false %}
+  <url>
+    <loc>{{ base }}{{ post.url }}</loc>
+    <lastmod>{{ post.last_modified_at | default: post.date | date_to_xmlschema }}</lastmod>
+  </url>
+  {%- endunless %}
+{%- endfor %}
+{%- for project in site.projects %}
+  {%- unless project.sitemap == false %}
+  <url>
+    <loc>{{ base }}{{ project.url }}</loc>
+  </url>
+  {%- endunless %}
+{%- endfor %}
+  <url>
+    <loc>{{ base }}/itp/</loc>
+  </url>
+</urlset>
