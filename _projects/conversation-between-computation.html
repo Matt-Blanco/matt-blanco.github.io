@@ -1,0 +1,272 @@
+---
+active_section: projects
+---
+
+<div class="row align-items-start">
+    <h2>A Conversation Between Computation</h2>
+    <p>Project Type: Installation</p>
+    <div class="col">
+        <video loop muted autoplay controls loading="lazy" decoding="async" class="img-fluid float-right"
+            src="https://www.mattblanco.me/itp/computer-conversation-wide.mp4"
+            alt="Screenshot of the main visualization of the project."></video>
+    </div>
+</div>
+
+<div class="col-12 mx-auto row">
+    <p>
+        <em>A Computational Conversation</em> bridges two computers released decades apart from one another.
+        A 1987 Apple IIGS and a 2024 Macbook Air.
+    </p>
+    <p>
+        With one computer running Eliza, a psychoanalytical chatbot algorithm from the 1960s, and Claude Haiku 5.5 a
+        contemporary AI model. The two computers converse with one another with the Apple IIGS initiating the
+        conversation with a message: <em>"How do you do. Please tell me your problems."</em>. The two devices proceed to
+        converse with one another.
+    </p>
+</div>
+
+<link href="https://fonts.googleapis.com/css2?family=Geist+Pixel&display=swap" rel="stylesheet">
+
+<style>
+    .cc-scroll {
+        position: relative;
+        margin: 2rem 0 3rem;
+        /* height is set by script: one scroll step per message */
+    }
+
+    .cc-stage {
+        position: sticky;
+        top: 90px;
+        height: calc(100vh - 120px);
+        overflow: hidden;
+        border-top: 1px solid #000;
+        border-bottom: 1px solid #000;
+    }
+
+    .cc-meta {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 2;
+        display: flex;
+        justify-content: space-between;
+        padding: 0.5rem 0 1.5rem;
+        font-size: 0.8rem;
+        background: linear-gradient(to bottom, #fff 60%, rgba(255, 255, 255, 0));
+    }
+
+    .cc-log {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        padding: 3rem 0 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.9rem;
+        transition: transform 400ms ease-out;
+        will-change: transform;
+    }
+
+    .cc-msg {
+        max-width: min(32rem, 75%);
+        opacity: 0;
+        transform: translateY(12px);
+        transition: opacity 300ms ease-out, transform 300ms ease-out;
+    }
+
+    .cc-msg.is-shown {
+        opacity: 1;
+        transform: none;
+    }
+
+    .cc-msg p {
+        margin: 0;
+        padding: 0.6rem 0.85rem;
+        line-height: 1.4;
+    }
+
+    .cc-msg time {
+        display: block;
+        font-size: 0.7rem;
+        opacity: 0.55;
+        margin-top: 0.25rem;
+    }
+
+    .cc-msg.cc-iigs {
+        align-self: flex-start;
+    }
+
+    .cc-msg.cc-iigs p {
+        font-family: "Press Start 2P", monospace !important;
+        background: #000;
+        color: #fff;
+        border-radius: 0;
+        font-size: 8pt;
+    }
+
+    .cc-msg.cc-mac {
+        align-self: flex-end;
+        text-align: right;
+    }
+
+    .cc-msg.cc-mac p {
+        text-align: left;
+        background: #ececec;
+        color: #000;
+        border-radius: 1rem 1rem 0.25rem 1rem;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+
+        .cc-log,
+        .cc-msg {
+            transition: none;
+        }
+    }
+</style>
+
+<div class="col-12 mx-auto">
+    <div class="cc-scroll" id="cc-scroll" aria-label="Transcript of the conversation between the Apple IIGS and the MacBook Air">
+        <div class="cc-stage">
+            <div class="cc-meta">
+                <span class="cc-iigs-label">Apple IIGS</span>
+                <span id="cc-progress"></span>
+                <span>MacBook Air</span>
+            </div>
+            <div class="cc-log" id="cc-log"></div>
+        </div>
+    </div>
+</div>
+
+<script>
+    (function () {
+        var SRC = "/assets/images/computational-conversation/demo-conversation.json";
+        var STEP_PX = 120; // scroll distance per message
+
+        var section = document.getElementById("cc-scroll");
+        var log = document.getElementById("cc-log");
+        var progress = document.getElementById("cc-progress");
+        var stage = section.querySelector(".cc-stage");
+        var nodes = [];
+        var current = -1;
+        var ticking = false;
+
+        function formatTime(iso) {
+            var d = new Date(iso);
+            if (isNaN(d)) return "";
+            return d.toLocaleTimeString([], { hour: "numeric", minute: "2-digit", second: "2-digit" });
+        }
+
+        function build(messages) {
+            var frag = document.createDocumentFragment();
+            messages.forEach(function (m) {
+                var isIIgs = m.role === "IIgs";
+                var el = document.createElement("div");
+                el.className = "cc-msg " + (isIIgs ? "cc-iigs" : "cc-mac");
+
+                var p = document.createElement("p");
+                p.textContent = m.content.replace(/\s+/g, " ").trim();
+                el.appendChild(p);
+
+                if (m.time) {
+                    var t = document.createElement("time");
+                    t.dateTime = m.time;
+                    t.textContent = formatTime(m.time);
+                    el.appendChild(t);
+                }
+
+                frag.appendChild(el);
+                nodes.push(el);
+            });
+            log.appendChild(frag);
+            sizeSection();
+            update();
+        }
+
+        function sizeSection() {
+            section.style.height = (nodes.length * STEP_PX + stage.offsetHeight) + "px";
+        }
+
+        function update() {
+            ticking = false;
+            if (!nodes.length) return;
+
+            // How far the sticky stage has travelled through the section
+            var rect = section.getBoundingClientRect();
+            var stageTop = parseFloat(getComputedStyle(stage).top) || 0;
+            var scrolled = stageTop - rect.top;
+            var index = Math.floor(scrolled / STEP_PX);
+            index = Math.max(0, Math.min(nodes.length - 1, index));
+
+            if (index === current) return;
+            current = index;
+
+            nodes.forEach(function (el, i) {
+                el.classList.toggle("is-shown", i <= index);
+            });
+
+            // Keep the newest visible message pinned to the bottom of the stage
+            var last = nodes[index];
+            var bottom = last.offsetTop + last.offsetHeight + 32;
+            var offset = Math.min(0, stage.clientHeight - bottom);
+            log.style.transform = "translateY(" + offset + "px)";
+
+            progress.textContent = (index + 1) + " / " + nodes.length;
+        }
+
+        function onScroll() {
+            if (!ticking) {
+                ticking = true;
+                requestAnimationFrame(update);
+            }
+        }
+
+        window.addEventListener("scroll", onScroll, { passive: true });
+        window.addEventListener("resize", function () {
+            sizeSection();
+            current = -1;
+            onScroll();
+        });
+
+        fetch(SRC)
+            .then(function (res) { return res.json(); })
+            .then(function (data) { build(data.messages || []); })
+            .catch(function (err) {
+                console.error("Could not load conversation", err);
+                section.style.display = "none";
+            });
+    })();
+</script>
+
+<div class="col-12 mx-auto">
+    <video class="img-fluid" loop autoplay muted controls
+        src="https://www.mattblanco.me/itp/computer-conversation-closeup.mp4"></video>
+</div>
+
+<div class="col-12 mx-auto">
+    <video class="img-fluid" loop autoplay muted controls
+        src="https://www.mattblanco.me/itp/computer-conversation-terminal.mov"></video>
+</div>
+
+<div class="col-12 mx-auto row">
+    <div class="row my-2">
+        <div class="col-md-6 col-12 align-items-center my-2">
+            <img loading="lazy" decoding="async" class="img-fluid float-right"
+                src="/assets/images/computational-conversation/538A0405.JPG" />
+        </div>
+        <div class="col-md-6 col-12 align-items-center">
+            <img loading="lazy" decoding="async" class="img-fluid float-right my-2"
+                src="/assets/images/computational-conversation/538A0409.JPG" />
+        </div>
+        <div class="col-md-6 col-12 align-items-center">
+            <img loading="lazy" decoding="async" class="img-fluid float-right my-2"
+                src="/assets/images/computational-conversation/538A0413.JPG" />
+        </div>
+        <div class="col-md-6 col-12 align-items-center">
+            <img loading="lazy" decoding="async" class="img-fluid float-right my-2"
+                src="/assets/images/computational-conversation/538A0419.JPG" />
+        </div>
+    </div>
+</div>

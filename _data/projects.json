@@ -1,5 +1,13 @@
 [
   {
+    "title": "A Conversation Between Computation",
+    "url": "/projects/conversation-between-computation",
+    "isArt": true,
+    "isVisible": true,
+    "description": "An automated conversation between a modern Macbook Air and an Apple IIGS.",
+    "img": "https://www.mattblanco.me/itp/computer-conversation-wide.mp4"
+  },
+  {
     "title": "VizDev",
     "description": "As a contractor for Undaunted Development, I led the front-end engineering and interface design for VizDev. A tool to visualize code, and store information about code in code. If you'd like to learn more about the work, please reach out.",
     "tags": ["data visualization", "software architecture", "engineering"],
